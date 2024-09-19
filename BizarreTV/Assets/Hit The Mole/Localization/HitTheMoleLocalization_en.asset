@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HitTheMoleLocalization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3cf4c791829246542b8b8e99a19b6139, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6665535488
+    m_Localized: Got it, let's start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 985779666944
+    m_Localized: RULES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1396280393728
+    m_Localized: To summ up, there are three categories of opponents, they differ
+      in the color of their hats. For hitting each of them you get a different number
+      of points. Points are needed to plant plants. Your goal is to plant all the
+      beds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1950628970496
+    m_Localized: The youngest mole, he sits above the ground the longest, he is interested
+      in what is happening around him, he is the easiest to catch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2482747736064
+    m_Localized: An experienced mole, but still not so difficult to catch, he likes
+      to explore the surroundings, but does so with caution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2764214894592
+    m_Localized: "The oldest mole, he doesn\u2019t think about anything other than
+      survival, appears above the surface for just a couple of seconds, be careful"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3476873281536
+    m_Localized: Experienced gardeners know how expensive good seedlings are
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3783715979264
+    m_Localized: A mole may encroach on your plant. In this case, it is necessary
+      to use poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4104563458048
+    m_Localized: At this stage of growth, the plant cannot be attacked, you can relax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4512920895488
+    m_Localized: Congratulations! You can be called an experienced gardener; you
+      saved the seedlings from pests. You can expect a wonderful harvest!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5185737588736
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5800932933632
+    m_Localized: You have become an experienced gardener!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24062076911616
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24193950023680
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37016920423923712
+    m_Localized: Increases cart size.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017114611810304
+    m_Localized: Reduces cart size.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017157091721216
+    m_Localized: Resets the cart size.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017167334211584
+    m_Localized: Increases game speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017177476038656
+    m_Localized: Reduces game speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017189656297472
+    m_Localized: Restores game speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37031062954311680
+    m_Localized: Use A/D or <--> to move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37033575824752640
+    m_Localized: You dug up all ore!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

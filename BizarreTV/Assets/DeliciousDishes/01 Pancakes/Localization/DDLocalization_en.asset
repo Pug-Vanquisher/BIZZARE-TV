@@ -1,0 +1,758 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DDLocalization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b587d4eaf3d9cc245b51b164f27ec202, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8695578624
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67457777664
+    m_Localized: My dishes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126110924800
+    m_Localized: To navigate through the training, left-click on the bookmarks located
+      between the pages of the book. Each tab represents a corresponding section
+      of training.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545413066752
+    m_Localized: Table of contents. UI,  goal of the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1723746484224
+    m_Localized: Navigation. Search for objects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2098775982080
+    m_Localized: Selection of items. Interaction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2208066961408
+    m_Localized: Replenishment of objects. Pouring.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2566847725568
+    m_Localized: Status slider. Mixing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2757592088576
+    m_Localized: Start of cooking. Frying pancakes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2955571625984
+    m_Localized: Taking pancakes. Topping of the dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196031074304
+    m_Localized: UI, goal of the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3447932583936
+    m_Localized: 'Two buttons are always available on the screen:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3684172562432
+    m_Localized: Open/close help window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3779903356928
+    m_Localized: Open/close recipe window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4168497233920
+    m_Localized: 'To view a recipe, hold down the left mouse button and drag up/down,
+      or use the mouse wheel.
+
+      In the upper right corner are your points: for
+      correct actions you will earn them, for incorrect actions you will lose them.
+      Try to score maximum points and get 5 stars for your dish'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5801356558336
+    m_Localized: Navigation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6064280698880
+    m_Localized: 'Moving around the kitchen is done by clicking on the shaded edges
+      of the screen. Move the cursor to the edge of the screen, and if a shadow appears
+      in this place, left-click on it to move to the next screen.
+
+      Some screens
+      contain locked doors that can be opened by left-clicking. Don''t forget to
+      close the refrigerator!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341587107840
+    m_Localized: Search
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6479068004352
+    m_Localized: To start cooking, you need to find and put on the table all the
+      required ingredients and utensils.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6678330998784
+    m_Localized: Having found an ingredient or utensil, left-click on it and it will
+      automatically appear in its place in other parts of the kitchen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7065079382016
+    m_Localized: Interaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7237142315008
+    m_Localized: To pick up an item, left-click on it and it will begin to follow
+      the cursor. To return an item to its place, click the right mouse button. If
+      you left-click on the bowl or box from which the item was taken, it will also
+      return to its place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7463957692416
+    m_Localized: 'When a held item becomes opaque, it will indicate that it is touching
+      an object that it can interact with. Click the left mouse button and see what
+      happens!
+
+      If there is nowhere to apply an item, it means that the required
+      object has not been added to the screen.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7845731631104
+    m_Localized: Replenishable objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8222359158784
+    m_Localized: 'Some objects (such as the sugar spoon) require refilling before
+      use. To do this, pick up the spoon and left-click on the sugar bowl. Now you
+      can use a spoon on the bowl to add a teaspoon of sugar to the dough.
+
+      The
+      dough ladle works in the same way.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8450520907776
+    m_Localized: Pouring
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8680452653056
+    m_Localized: 'Click the left mouse button to start pouring/sprinkling. Left-click
+      again to stop, or right-click to stop and return the object to its place.
+
+      The
+      action will stop itself if the held object stops touching the target.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9088742981632
+    m_Localized: Status slider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9202211487744
+    m_Localized: 'Sliders are used to display the amount poured and poured, as well
+      as the elapsed time.
+
+      <color="red">Too little/too much</color>
+
+      <color=#BAAB00>More
+      than necessary</color>
+
+      <color="green">What you need</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9497133973504
+    m_Localized: Mixing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9653673787392
+    m_Localized: 'When all the ingredients are in place, take the whisk and left-click
+      on the bowl. Move the cursor left and right to stir the dough until the slider
+      is full.
+
+      Once the batter is mixed, place the whisk in place and click
+      on the bowl to send it to the stove screen and begin frying the pancakes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9948587884544
+    m_Localized: Start cooking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10060911345664
+    m_Localized: First you need to heat up the stove. Using the right near burner
+      (the others do not work), set the appropriate temperature - the higher, the
+      faster the cooking. Don't burn the dish!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10098920128512
+    m_Localized: Now you can start making pancakes! Take a ladle, scoop out the batter
+      and pour it into the pan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10351622750208
+    m_Localized: Frying pancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10513829068800
+    m_Localized: The degree of doneness of one side of the pancake is displayed on
+      the slider. When the first side of the pancake is cooked, you will need to
+      turn it over. To do this, remove the frying pan from the stove by clicking
+      on its handle. Hold the left mouse button to tilt the pan and release to flip
+      the pancake. After flipping the pancake, press the right mouse button to return
+      the pan to the stove - frying of the second side of the pancake will begin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10756075290624
+    m_Localized: Taking pancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10918008979456
+    m_Localized: 'After flipping the pancake, take a spatula. Once the side is cooked,
+      click the pancake with a spatula to place it on a plate. If you accidentally
+      burn this side of the pancake, you can turn it over again and put the beautiful
+      side up.
+
+      You can stop at two pancakes or when you run out of dough.
+      After finishing cooking, click on the plate with pancakes to proceed to decorating
+      the dish.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11143117275136
+    m_Localized: Dish decoration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11353805553664
+    m_Localized: "Click on the container with decorations to take one piece. Use
+      the mouse wheel to rotate the decoration and place it on the pancakes by left-clicking.
+      Click on a placed decoration to pick it up again.\nWhen you are satisfied with
+      the result, click on the \u201Csave\u201D button to find out the rating of
+      your dish and add it to your saves."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11719871823872
+    m_Localized: "\n\nTHE MOST DELICIOUS PANCAKES WITH MILK\n\nProducts:\nMilk -
+      500 ml\n\nEggs - 2 pcs.\n\nFlour - 300 g\n\nSugar - 3-4 spoons (to taste)\n\nSalt
+      - 1-2 pinches\n\nVegetable oil - 100 ml\n\n\nHow to cook:\n\n1. Break eggs
+      into a bowl, add salt and sugar.\n\n2. Pour milk and butter into the eggs.\n\n3.
+      Add flour.\n\n4. Mix thoroughly. The dough should be liquid and easy to pour.\n\n5.
+      Heat a pan for pancakes. Optimum temperature 170\xB0C.\n\n6. Pour a ladle of
+      dough into the center of the pan and quickly spread it over the entire surface
+      in a thin layer, turning the pan slightly.\n\n7. When the edges of the dough
+      begin to dry out and slightly brown, lift the pancake with a thin wide spatula
+      and carefully turn it over. Let the pancake brown a little on the other side.\n\n8.
+      Using a spatula, remove the finished pancakes from the pan and transfer to
+      a plate.\n\n9. Decorate the finished dish to taste.\n\nBon appetit!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12861695590400
+    m_Localized: Delicious
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13198665973760
+    m_Localized: Return to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36905245641277440
+    m_Localized: Flour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36905437786537984
+    m_Localized: Milk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36906886155206656
+    m_Localized: Cocoa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907355170668544
+    m_Localized: Welcome to the kitchen! Today we are making pancakes.To close this
+      window, click on the button in the lower right corner. To view the recipe,
+      click on the phone icon at the bottom left. Scroll through the recipe by scrolling
+      the mouse wheel, or hold and drag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907738911735808
+    m_Localized: To start cooking, you need ingredients and utensils that are located
+      in other parts of the kitchen. Click on the edge of the screen where there
+      is an arrow to move.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907894100983808
+    m_Localized: Click on doors to open or close them. The cabinet doors can be closed
+      by clicking on the middle shelf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908000879575040
+    m_Localized: Click on an item to send it to the table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908155003469824
+    m_Localized: Take everything you need.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908261488459776
+    m_Localized: Not all ingredients and utensils are needed for cooking.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908340081328128
+    m_Localized: When you have taken everything you need, return to the table.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908434746769408
+    m_Localized: Clicking with the left mouse button will pick up the item, and with
+      the right mouse button it will return it to its place. Try picking something
+      up and letting it go.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908450248916992
+    m_Localized: Some objects can be removed from the container many times, for example,
+      eggs. You can return them to their place either as other objects, or by left
+      clicking on the container. Try to take the egg out and put it back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908466132746240
+    m_Localized: When the held item becomes opaque, it means it can be applied by
+      left clicking the mouse. Try putting an egg in a bowl!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908480322076672
+    m_Localized: Some items need to be filled before use. For example, to fill a
+      spoon with sugar, pick it up and then left-click on the sugar bowl. Now you
+      can put a spoonful of sugar in a bowl.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908504099586048
+    m_Localized: If you use a pourable object on a bowl, it will start filling, and
+      clicking it again will stop it. Right-clicking will stop the action and send
+      the object into place. Try pouring milk into a bowl!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908514866364416
+    m_Localized: 'Sliders are used to display the amount poured and poured, as well
+      as the elapsed time.
+
+      <color=#C60000>Too little/too much</color>
+
+      <color="yellow">A
+      little more than necessary</color>
+
+      <color="green">What you need</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908525834469376
+    m_Localized: Once you have added all the ingredients, use a whisk to stir the
+      mixture.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908535863050240
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908547137339392
+    m_Localized: Move the cursor left and right until the slider is full to stir
+      the dough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909175930617856
+    m_Localized: Click on the bowl of dough to send it to the stove!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909238828400640
+    m_Localized: Set the desired temperature for the near right burner. The stove
+      heats up gradually. The higher the temperature, the faster the pancakes will
+      fry. Don't burn the dish!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909249683259392
+    m_Localized: Now you can start making pancakes! Take a ladle, scoop out the batter
+      and pour it into the pan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909258868785152
+    m_Localized: The degree of doneness of one side of the pancake is displayed on
+      the slider. When the first side of the pancake is cooked, you will need to
+      turn it over. To do this, remove the frying pan from the stove by clicking
+      on its handle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909270273097728
+    m_Localized: Hold the left mouse button to tilt the pan and release to flip the
+      pancake. After flipping the pancake, press the right mouse button to return
+      the pan to the stove - frying of the second side of the pancake will begin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909282403024896
+    m_Localized: After flipping the pancake, take a spatula. Once the second side
+      is cooked, click the pancake with a spatula to place it on a plate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909294772027392
+    m_Localized: You can turn the burnt pancake over again and place the beautiful
+      side up. After finishing cooking, click on the plate with pancakes to proceed
+      to decorating the dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909304267931648
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909325474332672
+    m_Localized: Click on the container with decorations to take one piece. You can
+      rotate the held decoration by rotating the mouse wheel. Try it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909336924782592
+    m_Localized: By clicking the left mouse button, you can either place the decoration
+      on the pancakes or pick it up from them to move or remove it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909350023593984
+    m_Localized: "When you are satisfied with the result, click on the \u201Csave\u201D
+      button to find out the rating of your dish and add it to your saves."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224774107582464
+    m_Localized: The first pancake is always lumpy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224817761898496
+    m_Localized: Pancakes from the gas station
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224820433670144
+    m_Localized: Student's breakfast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224822799257600
+    m_Localized: The Golden Mean
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224824908992512
+    m_Localized: Mom's pancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224989019525120
+    m_Localized: Grandma's masterpiece
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227027539349504
+    m_Localized: Kitchen disaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227029695221760
+    m_Localized: One star for trying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227031788179456
+    m_Localized: A decent start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227033574952960
+    m_Localized: Acceptable result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227035491749888
+    m_Localized: Homemade tacos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227037274329088
+    m_Localized: The chef's masterpiece
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55567079171248128
+    m_Localized: "\n\nDELICIOUS MINT BEEF TACOS\n\nProducts:\n\nGround beef - 400
+      g\n\nWheat flatbread - 1 pc.\n\nCheese - 150 g\n\nLettuce leaves - 100 g\n\nCherry
+      tomatoes - 160 g\n\nTabasco sauce - 30 g\n\nVegetable oil - 30 ml\n\nSalt and
+      sugar to taste (no more than 5 teaspoons)\n\n\nHow to cook:\n\n1. Grate the
+      salad and cheese on a coarse grater.\n\n2. Cut the cherry tomatoes into halves.\n\n3.
+      Heat the frying pan. Optimum temperature 200\xB0C.\n\n4. Pour sunflower oil
+      into the center of the pan.\n\n5. Place the defrosted minced meat in a frying
+      pan, add spices to taste.\n\n6. Stir the minced meat thoroughly until cooked.\n\n7.
+      Brush the tortilla with Tabasco sauce.\n\n8. Place layers of minced meat, tomatoes
+      and cheese on the flatbread.\n\n9. Decorate the finished dish to taste.\n\nBon
+      appetit!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128680825192448
+    m_Localized: 'Welcome to the kitchen! Today we are making tacos. To hide/show
+      training, click on the button in the lower right corner.
+
+      To view the
+      recipe, click on the phone icon at the bottom left. Scroll through the recipe
+      using the mouse wheel, or press and drag.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128841794191360
+    m_Localized: To start cooking, you need ingredients and utensils that are located
+      in other parts of the kitchen. Click on the edge of the screen where there
+      is an arrow to move.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128916108869632
+    m_Localized: Click on doors to open or close them. The cabinet doors can be closed
+      by clicking on the middle shelf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128926376525824
+    m_Localized: Click on an item to send it to the table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128955820539904
+    m_Localized: When you have taken everything you need, return to the table.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128968051130368
+    m_Localized: Clicking with the left mouse button will pick up the item, and with
+      the right mouse button it will return it to its place. Try picking something
+      up and letting it go.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128976506847232
+    m_Localized: When the held item becomes opaque, it means it can be applied by
+      left clicking the mouse. Try putting a grater on the board!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128988720660480
+    m_Localized: 'Sliders are used to display the amount poured and grated, as well
+      as the elapsed time.
+
+      <color=#C60000>Too little/too much</color>
+
+      <color="yellow">A
+      little more than necessary</color>
+
+      <color="green">What you need</color>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128998476611584
+    m_Localized: 'To grate lettuce (cheese), take it, click on the grater, press
+      it against it and move the mouse up and down.
+
+      When the slider is full,
+      return the ingredient and grater to its place. Place the grated mixture in
+      a bowl by clicking LMB.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56129008261922816
+    m_Localized: Click on the bowl to send it to the assembly table!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130749640474624
+    m_Localized: Place the tomato on the board. Take the knife and click the tip
+      on the tomato to cut it. Click on the tomato half to send it to the bowl.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130796163694592
+    m_Localized: Set the desired temperature for the near right burner. The stove
+      heats up gradually. The higher the temperature, the faster the minced meat
+      will fry. Don't burn the dish!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130807802888192
+    m_Localized: 'If you use a pourable/pourable object on a frying pan, it will
+      start filling, and clicking it again will stop it. Right-clicking will stop
+      the action and send the object into place.
+
+      Pour oil into the frying
+      pan.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130816321519616
+    m_Localized: Now you can start frying the minced meat! Open it by pressing and
+      click it into the pan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130829252558848
+    m_Localized: To ensure even cooking, the minced meat must be stirred. To do this,
+      take a spatula, click on the pan and move it left and right, touching the bottom
+      of the pan. The stirred minced meat will sizzle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130914971549696
+    m_Localized: After finishing cooking, click on the frying pan with minced meat
+      to proceed to assembling the dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130926916927488
+    m_Localized: Click on an ingredient to take one. You can rotate what you are
+      holding by rotating the mouse wheel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130935519444992
+    m_Localized: By clicking the left mouse button, you can either place an ingredient
+      or pick it up from them to move or remove it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130946097479680
+    m_Localized: "When you are satisfied with the result, click on the \u201Csave\u201D
+      button to find out the rating of your dish and add it to your saves."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132438619586560
+    m_Localized: To navigate through the training, left-click on the bookmarks located
+      between the pages of the book. Each tab represents a corresponding section
+      of training.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132481229520896
+    m_Localized: Table of contents. UI and goal of the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132490805116928
+    m_Localized: Moving. Search for objects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132498665242624
+    m_Localized: Picking of items. Interaction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132506466648064
+    m_Localized: Slicing tomatoes. Pouring.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132514960113664
+    m_Localized: Status slider. Grater.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132522539220992
+    m_Localized: Start of cooking. Frying minced meat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132531062046720
+    m_Localized: Assembling the tacos. Decoration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132540075606016
+    m_Localized: UI and goal of the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132552994062336
+    m_Localized: 'Three buttons are always available on the screen:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133380471521280
+    m_Localized: Open/close help book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133410695675904
+    m_Localized: Open/close recipe window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133420657147904
+    m_Localized: Open/close training window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133428781514752
+    m_Localized: 'To view a recipe, hold down the left mouse button and drag up/down,
+      or use the mouse wheel.
+
+      In the upper right corner are your points:
+      for correct actions you will earn them, for incorrect actions you will lose
+      them. Try to score maximum points and get 5 stars for your dish!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133439409881088
+    m_Localized: Picking of items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133447286784000
+    m_Localized: Slicing tomatoes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133456749133824
+    m_Localized: 'Place the tomato on the board. Take the knife and click the tip
+      on the tomato to cut it.
+
+      Click on the tomato half to send it to the
+      bowl. When all the tomatoes are chopped, click on the bowl to move it to the
+      serving table.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133467922759680
+    m_Localized: Pouring
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133475854188544
+    m_Localized: 'Click the left mouse button to start pouring/sprinkling. Left-click
+      again to stop, or right-click to stop and return the object to its place.
+
+      The
+      action will stop itself if the held object stops touching the target.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133488105750528
+    m_Localized: Grater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136574048141312
+    m_Localized: 'To grate lettuce (cheese), take it, click on the grater, press
+      it against it and move the mouse up and down.
+
+      When the slider is full,
+      return the ingredient and grater to its place. Place the grate into a bowl
+      by LMB-clicking, and then click on the filled bowl to send it to the serving
+      table. Hold LMB and swipe to collect a lot at once!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136903032569856
+    m_Localized: "First you need to heat up the stove. Using the right near burner
+      (the others do not work), set the appropriate temperature - the higher, the
+      faster the cooking. Don't burn the dish!\r\nPour oil into the pan, then remove
+      the lid from the mince and place it in the pan. You can add a little spice
+      at any time during cooking (don\u2019t overdo it!)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136905054224384
+    m_Localized: Frying minced meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136906966827008
+    m_Localized: 'To ensure even cooking, the minced meat must be stirred. To do
+      this, take a spatula, click on the pan and move it left and right, touching
+      the bottom of the pan. The stirred minced meat will sizzle.
+
+      When the
+      slider turns green, return the spatula to its place and click on the pan to
+      send it to the serving table.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136913040179200
+    m_Localized: Taco assembly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56137776764813312
+    m_Localized: 'Click on an ingredient to pick it up, and then click on a taco
+      to place the ingredient in the pita. Click on a placed ingredient to pick up
+      and move it.
+
+      To take some sauce, click on the jar. Click with the sauce
+      on the jar to return it to it, or right-click.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56138119292649472
+    m_Localized: Decoration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56138268437905408
+    m_Localized: "Some ingredients and decorations may rotate. Roll the mouse wheel
+      to rotate the held decoration and place it in the pita.\r\nWhen you are satisfied
+      with the result, click on the \u201Csave\u201D button to find out the rating
+      of your dish and add it to your saves."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

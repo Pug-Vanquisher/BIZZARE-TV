@@ -1,0 +1,560 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DDLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: DDLocalization
+  m_TableCollectionNameGuidString: b587d4eaf3d9cc245b51b164f27ec202
+  m_Entries:
+  - m_Id: 8695578624
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67457777664
+    m_Key: My dishes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126110924800
+    m_Key: Navigation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545413066752
+    m_Key: Contents
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1723746484224
+    m_Key: Search
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2098775982080
+    m_Key: Interaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2208066961408
+    m_Key: Pouring
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2566847725568
+    m_Key: Mixing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2757592088576
+    m_Key: Cooking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2955571625984
+    m_Key: Topping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196031074304
+    m_Key: Goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3447932583936
+    m_Key: Buttons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3684172562432
+    m_Key: Open/close help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3779903356928
+    m_Key: Open/close recipe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4168497233920
+    m_Key: Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5801356558336
+    m_Key: NavigationH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6064280698880
+    m_Key: NavigationB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6341587107840
+    m_Key: SearchH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6479068004352
+    m_Key: SearchB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6678330998784
+    m_Key: SearchB2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7065079382016
+    m_Key: InteractionH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7237142315008
+    m_Key: SearchB3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7463957692416
+    m_Key: InteractionB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7845731631104
+    m_Key: ReplenishableH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8222359158784
+    m_Key: ReplenishableB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8450520907776
+    m_Key: PouringH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8680452653056
+    m_Key: PouringB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9088742981632
+    m_Key: SliderH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9202211487744
+    m_Key: SliderB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9497133973504
+    m_Key: MixingH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9653673787392
+    m_Key: MixingB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9948587884544
+    m_Key: CookingH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10060911345664
+    m_Key: CookingB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10098920128512
+    m_Key: CookingB2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10351622750208
+    m_Key: FryingH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10513829068800
+    m_Key: FryingB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10756075290624
+    m_Key: TakingH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10918008979456
+    m_Key: TakingB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11143117275136
+    m_Key: DecorationH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11353805553664
+    m_Key: DecorationB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11719871823872
+    m_Key: RecipePancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12861695590400
+    m_Key: Delicious
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13198665973760
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36905245641277440
+    m_Key: Flour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36905437786537984
+    m_Key: Milk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36906886155206656
+    m_Key: Cocoa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907355170668544
+    m_Key: Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907738911735808
+    m_Key: Learning1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36907894100983808
+    m_Key: Learning2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908000879575040
+    m_Key: Learning3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908155003469824
+    m_Key: Learning4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908261488459776
+    m_Key: Learning5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908340081328128
+    m_Key: Learning6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908434746769408
+    m_Key: Learning7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908450248916992
+    m_Key: Learning8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908466132746240
+    m_Key: Learning9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908480322076672
+    m_Key: Learning10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908504099586048
+    m_Key: Learning11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908514866364416
+    m_Key: Learning12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908525834469376
+    m_Key: Learning13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908535863050240
+    m_Key: Learning14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36908547137339392
+    m_Key: Learning15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909175930617856
+    m_Key: Learning16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909238828400640
+    m_Key: Learning17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909249683259392
+    m_Key: Learning18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909258868785152
+    m_Key: Learning19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909270273097728
+    m_Key: Learning20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909282403024896
+    m_Key: Learning21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909294772027392
+    m_Key: Learning22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909304267931648
+    m_Key: Learning23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909325474332672
+    m_Key: Learning24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909336924782592
+    m_Key: Learning25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36909350023593984
+    m_Key: Learning26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224774107582464
+    m_Key: CommentPancake0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224817761898496
+    m_Key: CommentPancake1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224820433670144
+    m_Key: CommentPancake2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224822799257600
+    m_Key: CommentPancake3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224824908992512
+    m_Key: CommentPancake4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54224989019525120
+    m_Key: CommentPancake5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227027539349504
+    m_Key: CommentTaco0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227029695221760
+    m_Key: CommentTaco1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227031788179456
+    m_Key: CommentTaco2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227033574952960
+    m_Key: CommentTaco3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227035491749888
+    m_Key: CommentTaco4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54227037274329088
+    m_Key: CommentTaco5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55567079171248128
+    m_Key: RecipeTacos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128680825192448
+    m_Key: TLearning1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128841794191360
+    m_Key: TLearning2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128916108869632
+    m_Key: TLearning3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128926376525824
+    m_Key: TLearning4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128955820539904
+    m_Key: TLearning5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128968051130368
+    m_Key: TLearning6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128976506847232
+    m_Key: TLearning7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128988720660480
+    m_Key: TLearning8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56128998476611584
+    m_Key: TLearning9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56129008261922816
+    m_Key: TLearning10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130749640474624
+    m_Key: TLearning11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130796163694592
+    m_Key: TLearning12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130807802888192
+    m_Key: TLearning13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130816321519616
+    m_Key: TLearning14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130829252558848
+    m_Key: TLearning15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130914971549696
+    m_Key: TLearning16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130926916927488
+    m_Key: TLearning17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130935519444992
+    m_Key: TLearning18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56130946097479680
+    m_Key: TLearning19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132438619586560
+    m_Key: TBook1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132481229520896
+    m_Key: TBook2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132490805116928
+    m_Key: TBook3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132498665242624
+    m_Key: TBook4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132506466648064
+    m_Key: TBook5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132514960113664
+    m_Key: TBook6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132522539220992
+    m_Key: TBook7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132531062046720
+    m_Key: TBook8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132540075606016
+    m_Key: TBook9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56132552994062336
+    m_Key: TBook10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133380471521280
+    m_Key: TBook11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133410695675904
+    m_Key: TBook12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133420657147904
+    m_Key: TBook13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133428781514752
+    m_Key: TBook14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133439409881088
+    m_Key: TBook15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133447286784000
+    m_Key: TBook16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133456749133824
+    m_Key: TBook17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133467922759680
+    m_Key: TBook18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133475854188544
+    m_Key: TBook19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56133488105750528
+    m_Key: TBook20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136574048141312
+    m_Key: TBook21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136903032569856
+    m_Key: TBook22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136905054224384
+    m_Key: TBook23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136906966827008
+    m_Key: TBook24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56136913040179200
+    m_Key: TBook25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56137776764813312
+    m_Key: TBook26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56138119292649472
+    m_Key: TBook27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56138268437905408
+    m_Key: TBook28
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7584266541886341120
+  references:
+    version: 2
+    RefIds:
+    - rid: 7584266541886341120
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1702295105237

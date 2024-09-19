@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 312b1152a7693394ab1822fd71a9950e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - WatchSmall: {fileID: 919132149155446097, guid: a6a53f4bbd333484180ff9489734f1fa, type: 3}
+  - WatchBig: {fileID: 919132149155446097, guid: cdef45aaa1291874f9a9934c6b47d587, type: 3}
+  - Spawn1: {instanceID: 0}
+  - Spawn2: {instanceID: 0}
+  - Spawn3: {instanceID: 0}
+  - Spawn4: {instanceID: 0}
+  - Spawn5: {instanceID: 0}
+  - Spawn6: {instanceID: 0}
+  - Spawn7: {instanceID: 0}
+  - Spawn8: {instanceID: 0}
+  - Spawn9: {instanceID: 0}
+  - Spawn10: {instanceID: 0}
+  - Spawn11: {instanceID: 0}
+  - Spawn12: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

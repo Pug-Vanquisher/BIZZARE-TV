@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tower_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 5d337a8c3a94f61408ddb39e3b1c6236, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 66174320640
+    m_Localized: Wave 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417862516736
+    m_Localized: Attack Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629800697856
+    m_Localized: Attack Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 753331339264
+    m_Localized: Tower Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 896424214528
+    m_Localized: Health Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166688387072
+    m_Localized: Gold for Kill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1530871414784
+    m_Localized: Upgraded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2075816361984
+    m_Localized: 'Adds a second arrow
+
+      Damage +1
+
+      Speed +0.1'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2134398205952
+    m_Localized: 'Arrows knock back enemies when they hit
+
+      Damage +1'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2672175087616
+    m_Localized: 'A hammer appears and flies at enemies
+
+      Damage 5'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2756094722048
+    m_Localized: "\u041C\u043E\u043B\u043E\u0442 \u043B\u0435\u0442\u0430\u0435\u0442
+      \u0432\u043E\u043A\u0440\u0443\u0433 \u0431\u0430\u0448\u043D\u0438\n\u0423\u0440\u043E\u043D
+      7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3038035836928
+    m_Localized: 'The hammer emmits lightning
+
+      Damage 9'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317477146624
+    m_Localized: 'Fireball deals area damage
+
+      Reload speed 10 seconds'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3398360104960
+    m_Localized: Increases fireball range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3601683185664
+    m_Localized: 'Three fireballs appear
+
+      Reload time 20 seconds'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3835809234944
+    m_Localized: A swamp appears around the tower, slowing down enemies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3994127433728
+    m_Localized: 'The swamp becomes poisonous
+
+      Damage 3'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4207323906048
+    m_Localized: Increases the range of the swamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 499380738850816
+    m_Localized: You won!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 499479569235968
+    m_Localized: Again
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

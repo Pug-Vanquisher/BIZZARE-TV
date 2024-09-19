@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tower Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tower
+  m_TableCollectionNameGuidString: 5d337a8c3a94f61408ddb39e3b1c6236
+  m_Entries:
+  - m_Id: 66174320640
+    m_Key: Wave1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417862516736
+    m_Key: AttackPower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629800697856
+    m_Key: AttackSpeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 753331339264
+    m_Key: TowerHealth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 896424214528
+    m_Key: HealthRegeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166688387072
+    m_Key: GoldForKill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1530871414784
+    m_Key: Upgraded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2075816361984
+    m_Key: Arrow1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2134398205952
+    m_Key: Arrow2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2672175087616
+    m_Key: Hammer1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2756094722048
+    m_Key: Hammer2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3038035836928
+    m_Key: Hammer3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317477146624
+    m_Key: Fireball1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3398360104960
+    m_Key: Fireball2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3601683185664
+    m_Key: Fireball3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3835809234944
+    m_Key: Swamp1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3994127433728
+    m_Key: Swamp2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4207323906048
+    m_Key: Swamp3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 499380738850816
+    m_Key: Won
+    m_Metadata:
+      m_Items: []
+  - m_Id: 499479569235968
+    m_Key: Again
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8696499582959091725
+  references:
+    version: 2
+    RefIds:
+    - rid: 8696499582959091725
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1715675829708

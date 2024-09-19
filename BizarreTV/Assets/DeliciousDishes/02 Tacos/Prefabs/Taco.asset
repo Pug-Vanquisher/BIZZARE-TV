@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3401631f0ff356c4ea1760e850d0bb4b, type: 3}
+  m_Name: Taco
+  m_EditorClassIdentifier: 
+  recipeBySteps:
+  - stepTitle: "\u041D\u0430\u0440\u0435\u0437\u0430\u0442\u044C \u0438 \u043D\u0430\u0442\u0435\u0440\u0435\u0442\u044C
+      \u043E\u0432\u043E\u0449\u0438 \u0438 \u0441\u044B\u0440"
+    items:
+    - product: {fileID: 8472691958058974476, guid: 4dd31c0289177ee4c89d16a991470695, type: 3}
+      minimalAmount: 99
+      maximalAmount: 102
+    - product: {fileID: 4626768149899417768, guid: daba6aaf2a7964048a75684d17c3416e, type: 3}
+      minimalAmount: 12
+      maximalAmount: 14
+    - product: {fileID: 4112951814666964742, guid: ee00be0ae4dca9a4c8ba488f6edd6094, type: 3}
+      minimalAmount: 99
+      maximalAmount: 102
+  - stepTitle: "\u0421\u043B\u043E\u0436\u0438\u0442\u044C \u043D\u0430\u0440\u0435\u0437\u0430\u043D\u043D\u043E\u0435
+      \u0438 \u043D\u0430\u0442\u0451\u0440\u0442\u043E\u0435 \u0432 \u0451\u043C\u043A\u043E\u0441\u0442\u0438"
+    items:
+    - product: {fileID: 2355497196031920107, guid: 7459ba29daca3754f8e0feac369f2025, type: 3}
+      minimalAmount: 1
+      maximalAmount: 1.000001
+    - product: {fileID: 8943891714138857571, guid: 296668d2424e55b4e97753069e69cf4b, type: 3}
+      minimalAmount: 1
+      maximalAmount: 1.000001
+    - product: {fileID: 1240587078012081742, guid: 03d92f664583b144d9e8240112d92288, type: 3}
+      minimalAmount: 1
+      maximalAmount: 1.000001
+  - stepTitle: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u0430\u0441\u043B\u043E
+      \u0438 \u0441\u043F\u0435\u0446\u0438\u0438"
+    items:
+    - product: {fileID: 6731040164040502008, guid: 053af5a1645373540ba9a93883db00db, type: 3}
+      minimalAmount: 0
+      maximalAmount: 5
+    - product: {fileID: 6731040164040502008, guid: 5ae85ea14fdbb144ba2636d76f2f5ea2, type: 3}
+      minimalAmount: 0
+      maximalAmount: 5
+    - product: {fileID: 1974172340571983951, guid: 607223e92c2c5ef49b38f00b4d68665b, type: 3}
+      minimalAmount: 50
+      maximalAmount: 150
+  - stepTitle: "\u0416\u0430\u0440\u0438\u0442\u044C \u043D\u0430 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0435
+      \u0434\u043E \u0433\u043E\u0442\u043E\u0432\u043D\u043E\u0441\u0442\u0438"
+    items:
+    - product: {fileID: 6977655949341453594, guid: 651c520eca2cc034799a1e9d2b547761, type: 3}
+      minimalAmount: 200
+      maximalAmount: 300

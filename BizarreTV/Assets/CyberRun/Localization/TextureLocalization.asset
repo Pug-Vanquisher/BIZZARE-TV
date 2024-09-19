@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: TextureLocalization
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 70d9eeb26579ad64bae7877b60dfd6e5, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: c32ba5bd1c2c2c84884d91b3b267557d, type: 2}
+  - {fileID: 11400000, guid: 2b275dbeeb8f40948a4c42434189de11, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []

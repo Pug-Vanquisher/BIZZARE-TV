@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Rouge_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f800d9efbd1cbb5438c7ed34b951e14a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 253772955648
+    m_Localized: 'W A S D - Movement
+
+      Left mouse button - shooting
+
+      Space
+      - dash
+
+
+      Advance through the dungeon and destroy your opponents.
+
+      Beware
+      of attacks, while the character is making a dash, he is invulnerable,
+
+      this
+      is the main method of protection.
+
+
+      When all the enemies in the room
+      are defeated, move through the portal to the next room.
+
+
+      After the death
+      of enemies or in chests you can find power-ups that will help you survive'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 494148517888
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 676315529216
+    m_Localized: You've won for now
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

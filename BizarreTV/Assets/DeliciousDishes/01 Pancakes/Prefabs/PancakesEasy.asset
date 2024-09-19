@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3401631f0ff356c4ea1760e850d0bb4b, type: 3}
+  m_Name: PancakesEasy
+  m_EditorClassIdentifier: 
+  recipeBySteps:
+  - stepTitle: "\u041F\u043E\u043B\u043E\u0436\u0438\u0442\u044C \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u044B
+      \u0432 \u043C\u0438\u0441\u043A\u0443"
+    items:
+    - product: {fileID: 7224061422302547021, guid: 357c8c7f5febe0c478d82a40181bf7aa, type: 3}
+      minimalAmount: 2
+      maximalAmount: 2
+    - product: {fileID: 6731040164040502008, guid: 5ae85ea14fdbb144ba2636d76f2f5ea2, type: 3}
+      minimalAmount: 1
+      maximalAmount: 2
+    - product: {fileID: 6731040164040502008, guid: 053af5a1645373540ba9a93883db00db, type: 3}
+      minimalAmount: 2
+      maximalAmount: 4
+    - product: {fileID: 2884410177297969137, guid: ef622a93a5c899b46bb13d1e20d2b97e, type: 3}
+      minimalAmount: 230
+      maximalAmount: 311
+    - product: {fileID: 552876050893826301, guid: cffb19cfa2bc4e64396e7aacd584dba6, type: 3}
+      minimalAmount: 440
+      maximalAmount: 521
+    - product: {fileID: 1974172340571983951, guid: 607223e92c2c5ef49b38f00b4d68665b, type: 3}
+      minimalAmount: 80
+      maximalAmount: 120
+  - stepTitle: "\u041F\u0435\u0440\u0435\u043C\u0435\u0448\u0430\u0442\u044C \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u044B"
+    items:
+    - product: {fileID: 1728593994482583098, guid: 2341a3e0d4e27c94197753e6d443f6e8, type: 3}
+      minimalAmount: 100
+      maximalAmount: 101
+  - stepTitle: "\u0416\u0430\u0440\u0438\u0442\u044C \u043D\u0430 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0435
+      \u0434\u043E \u0433\u043E\u0442\u043E\u0432\u043D\u043E\u0441\u0442\u0438"
+    items:
+    - product: {fileID: 6977655949341453594, guid: 651c520eca2cc034799a1e9d2b547761, type: 3}
+      minimalAmount: 160
+      maximalAmount: 200
+    - product: {fileID: 7255294030637082518, guid: 2daeafc054aeff44487bc7ee8d154229, type: 3}
+      minimalAmount: 2
+      maximalAmount: 14

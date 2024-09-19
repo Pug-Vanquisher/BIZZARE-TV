@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: HitTheMoleLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: HitTheMoleLocalization
+  m_TableCollectionNameGuidString: 3cf4c791829246542b8b8e99a19b6139
+  m_Entries:
+  - m_Id: 6665535488
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 985779666944
+    m_Key: Rules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1396280393728
+    m_Key: Goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1950628970496
+    m_Key: Hint1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2482747736064
+    m_Key: Hint2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2764214894592
+    m_Key: Hint3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3476873281536
+    m_Key: Hint4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3783715979264
+    m_Key: Hint5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4104563458048
+    m_Key: Hint6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4512920895488
+    m_Key: Hint7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5185737588736
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5800932933632
+    m_Key: Success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24062076911616
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24193950023680
+    m_Key: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37016920423923712
+    m_Key: MineHint0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017114611810304
+    m_Key: MineHint1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017157091721216
+    m_Key: MineHint2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017167334211584
+    m_Key: MineHint3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017177476038656
+    m_Key: MineHint4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37017189656297472
+    m_Key: MineHint5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37031062954311680
+    m_Key: MineMove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37033575824752640
+    m_Key: MineSuccess
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7584266541886341133
+  references:
+    version: 2
+    RefIds:
+    - rid: 7584266541886341133
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1702298516313

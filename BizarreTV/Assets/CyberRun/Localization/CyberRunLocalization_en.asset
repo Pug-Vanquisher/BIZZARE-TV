@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CyberRunLocalization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3696f765bf7792c44933a08e6d863752, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6405488640
+    m_Localized: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221770416128
+    m_Localized: Press to slide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 532803223552
+    m_Localized: Getting ready to depart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 776022523904
+    m_Localized: Press to run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8046584266752
+    m_Localized: Congratulations, you passed the test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8276214022144
+    m_Localized: Use to dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36895161699794944
+    m_Localized: Begin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36895460267130880
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

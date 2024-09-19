@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: CyberRunLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: CyberRunLocalization
+  m_TableCollectionNameGuidString: 3696f765bf7792c44933a08e6d863752
+  m_Entries:
+  - m_Id: 6405488640
+    m_Key: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221770416128
+    m_Key: Slide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 532803223552
+    m_Key: Depart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 776022523904
+    m_Key: Run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8046584266752
+    m_Key: Congratulations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8276214022144
+    m_Key: Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36895161699794944
+    m_Key: Begin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36895460267130880
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7584266541886341134
+  references:
+    version: 2
+    RefIds:
+    - rid: 7584266541886341134
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1702300512785
