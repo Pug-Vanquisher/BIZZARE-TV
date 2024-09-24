@@ -44,12 +44,11 @@ namespace BID
 
             if (Input.GetKeyDown(key.Attack))
             {
-                var a = Instantiate(dagger, transform);//transform.position + side1cos * Random.Range(-1f, 2f) * 0.03f, Quaternion.identity);
+                var a = Instantiate(dagger, transform); //transform.position + side1cos * Random.Range(-1f, 2f) * 0.03f, Quaternion.identity);
                 a.transform.position = transform.position + side1cos * Random.Range(-1f, 1f) * AttackSpreadness;
                 a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(mousePosition - a.transform.position, Vector3.right), Vector3.forward);
                 
                 //Quaternion.AngleAxis(-Vector2.SignedAngle(side1, side2) + Random.Range(-5, 5), Vector3.forward)
-                //
             }
 
 
