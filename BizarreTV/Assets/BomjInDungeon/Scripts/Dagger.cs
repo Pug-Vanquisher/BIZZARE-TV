@@ -16,7 +16,7 @@ public class Dagger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position += transform.right * Time.deltaTime * speed;
+        //gameObject.transform.position += transform.right * Time.deltaTime * speed;
         if (Time.time >= startime + lifetime) { Destroy(gameObject); }
     }
 }
