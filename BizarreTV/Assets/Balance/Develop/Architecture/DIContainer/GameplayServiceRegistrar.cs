@@ -4,18 +4,20 @@ namespace Balance
 {
     public class GameplayServiceRegistrar : ServiceRegistrar
     {
-        [SerializeField] private PlayerConfig playerConfig;
+        [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private CameraConfig _cameraConfig;
 
         public override void Register()
         {
             RegisterConfigs();
+
+            Debug.Log("Gameplay services registered");
         }
 
         private void RegisterConfigs()
         {
-            DIContainer.Register<PlayerConfig>(playerConfig);
-
-            Debug.Log("Gameplay services registered");
+            DIContainer.Register<PlayerConfig>(_playerConfig);
+            DIContainer.Register<CameraConfig>(_cameraConfig);
         }
     }
 }
