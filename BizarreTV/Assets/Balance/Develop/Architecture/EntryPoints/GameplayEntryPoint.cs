@@ -7,6 +7,8 @@ namespace Balance
     {
         public override IEnumerator Run()
         {
+            RegisterServices();
+
             Debug.Log("Gameplay scene loaded");
 
             yield return null;

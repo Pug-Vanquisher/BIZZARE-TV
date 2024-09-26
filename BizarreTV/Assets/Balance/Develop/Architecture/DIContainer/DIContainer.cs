@@ -10,9 +10,9 @@ namespace Balance
     {
         private static Dictionary<Type, Object> _services = new();
 
-        public static void Register(Type type, Object service)
+        public static void Register<T>(T service)
         {
-            _services[type] = service;
+            _services[typeof(T)] = service;
         }
 
         public static T Resolve<T>()

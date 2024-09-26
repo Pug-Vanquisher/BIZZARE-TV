@@ -5,15 +5,15 @@ namespace Balance
 {
     public abstract class EntryPoint : MonoBehaviour
     {
-        [SerializeField] private DIInstaller[] _installers;
+        [SerializeField] private ServiceRegistrar[] _serviceRegistrars;
 
         public abstract IEnumerator Run();
 
-        protected void InstallBindings()
+        protected void RegisterServices()
         {
-            foreach (DIInstaller installer in _installers)
+            foreach (ServiceRegistrar registrar in _serviceRegistrars)
             {
-                installer.InstallBindings();
+                registrar.Register();
             }
         }
     }

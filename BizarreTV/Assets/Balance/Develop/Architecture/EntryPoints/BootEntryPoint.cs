@@ -8,10 +8,7 @@ namespace Balance
         public override IEnumerator Run()
         {
             DIContainer.RemoveAll();
-            InstallBindings();
-
-            DIContainer.Resolve<TestService>().Print();
-            Debug.Log(DIContainer.Resolve<TestConfig>().Message);
+            RegisterServices();
 
             Debug.Log("Boot scene loaded");
 
