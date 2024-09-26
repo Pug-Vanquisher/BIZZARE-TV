@@ -1,14 +1,14 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Balance
 {
-    public class EntryPoint : MonoBehaviour
+    public abstract class EntryPoint : MonoBehaviour
     {
         [SerializeField] private DIInstaller _installer;
 
-        protected void InstallBindings()
-        {
-            _installer.InstallBindings();
-        }
+        public abstract IEnumerator Run();
+
+        protected void InstallBindings() => _installer.InstallBindings();
     }
 }

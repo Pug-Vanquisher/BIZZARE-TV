@@ -212,4 +212,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cd33cd81f77314a888cc1ac660c307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Installer: {fileID: 794343400}
+  _installer: {fileID: 794343400}

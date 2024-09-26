@@ -22,5 +22,10 @@ namespace Balance
 
             return (T)_services[typeof(T)];
         }
+
+        public static void RemoveAll()
+        {
+            _services.Clear();
+        }
     }
 }
