@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   <MoveSpeed>k__BackingField: 20
+  <GravityScale>k__BackingField: 3
