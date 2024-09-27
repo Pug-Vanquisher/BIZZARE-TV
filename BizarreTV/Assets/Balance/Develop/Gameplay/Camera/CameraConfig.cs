@@ -6,5 +6,6 @@ namespace Balance
     public class CameraConfig : ScriptableObject
     {
         [field: SerializeField] public float TrackSpeed { get; private set; }
+        [field: SerializeField] public Vector3 OffsetFromPlayer { get; private set; }
     }
 }

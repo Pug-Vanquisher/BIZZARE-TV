@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CameraConfig
   m_EditorClassIdentifier: 
   <TrackSpeed>k__BackingField: 10
+  <OffsetFromPlayer>k__BackingField: {x: 0, y: 8, z: -8}
