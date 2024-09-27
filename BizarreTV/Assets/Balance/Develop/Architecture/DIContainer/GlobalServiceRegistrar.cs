@@ -4,8 +4,6 @@ namespace Balance
 {
     public class GlobalServiceRegistrar : ServiceRegistrar
     {
-        [SerializeField] private TestConfig _testConfig;
-
         public override void Register()
         {
             RegisterInput();
