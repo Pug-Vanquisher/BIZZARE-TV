@@ -44,7 +44,7 @@ public class EnemyAi : MonoBehaviour
             if (player.transform.position.x >= transform.position.x) { velik.x = 1; }
             if (player.transform.position.x < transform.position.x) { velik.x = -1; }
             if (player.transform.position.y >= transform.position.y) { velik.y = 1; }
-            if (player.transform.position.y < transform.position.y) > 0.2) { velik.y = -1; }
+            if (player.transform.position.y < transform.position.y) { velik.y = -1; }
 
             
 
