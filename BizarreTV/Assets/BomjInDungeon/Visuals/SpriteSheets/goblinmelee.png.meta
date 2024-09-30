@@ -1,0 +1,1735 @@
+fileFormatVersion: 2
+guid: 00d7e43a06fdc8043b20b63b0ecc73b5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblinMeleeStandDown0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c3306156b7fdf41988e54337e50557
+      internalID: -1335839083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandDown1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41073367afb94e3498e6bb032cf5dcbf
+      internalID: 527969505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandDown2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e7c6758c93b2243969a9dc15896d90
+      internalID: -1904646873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandDown3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf57b4eca8a6994e9754ea73fc6e5e5
+      internalID: -52679974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandDown4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d997709ae9afc4b8c21f3dddc79f66
+      internalID: 857728267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandDown5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 492
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e5e6659cc29d3458440f2f7e517b7d
+      internalID: -622432244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480910bb5530a80478d58fad84769ab6
+      internalID: 1367034154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04febedd327ee714ab3332442f438193
+      internalID: -1100792981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2531ddc8cf472004f9b11a643dbfefc2
+      internalID: 2006167838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1705610256e75741861dd28976889bf
+      internalID: 819041652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b1921134a517b4b8cf1c83f5412b75
+      internalID: -1283288510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoDown5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 451
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218ff78cb6474f646aed5b5cd48c71d5
+      internalID: -1869551006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376c60d7dbf7c7d41bbf0fdbf0883da7
+      internalID: 1371219640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33220bf81d9f5ef4fa9d6650c5eac552
+      internalID: 1636091377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2d7397f2ad60e45b0d7d672cce4095
+      internalID: -1362617598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c5dfa156d1d5e409c7094ea0187e27
+      internalID: -1664455177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a13a07ba98ad424fbe3f4007170211f
+      internalID: 1662140889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandUp5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 410
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c39c14ec38a044489dc36772b47e26
+      internalID: -1286462018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9472820e188c16443a96dff24b7b4f11
+      internalID: -1104487185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebe107f4e21813448e2428a14ef7ef1
+      internalID: 1383410381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd6799555b52ac4bbc16acb82f05ed7
+      internalID: -1321553754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6971f62106813c44889b636e47c00740
+      internalID: -74884126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbc0247b8bb40c4186402f6e3d2ff86
+      internalID: -1439752788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoUp5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 369
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5d534607176bd488845166fa0d8c38
+      internalID: 831871560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1717c67b3ef45d4e84d8f6208d73080
+      internalID: 1706061522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a547e4a82a5e8c4ca6cf0c296b168e0
+      internalID: -2003241517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec4f8cfe207d3d4798e6aeab2451ba0
+      internalID: 1312392202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429219e37d9f84e4ab941428e94543de
+      internalID: -1843450777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6274dc875d61b46810853571854af7
+      internalID: -1142626667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandLeft5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 328
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab1ae645881b7047a049a2923bef022
+      internalID: -399548847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b10f527b239374e90e477bbd76988f
+      internalID: -2110828855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa22f136f2869641bdf842728685804
+      internalID: 684494374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af86904b11493746a5549efce0fa5aa
+      internalID: 1538890990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45021f051b744ac4fb763fc0d7e15c5d
+      internalID: 1166027147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12760a963b7fbae43a8d4279c6c7d807
+      internalID: 1146520973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoLeft5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 287
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a545d2e79c1ce2d4f915bfccd51fccb2
+      internalID: 1563705821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0013b25fc83c4cf4abc6c7fea4aa4aab
+      internalID: -785231324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6558ba190241a334a8660d4d960d648e
+      internalID: -834032491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2717f71a237428142a1c8ad489997373
+      internalID: 31127914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c816085a09a91fc4082af07078d887c2
+      internalID: 1198154091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908075a9e56cae94fb4997350e9c6af3
+      internalID: -1863759184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeStandRight5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 246
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec8ac22d161d5a4a85881829c52e4cd
+      internalID: 823344314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4b90192e12e6545b5cc826fc0e11c2
+      internalID: -922851188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dac9e71162c234e934600a43cf7c47
+      internalID: 644018309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a629aca8d2963e84ea9ff0040e135726
+      internalID: -2019782615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cd87303bcf41c43b6c829d670848ad
+      internalID: 369933353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60185c209195c624e9bfca338974022b
+      internalID: 1762113769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeGoRight5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 205
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6c282417a62f4499e9ffc7e27a329e
+      internalID: 1232294221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2a0a7b1ee8f4546a169e1d6e1d4e5a
+      internalID: 2086181872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77cb0d6898b23a49b2e6d32b2756a50
+      internalID: -599610127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddca7a11da5a0e49a4e9aa6527cb47c
+      internalID: -538230868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b375b9eebf511894c939f1ea7d974fc0
+      internalID: -745244705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0cf52bc0a147fa449be2f3e444c9c71
+      internalID: 1236564649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackLeft5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 164
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076038ba2172d2b40a35ba6feae4395f
+      internalID: 1859886204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7993e0eda423b34eafc03b8e4392d91
+      internalID: -1234934103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4dfce27d36f48f478ff3a7cbeed3995
+      internalID: 134557580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bd59e219c327c44b723adb06a3ce7d
+      internalID: -1435960515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791f1143819d45c458dba37e1b27e5bb
+      internalID: -1765852965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fba9fc905bbb634f940920471020e27
+      internalID: -2012491767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackRight5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 123
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6214fa85ee52b764898627005ee8dc78
+      internalID: -1645864099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34a2d96e4795444fa0a1e9a16d83dd2
+      internalID: 235104405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1ac6967f767284d8e6fc7befc51460
+      internalID: 1863331709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c464a17c807b7f540a636c71282ff9c4
+      internalID: -767172714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc56c5665ebcb64e9587d1155e2989c
+      internalID: -1893708337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50157a2d6acbe1b4a99606d95726906d
+      internalID: -1154172072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackDown5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 41
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cde4d043f60ee469c63caaafd55140
+      internalID: 1150712646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621e2aab8b4b008438a132c934b02079
+      internalID: -757493766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9547c3d2c90789d44b8116d6f1b5899f
+      internalID: 2083340194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c062d1183755845b5ff148ae47078c
+      internalID: 1092341928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a5cf7c3b5967c4ba0b6d493f6e857b
+      internalID: 827557277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3284604ad654e7144acede0a7c39b27e
+      internalID: 2026059785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMeleeAttackUp5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd48b316f1f5c844bbbfec5328a4948
+      internalID: -1308299887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinMRange
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ed929dbeecda04c94b6e04e8da3657
+      internalID: 369242149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 30040a08bf6e2474e8c8f36f39bc3751
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      goblinMRange: 369242149
+      goblinMeleeAttackDown0: 235104405
+      goblinMeleeAttackDown1: 1863331709
+      goblinMeleeAttackDown2: -767172714
+      goblinMeleeAttackDown3: -1893708337
+      goblinMeleeAttackDown4: -1154172072
+      goblinMeleeAttackDown5: 1150712646
+      goblinMeleeAttackLeft0: 2086181872
+      goblinMeleeAttackLeft1: -599610127
+      goblinMeleeAttackLeft2: -538230868
+      goblinMeleeAttackLeft3: -745244705
+      goblinMeleeAttackLeft4: 1236564649
+      goblinMeleeAttackLeft5: 1859886204
+      goblinMeleeAttackRight0: -1234934103
+      goblinMeleeAttackRight1: 134557580
+      goblinMeleeAttackRight2: -1435960515
+      goblinMeleeAttackRight3: -1765852965
+      goblinMeleeAttackRight4: -2012491767
+      goblinMeleeAttackRight5: -1645864099
+      goblinMeleeAttackUp0: -757493766
+      goblinMeleeAttackUp1: 2083340194
+      goblinMeleeAttackUp2: 1092341928
+      goblinMeleeAttackUp3: 827557277
+      goblinMeleeAttackUp4: 2026059785
+      goblinMeleeAttackUp5: -1308299887
+      goblinMeleeGoDown0: -1100792981
+      goblinMeleeGoDown1: -1100792981
+      goblinMeleeGoDown2: 2006167838
+      goblinMeleeGoDown3: -1283288510
+      goblinMeleeGoDown4: -1869551006
+      goblinMeleeGoDown5: 1371219640
+      goblinMeleeGoLeft0: -2110828855
+      goblinMeleeGoLeft1: 684494374
+      goblinMeleeGoLeft2: 1538890990
+      goblinMeleeGoLeft3: 1166027147
+      goblinMeleeGoLeft4: 1146520973
+      goblinMeleeGoLeft5: 1563705821
+      goblinMeleeGoRight0: -922851188
+      goblinMeleeGoRight1: 644018309
+      goblinMeleeGoRight2: -2019782615
+      goblinMeleeGoRight3: 369933353
+      goblinMeleeGoRight4: 1762113769
+      goblinMeleeGoRight5: 1232294221
+      goblinMeleeGoUp0: 1383410381
+      goblinMeleeGoUp1: -1321553754
+      goblinMeleeGoUp2: -74884126
+      goblinMeleeGoUp3: -1439752788
+      goblinMeleeGoUp4: -1439752788
+      goblinMeleeGoUp5: 831871560
+      goblinMeleeStandDown0: 527969505
+      goblinMeleeStandDown1: -1904646873
+      goblinMeleeStandDown2: -52679974
+      goblinMeleeStandDown3: 857728267
+      goblinMeleeStandDown4: -622432244
+      goblinMeleeStandDown5: 1367034154
+      goblinMeleeStandLeft0: 1706061522
+      goblinMeleeStandLeft1: -2003241517
+      goblinMeleeStandLeft2: 1312392202
+      goblinMeleeStandLeft3: -1843450777
+      goblinMeleeStandLeft4: -1142626667
+      goblinMeleeStandLeft5: -399548847
+      goblinMeleeStandRight0: -785231324
+      goblinMeleeStandRight1: -834032491
+      goblinMeleeStandRight2: 31127914
+      goblinMeleeStandRight3: 1198154091
+      goblinMeleeStandRight4: -1863759184
+      goblinMeleeStandRight5: 823344314
+      goblinMeleeStandUp0: 1636091377
+      goblinMeleeStandUp1: -1362617598
+      goblinMeleeStandUp2: -1664455177
+      goblinMeleeStandUp3: 1662140889
+      goblinMeleeStandUp4: -1286462018
+      goblinMeleeStandUp5: -1104487185
+      goblinmelee_60: 296170509
+      goblinmelee_61: -1175043958
+      goblinmelee_62: 1330474494
+      goblinmelee_63: -1778806254
+      goblinmelee_64: 84990937
+      goblinmelee_65: 235104405
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

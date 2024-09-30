@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,6 +147,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22.949999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.95
       objectReference: {fileID: 0}
@@ -185,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077690492971211203, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11e6c7d61549db04b964a3b4b8b1ac8a, type: 3}
@@ -735,17 +751,17 @@ MonoBehaviour:
   door: {fileID: 8721979562122025140, guid: a5e04252dca3d0d46bcbdcabac523608, type: 3}
   tiles:
   - {fileID: 862540447, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: -1616999036, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -1234340018, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: 641258366, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: 67169267, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: -2054059711, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: 1107991526, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: -530260385, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: 11708054, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  - {fileID: 2032296125, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -691224848, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: -1616999036, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 2032296125, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 1107991526, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 67169267, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 641258366, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: -530260385, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: 901533148, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: -2054059711, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: 222895183, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: 1300135399, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -1737557322, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}

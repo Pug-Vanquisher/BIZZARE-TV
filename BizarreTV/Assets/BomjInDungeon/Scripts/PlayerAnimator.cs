@@ -14,8 +14,11 @@ namespace BID
         }
         void Update()
         {
-            animator.SetFloat("X", pm.velik.x);
-            animator.SetFloat("Y", pm.velik.y);
+            if(pm.velik != Vector2.zero)
+            {
+                animator.SetFloat("X", pm.velik.x);
+                animator.SetFloat("Y", pm.velik.y);
+            }
             animator.SetFloat("Speed", pm.velik.magnitude);
         }
     }
