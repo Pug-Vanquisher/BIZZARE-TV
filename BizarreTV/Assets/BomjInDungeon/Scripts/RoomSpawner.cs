@@ -14,7 +14,7 @@ public class RoomSpawner : MonoBehaviour
     public int multiplyer;
 
     public Vector2 roomsize;
-    // Start is called before the first frame update
+    
     void Start()
     {
         for (float y = -roomsize.y; y <= roomsize.y; y++)
@@ -89,11 +89,5 @@ public class RoomSpawner : MonoBehaviour
 
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
