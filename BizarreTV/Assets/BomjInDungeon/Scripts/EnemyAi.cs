@@ -46,7 +46,9 @@ public class EnemyAi : MonoBehaviour
             if (player.transform.position.y >= transform.position.y) { velik.y = 1; }
             if (player.transform.position.y < transform.position.y) { velik.y = -1; }
 
-            
+            if (Mathf.Abs(player.transform.position.x - transform.position.x) <= 0.2 ) { velik.x = 0; }
+            if (Mathf.Abs(player.transform.position.y - transform.position.y) <= 0.2) { velik.y = 0; }
+
 
             hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
 
