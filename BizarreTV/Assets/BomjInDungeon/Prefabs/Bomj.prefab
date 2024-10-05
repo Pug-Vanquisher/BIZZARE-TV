@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2510880455436732962}
   - component: {fileID: 4635954419689734015}
   - component: {fileID: 696335732885331868}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bomj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

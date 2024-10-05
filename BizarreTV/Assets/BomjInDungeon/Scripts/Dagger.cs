@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dagger : MonoBehaviour
+namespace BID
 {
-    public float lifetime = 1f;
-    private float startime;
-    public int speed;
-
-    void Start()
+    public class Dagger : MonoBehaviour
     {
-        startime = Time.time;
+        public float lifetime = 1f;
+        private float startime;
+        public int speed;
+
+        void Start()
+        {
+            startime = Time.time;
+        }
+
+        void Update()
+        {
+            if (Time.time >= startime + lifetime) { Destroy(gameObject); }
+        }
     }
 
-    void Update()
-    {
-        if (Time.time >= startime + lifetime) { Destroy(gameObject); }
-    }
 }

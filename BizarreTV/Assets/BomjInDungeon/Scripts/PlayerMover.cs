@@ -28,9 +28,7 @@ namespace BID
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
-            Vector3 side1 = mousePosition - transform.position;
-
-            Vector3 side1cos = Quaternion.AngleAxis(-90, Vector3.forward) * side1;
+            Vector3 side1cos = Quaternion.AngleAxis(-90, Vector3.forward) * (mousePosition - transform.position);
 
             if (Input.GetKeyDown(key.Attack))
             {
@@ -43,7 +41,7 @@ namespace BID
         private void FixedUpdate()
         {
             hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
-
+            
             if (hit.collider == null) { pl_tmp.MovePosition(new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed); } 
         }
     }
