@@ -18,6 +18,7 @@ namespace BID
         void Update()
         {
             if (Time.time >= startime + lifetime) { Destroy(gameObject); }
+            transform.position += transform.right * Time.deltaTime * speed;
         }
     }
 

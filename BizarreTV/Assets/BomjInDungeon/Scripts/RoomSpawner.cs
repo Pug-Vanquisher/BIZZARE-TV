@@ -8,7 +8,6 @@ namespace BID
     public class RoomSpawner : MonoBehaviour
     {
         public GameObject wall;
-        public GameObject floor;
         public GameObject door;
 
         public Sprite[] tiles;
@@ -25,49 +24,49 @@ namespace BID
                 {
                     if (x == -roomsize.x & y == roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[0];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (x == roomsize.x & y == roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[1];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (x == -roomsize.x & y == -roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[2];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (x == roomsize.x & y == -roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[3];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (y == roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[4];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (y == -roomsize.y)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[5];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (x == roomsize.x)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[6];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
                     else if (x == -roomsize.x)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[7];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
@@ -75,14 +74,14 @@ namespace BID
 
                     else if (y == roomsize.y - 1)
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[Random.Range(11, 16)];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }
 
                     else
                     {
-                        var a = Instantiate(wall);
+                        var a = Instantiate(wall, transform);
                         a.layer = 0;
                         a.GetComponent<BoxCollider2D>().enabled = false;
                         a.GetComponent<SpriteRenderer>().sprite = tiles[Random.Range(8, 11)];

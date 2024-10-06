@@ -782,7 +782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 8721979562122025140, guid: 31822c9daf9c8504c834969adccaae6b, type: 3}
-  floor: {fileID: 8721979562122025140, guid: 52c0bdd5a4bcfd6429e9ed101403e91b, type: 3}
   door: {fileID: 8721979562122025140, guid: a5e04252dca3d0d46bcbdcabac523608, type: 3}
   tiles:
   - {fileID: 862540447, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
@@ -831,11 +830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833293638586360517, guid: 31822c9daf9c8504c834969adccaae6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.22
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5833293638586360517, guid: 31822c9daf9c8504c834969adccaae6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.89
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5833293638586360517, guid: 31822c9daf9c8504c834969adccaae6b, type: 3}
       propertyPath: m_LocalPosition.z

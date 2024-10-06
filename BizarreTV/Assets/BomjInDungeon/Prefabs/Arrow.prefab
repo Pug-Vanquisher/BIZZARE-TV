@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1842305853398601592}
   - component: {fileID: 1842305853398601593}
   - component: {fileID: 1842305853398601599}
-  - component: {fileID: 6250423756474505788}
+  - component: {fileID: 6633848820614761320}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1842305853398601597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 0.7}
   m_Direction: 1
---- !u!114 &6250423756474505788
+--- !u!114 &6633848820614761320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1842305853398601597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e9874672ec9ae4897e63e57c5da48e, type: 3}
+  m_Script: {fileID: 11500000, guid: c77d3144ad3109a4e92da782c68a1c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
