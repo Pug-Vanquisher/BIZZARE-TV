@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4682256760805990435}
   - component: {fileID: 4682256760805990436}
   - component: {fileID: 4682256760805990438}
+  - component: {fileID: 8937605239083330395}
   - component: {fileID: 5175776509150032307}
   - component: {fileID: 2510880455436732962}
   - component: {fileID: 4635954419689734015}
@@ -106,6 +107,20 @@ MonoBehaviour:
   speed: 0.45
   dagger: {fileID: 3899623944128159961, guid: 5347981c243a7e04599704d13f6a65e7, type: 3}
   AttackSpreadness: 0.2
+--- !u!114 &8937605239083330395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682256760805990439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f6de5f11f9a1488139846043554b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhp: 6
+  currenthp: 0
 --- !u!114 &5175776509150032307
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,9 +17,6 @@ namespace BID
         public GameObject dagger;
         public float AttackSpreadness = 0.03f;
 
-        public int maxhp;
-        public int currenthp;
-
         void Update()
         {
             velik = Vector2.zero;

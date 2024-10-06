@@ -10,6 +10,8 @@ namespace BID
         private float startime;
         public int speed;
 
+        public int damage;
+
         void Start()
         {
             startime = Time.time;
@@ -19,6 +21,25 @@ namespace BID
         {
             if (Time.time >= startime + lifetime) { Destroy(gameObject); }
             transform.position += transform.right * Time.deltaTime * speed;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if ( collision.gameObject.layer == 16)
+            {
+                collision.gameObject.GetComponent<HpManager>().currenthp -= damage;
+                transform.parent = collision.gameObject.transform;
+                speed = 0;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                startime = Time.time;
+            }
+            else if (collision.gameObject.layer == 15)
+            {
+                transform.parent = collision.gameObject.transform;
+                speed = 0;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                startime = Time.time;
+            }
         }
     }
 

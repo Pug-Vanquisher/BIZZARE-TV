@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 411226322803691040}
   - component: {fileID: 411226322803691047}
   - component: {fileID: 411226322803691046}
+  - component: {fileID: 5926991166182396908}
   m_Layer: 16
   m_Name: GoblinRanged
   m_TagString: Untagged
@@ -140,3 +141,17 @@ MonoBehaviour:
   arrow: {fileID: 1842305853398601597, guid: 773063d3367194749a609a26fe519f83, type: 3}
   attackRange: 100
   vlframes: 3
+--- !u!114 &5926991166182396908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411226322803691067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f6de5f11f9a1488139846043554b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhp: 3
+  currenthp: 0

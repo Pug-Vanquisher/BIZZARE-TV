@@ -21,11 +21,6 @@ namespace BID
             current_vlframes = 0;
         }
 
-        void Update()
-        {
-
-        }
-
         private void FixedUpdate()
         {
             if (Vector2.Distance(transform.position, player.transform.position) <= attackRange & current_vlframes == 0)

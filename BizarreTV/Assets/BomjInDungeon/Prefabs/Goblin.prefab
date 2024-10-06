@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8077690492971211203}
   - component: {fileID: 6144975746278586148}
   - component: {fileID: 6400966849489374705}
+  - component: {fileID: 2741897795279959906}
   - component: {fileID: 6852792371776153679}
   - component: {fileID: 3617301792888932401}
   - component: {fileID: 3868889975384610706}
@@ -104,8 +105,23 @@ MonoBehaviour:
   player: {fileID: 4682256760805990439, guid: bd06a8c09b7642a4493845cd1d801405, type: 3}
   speed: 0.3
   velik: {x: 0, y: 0}
+  dagger: {fileID: 3899623944128159961, guid: 5347981c243a7e04599704d13f6a65e7, type: 3}
   attackRange: 3
   vlframes: 1
+--- !u!114 &2741897795279959906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228829314035809848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f6de5f11f9a1488139846043554b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhp: 5
+  currenthp: 0
 --- !u!50 &6852792371776153679
 Rigidbody2D:
   serializedVersion: 4

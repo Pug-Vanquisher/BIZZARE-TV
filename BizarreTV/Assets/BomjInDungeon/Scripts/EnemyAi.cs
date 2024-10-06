@@ -12,6 +12,8 @@ namespace BID
         public float speed;
         public Vector2 velik;
 
+        public GameObject dagger;
+
         private RaycastHit2D hit;
 
         public float attackRange;
@@ -72,6 +74,10 @@ namespace BID
 
         void Attack()
         {
+            var a = Instantiate(dagger, transform);
+            a.transform.position = transform.position;
+            a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(player.transform.position - a.transform.position, Vector3.right), Vector3.forward);
+
             Debug.Log("палучай!!!");
 
             current_vlframes = vlframes;
