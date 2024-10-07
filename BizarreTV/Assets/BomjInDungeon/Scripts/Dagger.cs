@@ -11,7 +11,6 @@ namespace BID
         public int speed;
 
         public int damage;
-
         void Start()
         {
             startime = Time.time;
@@ -21,6 +20,7 @@ namespace BID
         {
             if (Time.time >= startime + lifetime) { Destroy(gameObject); }
             transform.position += transform.right * Time.deltaTime * speed;
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

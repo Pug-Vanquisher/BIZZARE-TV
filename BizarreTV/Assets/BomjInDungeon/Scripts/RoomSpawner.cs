@@ -83,7 +83,10 @@ namespace BID
                     {
                         var a = Instantiate(wall, transform);
                         a.layer = 0;
-                        a.GetComponent<BoxCollider2D>().enabled = false;
+                        var bc = a.GetComponent<BoxCollider2D>();
+                        var rb = a.GetComponent<Rigidbody2D>();
+                        Destroy(bc);
+                        Destroy(rb);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[Random.Range(8, 11)];
                         a.transform.position = new Vector2(x, y) * multiplyer;
                     }

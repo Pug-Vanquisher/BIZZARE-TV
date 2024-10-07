@@ -19,6 +19,7 @@ namespace BID
 
         void Update()
         {
+
             velik = Vector2.zero;
 
             if (Input.GetKey(key.Up)) { velik.y += 1; }

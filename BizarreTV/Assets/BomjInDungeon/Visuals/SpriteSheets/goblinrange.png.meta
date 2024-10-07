@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e547067da887a81489413d659598f32d
+guid: 39f66a706f0165d4da8b37d4d92b8d2c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chubricStandDown0
+      name: goblinRangeStandDown0
       rect:
         serializedVersion: 2
         x: 0
-        y: 133
-        width: 18
-        height: 19
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76a52ea1ff30ff947aea913614670b32
-      internalID: -91513641
+      spriteID: 7e771ec81f7056042af19d7db093bdb0
+      internalID: 1321917035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandDown1
+      name: goblinRangeStandDown1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 133
-        width: 18
-        height: 19
+        x: 32
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df450f4c1a4366e42811722e5e6d951c
-      internalID: -668218441
+      spriteID: 6f3d177eb885c684e8ad3043dc7b6484
+      internalID: -1091651010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandDown2
+      name: goblinRangeStandDown2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 133
-        width: 18
-        height: 19
+        x: 64
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c7655ddeb5f214ca24f47ae406c8a6
-      internalID: 140460240
+      spriteID: fd4b5b85bcb308c49a1e4b90095c7884
+      internalID: 546754381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandDown3
+      name: goblinRangeStandDown3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 133
-        width: 18
-        height: 19
+        x: 96
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3b9c373b13434c4480582fc4f775cf1
-      internalID: -1386621326
+      spriteID: 24ea16e5ec4ad5a458842edd33da6a8e
+      internalID: 1065680830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandDown4
+      name: goblinRangeStandDown4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 133
-        width: 18
-        height: 19
+        x: 128
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf8cdd01e1e03541a00eafa6f1f6b7a
-      internalID: -1253679623
+      spriteID: bf784ad9883ffbe4e8d0ff527033d511
+      internalID: 968871174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandDown5
+      name: goblinRangeStandDown5
       rect:
         serializedVersion: 2
-        x: 90
-        y: 133
-        width: 18
-        height: 19
+        x: 160
+        y: 126
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,146 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53601db1caba0984e807af8c2e123d83
-      internalID: 1837590761
+      spriteID: a1bab80022fead8458904cd7836b8c53
+      internalID: 1347835913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoDown0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e462aa6b2b6dfb45b2e2d23e3c1d128
-      internalID: -1117808309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoDown1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a5d87cfe9c70814cabad6aa64de353d
-      internalID: -2026328237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoDown2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fdccb30894ebb04bbf67a6f2cd098c3
-      internalID: 695476797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoDown3
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea00695bc02be92498d67025360d70f5
-      internalID: -1243453380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoDown4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25a674ea89cde6641a9995c58cc66c1e
-      internalID: -1300971033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoDown5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 114
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d4dc596c5804f842be802e87454fbfa
-      internalID: -1142209694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricStandUp0
+      name: goblinRangeStandUp0
       rect:
         serializedVersion: 2
         x: 0
-        y: 95
-        width: 18
-        height: 19
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f1e7194584ebe14d820958badb655d6
-      internalID: -2089991131
+      spriteID: 427c0a2f97938204faaac8c73111c4b2
+      internalID: 2084212925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandUp1
+      name: goblinRangeStandUp1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 95
-        width: 18
-        height: 19
+        x: 32
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b61ef1a31a017024fa0e5018db22c2df
-      internalID: -2052327752
+      spriteID: d8b09c3ec43f5e34a997b4bf2c183781
+      internalID: -657458115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandUp2
+      name: goblinRangeStandUp2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 95
-        width: 18
-        height: 19
+        x: 64
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12bbecbd464ed0044ab1ebf7ab8fab7d
-      internalID: 1127275623
+      spriteID: b8d5bf6d32a09434d839232092cdc0a6
+      internalID: 954307284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandUp3
+      name: goblinRangeStandUp3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 95
-        width: 18
-        height: 19
+        x: 96
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2254d6f8a2a19394585bfaa7a96c45bb
-      internalID: -588901429
+      spriteID: 3081f0e2383a4fe4785c210007c4a10f
+      internalID: 693997511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandUp4
+      name: goblinRangeStandUp4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 95
-        width: 18
-        height: 19
+        x: 128
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c01f2a4c8c192b346b9f1c3629c224a8
-      internalID: -459810600
+      spriteID: 9840a2aa190aa1c41beb4b5205d96eb8
+      internalID: 686405937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandUp5
+      name: goblinRangeStandUp5
       rect:
         serializedVersion: 2
-        x: 90
-        y: 95
-        width: 18
-        height: 19
+        x: 160
+        y: 108
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,146 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9a67cb4923336f428c40340e4ca289b
-      internalID: 1787611479
+      spriteID: 88eab617009e4ad4989d8eaef0870eba
+      internalID: 1702270402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoUp0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfc9884fb91d92647b4d43a55807b0ac
-      internalID: -1764830590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoUp1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3692f0d3668043648ae56f4ea4f39b72
-      internalID: -60469173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoUp2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6ace99a7bdb39b419c7c2c482ca218e
-      internalID: 1862549859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoUp3
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e73fb08c6a3b36445850c969ebcf15fd
-      internalID: 459839167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoUp4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 023497d71ae36c94c8131627dfad7bfa
-      internalID: -1676173968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoUp5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 76
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 362d397608cafee4dbe0c5ad740fc4ab
-      internalID: 91329897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricStandRight0
+      name: goblinRangeStandRight0
       rect:
         serializedVersion: 2
         x: 0
-        y: 57
-        width: 18
-        height: 19
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8965356762252b4dbc4bd2c5bf69158
-      internalID: -1920209696
+      spriteID: fdf675285e88c60409f3ba46793064ff
+      internalID: 755117249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandRight1
+      name: goblinRangeStandRight1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 57
-        width: 18
-        height: 19
+        x: 32
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e99ce5b66afdad34d88824df2319b85b
-      internalID: 1863215227
+      spriteID: bffcb225d52a162438c98483a357b978
+      internalID: -2061211233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandRight2
+      name: goblinRangeStandRight2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 57
-        width: 18
-        height: 19
+        x: 64
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5878981f34c61041b636c0d5af07274
-      internalID: -220779050
+      spriteID: aa221717db1a4734d87ad6a09f2c44f1
+      internalID: 336986879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandRight3
+      name: goblinRangeStandRight3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 57
-        width: 18
-        height: 19
+        x: 96
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0db0c7ad2249c8468f738d787373e20
-      internalID: 183659097
+      spriteID: 72c49bacde596a744b21907b636265ef
+      internalID: -516796908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandRight4
+      name: goblinRangeStandRight4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 57
-        width: 18
-        height: 19
+        x: 128
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9237d5bd362fc14aa194fd5afde9dad
-      internalID: 1254289596
+      spriteID: e05099072c9113f42a209c2df15ee045
+      internalID: 792753553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandRight5
+      name: goblinRangeStandRight5
       rect:
         serializedVersion: 2
-        x: 90
-        y: 57
-        width: 18
-        height: 19
+        x: 160
+        y: 90
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,146 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5361bc63a6f089643a0e2b1231d05446
-      internalID: -488960353
+      spriteID: c7d3fb36728f4a8479aa3eefc9655ecc
+      internalID: 121963652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoRight0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4af90c409811ac45afdca73f400cdd8
-      internalID: -667560271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoRight1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea8c065d39d2a5146ae362350f5d544b
-      internalID: -147214837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoRight2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67300a01fdf100341ad1a40ba0e65f4e
-      internalID: 394020630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoRight3
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5da4185154ef51c419d731175ebca2df
-      internalID: 1221402868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoRight4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddece569789b55d4b997e2c75669e436
-      internalID: -2028913796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricGoRight5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 38
-        width: 18
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1128315d874c05e45aa0d8dc8d96810c
-      internalID: -997630164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chubricStandLeft0
+      name: goblinRangeStandLeft0
       rect:
         serializedVersion: 2
         x: 0
-        y: 19
-        width: 18
-        height: 19
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -875,20 +497,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d04bd1c2a3f5c04185a403819381544
-      internalID: 1078891896
+      spriteID: b42e2028dc8ed994fa0d19dac060ab3c
+      internalID: 1797057341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandLeft1
+      name: goblinRangeStandLeft1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 19
-        width: 18
-        height: 19
+        x: 32
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -896,20 +518,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20d0483c66ae1d0429834eb443ede647
-      internalID: 696518770
+      spriteID: 4a10c94f59fc26941929dcce3352a952
+      internalID: -1392616673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandLeft2
+      name: goblinRangeStandLeft2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 19
-        width: 18
-        height: 19
+        x: 64
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,20 +539,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a57260352c5617418fbaf8e52a091f3
-      internalID: -577503409
+      spriteID: 4e5f164783505fb4cb651ebe6f715b38
+      internalID: -1928408842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandLeft3
+      name: goblinRangeStandLeft3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 19
-        width: 18
-        height: 19
+        x: 96
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -938,20 +560,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bedf7b6f2fa496439f4f4e969b91eb3
-      internalID: -1721835602
+      spriteID: 5843fa10bf732ee498bd47845079157e
+      internalID: 75145274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandLeft4
+      name: goblinRangeStandLeft4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 19
-        width: 18
-        height: 19
+        x: 128
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -959,20 +581,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8e04656607b66c40aaa15ade6782910
-      internalID: 1844527423
+      spriteID: dacb5acade5cced449f3fd9221dab507
+      internalID: 942226642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricStandLeft5
+      name: goblinRangeStandLeft5
       rect:
         serializedVersion: 2
-        x: 90
-        y: 19
-        width: 18
-        height: 19
+        x: 160
+        y: 72
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,20 +602,398 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9b5f4c593625c4f87998cf01a5db62
-      internalID: -102002062
+      spriteID: 60d6687647985ee4888a16b8058ae647
+      internalID: -1963580062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft0
+      name: goblinRangeAttackLeft0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e557ddf9facf7443958afcacd3c1146
+      internalID: 1827980740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackLeft1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cb295499e7cf542a4b89e993c18677
+      internalID: -1192982359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackLeft2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856baee34c8b1984aad496d8d892016f
+      internalID: 815007587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackLeft3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb461500c7a89943816b0eda29f93b0
+      internalID: 621446930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackLeft4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781fb86f5b853a14c9597827751eac0a
+      internalID: 680790357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackLeft5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 54
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be85459d05719e3418a45cf8dc0341ec
+      internalID: 1133324103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8cc6e3e75eb9941b9bd177d1993532
+      internalID: -1906365923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa28f496fb35d9148a0055165ebf75b0
+      internalID: 672947281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd251b9885b114458e04fafd19272ef
+      internalID: 607119365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0590155dd08705c45ad9a758c22af3f3
+      internalID: 391166080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c89a36775b067439b081e6a45b6170
+      internalID: 1396073728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackRight5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 36
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c22535538567e4e94e14343bd9c837
+      internalID: 1149904122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac2ff283bdf6ca4ea6be0af9519ccda
+      internalID: 1813729945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93bc267607b00b46aee8f5345d35794
+      internalID: 698318112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f165188666a034e9d54972946baf6e
+      internalID: 675330651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc2dd97d0c7707449dd3c67caf5d9e5
+      internalID: 1959151224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43de06b24e2a99f4b9f9b7f1691d4fd2
+      internalID: -1356808951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackDown5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 18
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d951e458ff85534ba7a9233ef0d6013
+      internalID: 311371513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblinRangeAttackUp0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1001,20 +1001,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c7f04d19ded0c2449cd6d78e3a8d4f9
-      internalID: 587358454
+      spriteID: ba50596dff3f3c4408a00f65a3da27c1
+      internalID: -98972438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft1
+      name: goblinRangeAttackUp1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 32
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,20 +1022,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0741d4fd66bd59346a1725aeac6067fc
-      internalID: -1429741358
+      spriteID: ee0558b9751f38d41809787f09dd14e3
+      internalID: 1825371212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft2
+      name: goblinRangeAttackUp2
       rect:
         serializedVersion: 2
-        x: 36
+        x: 64
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1043,20 +1043,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6901afbd198c74f96039817f93cd73
-      internalID: -1570421686
+      spriteID: b172219d4edd5244aa88910b3729d448
+      internalID: -666132446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft3
+      name: goblinRangeAttackUp3
       rect:
         serializedVersion: 2
-        x: 54
+        x: 96
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,20 +1064,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9269b98d332d0a74ab199e38d0c7285c
-      internalID: -1858083383
+      spriteID: 606914ec0e0f7e5489f335a08150fd15
+      internalID: 1936725742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft4
+      name: goblinRangeAttackUp4
       rect:
         serializedVersion: 2
-        x: 72
+        x: 128
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,20 +1085,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8bfe6c5ae4257645b06fff8b486210f
-      internalID: 864732495
+      spriteID: e375977c3393cd64bb1d268e2e9a2356
+      internalID: 1271359936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chubricGoLeft5
+      name: goblinRangeAttackUp5
       rect:
         serializedVersion: 2
-        x: 90
+        x: 160
         y: 0
-        width: 18
-        height: 19
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1106,8 +1106,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f97d02611d95f54e8d64c4771a0f134
-      internalID: 271260766
+      spriteID: 1eb02b5c901c6764a82a67a243be9ea1
+      internalID: -1323618126
       vertices: []
       indices: 
       edges: []
@@ -1115,7 +1115,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ffb467b1626be164aabc62562c9c2f75
+    spriteID: 963ba5cdf5c4bd24c88e4559fcb051d1
     internalID: 0
     vertices: []
     indices: 
@@ -1123,54 +1123,54 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chubricGoDown0: -1117808309
-      chubricGoDown1: -2026328237
-      chubricGoDown2: 695476797
-      chubricGoDown3: -1243453380
-      chubricGoDown4: -1300971033
-      chubricGoDown5: -1142209694
-      chubricGoLeft0: 587358454
-      chubricGoLeft1: -1429741358
-      chubricGoLeft2: -1570421686
-      chubricGoLeft3: -1858083383
-      chubricGoLeft4: 864732495
-      chubricGoLeft5: 271260766
-      chubricGoRight0: -667560271
-      chubricGoRight1: -147214837
-      chubricGoRight2: 394020630
-      chubricGoRight3: 1221402868
-      chubricGoRight4: -2028913796
-      chubricGoRight5: -997630164
-      chubricGoUp0: -1764830590
-      chubricGoUp1: -60469173
-      chubricGoUp2: 1862549859
-      chubricGoUp3: 459839167
-      chubricGoUp4: -1676173968
-      chubricGoUp5: 91329897
-      chubricStandDown0: -91513641
-      chubricStandDown1: -668218441
-      chubricStandDown2: 140460240
-      chubricStandDown3: -1386621326
-      chubricStandDown4: -1253679623
-      chubricStandDown5: 1837590761
-      chubricStandLeft0: 1078891896
-      chubricStandLeft1: 696518770
-      chubricStandLeft2: -577503409
-      chubricStandLeft3: -1721835602
-      chubricStandLeft4: 1844527423
-      chubricStandLeft5: -102002062
-      chubricStandRight0: -1920209696
-      chubricStandRight1: 1863215227
-      chubricStandRight2: -220779050
-      chubricStandRight3: 183659097
-      chubricStandRight4: 1254289596
-      chubricStandRight5: -488960353
-      chubricStandUp0: -2089991131
-      chubricStandUp1: -2052327752
-      chubricStandUp2: 1127275623
-      chubricStandUp3: -588901429
-      chubricStandUp4: -459810600
-      chubricStandUp5: 1787611479
+      goblinRangeAttackDown0: 1813729945
+      goblinRangeAttackDown1: 698318112
+      goblinRangeAttackDown2: 675330651
+      goblinRangeAttackDown3: 1959151224
+      goblinRangeAttackDown4: -1356808951
+      goblinRangeAttackDown5: 311371513
+      goblinRangeAttackLeft0: 1827980740
+      goblinRangeAttackLeft1: -1192982359
+      goblinRangeAttackLeft2: 815007587
+      goblinRangeAttackLeft3: 621446930
+      goblinRangeAttackLeft4: 680790357
+      goblinRangeAttackLeft5: 1133324103
+      goblinRangeAttackRight0: -1906365923
+      goblinRangeAttackRight1: 672947281
+      goblinRangeAttackRight2: 607119365
+      goblinRangeAttackRight3: 391166080
+      goblinRangeAttackRight4: 1396073728
+      goblinRangeAttackRight5: 1149904122
+      goblinRangeAttackUp0: -98972438
+      goblinRangeAttackUp1: 1825371212
+      goblinRangeAttackUp2: -666132446
+      goblinRangeAttackUp3: 1936725742
+      goblinRangeAttackUp4: 1271359936
+      goblinRangeAttackUp5: -1323618126
+      goblinRangeStandDown0: 1321917035
+      goblinRangeStandDown1: -1091651010
+      goblinRangeStandDown2: 546754381
+      goblinRangeStandDown3: 1065680830
+      goblinRangeStandDown4: 968871174
+      goblinRangeStandDown5: 1347835913
+      goblinRangeStandLeft0: 1797057341
+      goblinRangeStandLeft1: -1392616673
+      goblinRangeStandLeft2: -1928408842
+      goblinRangeStandLeft3: 75145274
+      goblinRangeStandLeft4: 942226642
+      goblinRangeStandLeft5: -1963580062
+      goblinRangeStandRight0: 755117249
+      goblinRangeStandRight1: -2061211233
+      goblinRangeStandRight2: 336986879
+      goblinRangeStandRight3: -516796908
+      goblinRangeStandRight4: 792753553
+      goblinRangeStandRight5: 121963652
+      goblinRangeStandUp0: 2084212925
+      goblinRangeStandUp1: -657458115
+      goblinRangeStandUp2: 954307284
+      goblinRangeStandUp3: 693997511
+      goblinRangeStandUp4: 686405937
+      goblinRangeStandUp5: 1702270402
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
