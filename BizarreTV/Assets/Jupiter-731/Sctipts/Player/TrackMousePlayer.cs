@@ -9,19 +9,21 @@ namespace Jupiter731
         [SerializeField] GameObject player;
         [SerializeField] Camera MainCamera;
         private Vector2 _mousePosition;
+        private float _startCentreOffset;
         private float _centreOffset;
         private bool _isReflect = false;
 
 
         private void Awake()
         {
-            _centreOffset = Screen.width / 2;
+            _startCentreOffset = Screen.width / 2;
         }
 
         void Update()
         {
-            _centreOffset = _centreOffset + (MainCamera.transform.position.normalized.x - player.transform.position.normalized.x) * ;
+            _centreOffset = _startCentreOffset ;
             _mousePosition = Input.mousePosition;
+            //Debug.Log(_centreOffset.ToString() + _mousePosition);
             if (_mousePosition.x - _centreOffset < 0 && !_isReflect)
             {
                 _isReflect = true;
@@ -37,7 +39,9 @@ namespace Jupiter731
 
         private void Reflect()
         {
-            player.transform.localScale = -player.transform.localScale;
+            var scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
         }
     }
 }

@@ -21,6 +21,10 @@ namespace Jupiter731
 
         private void Awake()
         {
+            var startCoord = transform.position;
+            startCoord.x = target.position.x;
+            startCoord.y = target.position.y;
+            transform.position = startCoord;
             offset = target.position - transform.position;
             TickRateTime = new WaitForSeconds(1 / tickRate);
             StartCoroutine(Control());
