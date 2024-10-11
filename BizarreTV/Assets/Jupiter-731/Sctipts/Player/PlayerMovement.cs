@@ -40,7 +40,6 @@ namespace Jupiter731
             while (_currDashTime < dashTime) 
             {
                 _currDashTime += Time.deltaTime;
-                Debug.Log(direct * speed * dashMulti);
                 playerBody.velocity = direct * speed * dashMulti;
                 yield return _waiter;
             }
