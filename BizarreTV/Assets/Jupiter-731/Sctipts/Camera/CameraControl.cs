@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Jupiter731
 {
@@ -8,7 +9,7 @@ namespace Jupiter731
     {
         [SerializeField] Transform target;
         [SerializeField] float speed = 10f;
-        [SerializeField] private float tickRate = 100f;
+        [SerializeField] private float tickRate = 60f;
         [SerializeField] private float xBorderPos = 2f;
         [SerializeField] private float zBorderPos = 2f;
 
@@ -17,7 +18,10 @@ namespace Jupiter731
         private Vector3 offset;
         private WaitForSeconds TickRateTime;
 
-
+        //private void Start()
+        //{
+        //    Application.targetFrameRate = 60;
+        //}
 
         private void Awake()
         {
@@ -26,22 +30,15 @@ namespace Jupiter731
             startCoord.y = target.position.y;
             transform.position = startCoord;
             offset = target.position - transform.position;
-            TickRateTime = new WaitForSeconds(1 / tickRate);
-            StartCoroutine(Control());
         }
 
 
+        private void Update()
+        {       
+            smooth = Vector3.Lerp(transform.position, target.position - offset, speed);
+            smooth = MouseTrack(smooth);
+            transform.position = smooth;
 
-        IEnumerator Control()
-        {
-            while (true)
-            {
-
-                smooth = Vector3.Lerp(transform.position, target.position - offset, speed);
-                smooth = MouseTrack(smooth);
-                transform.position = smooth;
-                yield return TickRateTime;
-            }
         }
 
         private Vector3 MouseTrack(Vector3 Changed)

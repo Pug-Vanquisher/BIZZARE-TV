@@ -23,7 +23,7 @@ namespace Jupiter731
 
         private void FixedUpdate()
         {
-            if (_currHP < 0)
+            if (_currHP <= 0)
             {
                 Destroy(gameObject);
             }

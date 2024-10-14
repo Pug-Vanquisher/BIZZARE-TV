@@ -12,17 +12,26 @@ namespace Jupiter731
         [SerializeField] float damage = 10f;
         [SerializeField] LayerMask enemyLayer;
         [SerializeField] Transform attackPoint;
+        [SerializeField] BaseAnimator baseAnimator;
+        [SerializeField] float timeToStrike;
+        private float _strikeTimer;
 
 
         void Update()
         {
-            if (Input.GetKeyDown(meleeAttackKey))
+            if (Input.GetKeyDown(meleeAttackKey) && _strikeTimer > timeToStrike)
             {
                 Hit();
+                _strikeTimer = 0;
+            }
+            else
+            {
+                _strikeTimer += Time.deltaTime;
             }
         }
         private void Hit()
         {
+            baseAnimator.PlayAnimations();
             if (attackPoint == null)
             {
                 Debug.LogWarning("Attack Point не назначена.");
@@ -33,7 +42,7 @@ namespace Jupiter731
             foreach (Collider2D enemy in hitEnemies)
             {
                 Vector2 directionToEnemy = (enemy.transform.position - attackPoint.position).normalized;
-                Vector2 characterForward = GetCharacterForward();
+                Vector2 characterForward = transform.right;
                 float angleToEnemy = Vector2.Angle(characterForward, directionToEnemy);
                 Debug.Log($"Проверка врага: {enemy.name}, угол: {angleToEnemy}");
                 if (angleToEnemy < attackAngle)
@@ -48,17 +57,17 @@ namespace Jupiter731
             }
         }
 
-        Vector2 GetCharacterForward()
-        {
-            // Предполагается, что персонаж смотрит вправо по умолчанию
-            // Если персонаж повёрнут, можно использовать scale.x или другой способ определения направления
-            Vector2 forward = Vector2.right;
-            if (transform.localScale.x < 0)
-            {
-                forward = Vector2.left;
-            }
-            return forward;
-        }
+        //Vector2 GetCharacterForward()
+        //{
+        //    // Предполагается, что персонаж смотрит вправо по умолчанию
+        //    // Если персонаж повёрнут, можно использовать scale.x или другой способ определения направления
+        //    Vector2 forward = Vector2.right;
+        //    if (transform.localScale.x < 0)
+        //    {
+        //        forward = Vector2.left;
+        //    }
+        //    return forward;
+        //}
 
         void OnDrawGizmosSelected()
         {
@@ -69,7 +78,7 @@ namespace Jupiter731
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 
             // Рисуем конус атаки
-            Vector2 forward = GetCharacterForward() * attackRange;
+            Vector2 forward = transform.right * attackRange;
             Vector2 right = Quaternion.Euler(0, 0, attackAngle) * forward;
             Vector2 left = Quaternion.Euler(0, 0, -attackAngle) * forward;
 

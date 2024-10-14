@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseAnimator : MonoBehaviour
+namespace Jupiter731
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BaseAnimator : MonoBehaviour
     {
-        
-    }
+        [SerializeField] Animator animator;
+        [SerializeField] float animationTime;
+        [SerializeField] string triggerName = "MeleeAttack";
+        public void PlayAnimations()
+        {
+            animator.SetTrigger(triggerName);
+            StartCoroutine(EndAnimation());
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        IEnumerator EndAnimation()
+        {
+            yield return new WaitForSeconds(animationTime);
+            animator.ResetTrigger(triggerName);
+        }
     }
 }
