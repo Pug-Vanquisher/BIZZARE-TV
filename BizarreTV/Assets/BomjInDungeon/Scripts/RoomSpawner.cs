@@ -24,59 +24,39 @@ namespace BID
                 {
                     if (x == -roomsize.x & y == roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[0];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[0]);
                     }
                     else if (x == roomsize.x & y == roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[1];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[1]);
                     }
                     else if (x == -roomsize.x & y == -roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[2];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[2]);
                     }
                     else if (x == roomsize.x & y == -roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[3];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[3]);
                     }
                     else if (y == roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[4];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[4]);
                     }
                     else if (y == -roomsize.y)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[5];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[5]);
                     }
                     else if (x == roomsize.x)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[6];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[6]);
                     }
                     else if (x == -roomsize.x)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[7];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[7]);
                     }
-
-
                     else if (y == roomsize.y - 1)
                     {
-                        var a = Instantiate(wall, transform);
-                        a.GetComponent<SpriteRenderer>().sprite = tiles[Random.Range(11, 16)];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        CreateTile(x, y, tiles[Random.Range(11, 16)]);
                     }
 
                     else
@@ -88,11 +68,18 @@ namespace BID
                         Destroy(bc);
                         Destroy(rb);
                         a.GetComponent<SpriteRenderer>().sprite = tiles[Random.Range(8, 11)];
-                        a.transform.position = new Vector2(x, y) * multiplyer;
+                        a.transform.position = new Vector3(x, y) * multiplyer + transform.position;
                     }
 
                 }
             }
+        }
+
+        void CreateTile(float x, float y, Sprite sprite)
+        {
+            var a = Instantiate(wall, transform);
+            a.GetComponent<SpriteRenderer>().sprite = sprite;
+            a.transform.position = new Vector3(x, y) * multiplyer + transform.position;
         }
     }
 

@@ -19,7 +19,7 @@ namespace BID
 
         void Update()
         {
-
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
             velik = Vector2.zero;
 
             if (Input.GetKey(key.Up)) { velik.y += 1; }

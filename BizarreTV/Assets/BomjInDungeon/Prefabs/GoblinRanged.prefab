@@ -127,7 +127,7 @@ MonoBehaviour:
   velik: {x: 0, y: 0}
   speed: 0
   attackRange: 100
-  AttackInvoke: 0.4
+  AttackInvoke: 0.8
   vlframes: 3
   arrow: {fileID: 1842305853398601597, guid: 773063d3367194749a609a26fe519f83, type: 3}
 --- !u!114 &5926991166182396908
