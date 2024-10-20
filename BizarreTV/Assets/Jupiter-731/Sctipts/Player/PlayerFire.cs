@@ -28,7 +28,6 @@ namespace Jupiter731
             {
                 _currTime += Time.deltaTime;
             }
-            Debug.Log(_currTime);
         }
     }
 }

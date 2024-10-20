@@ -8,17 +8,26 @@ namespace Jupiter731
     {
         [SerializeField] KeyCode meleeAttackKey = KeyCode.Mouse1;
         [SerializeField] float attackRange = 1.0f;
-        [SerializeField] float attackAngle = 45f;
+        [SerializeField, Range(30, 90)] float attackAngle = 45f;
         [SerializeField] float damage = 10f;
         [SerializeField] LayerMask enemyLayer;
         [SerializeField] Transform attackPoint;
         [SerializeField] BaseAnimator baseAnimator;
         [SerializeField] float timeToStrike;
+        [SerializeField] ParticleSystem particleSystem;
         private float _strikeTimer;
 
 
         void Update()
         {
+            if (_strikeTimer + 0.1f >= timeToStrike - 0.2f)
+            {
+                particleSystem.enableEmission = false;
+            }
+            else if (_strikeTimer > 0.08f && _strikeTimer < timeToStrike)
+            {
+                particleSystem.enableEmission = true;
+            }
             if (Input.GetKeyDown(meleeAttackKey) && _strikeTimer > timeToStrike)
             {
                 Hit();
@@ -32,6 +41,7 @@ namespace Jupiter731
         private void Hit()
         {
             baseAnimator.PlayAnimations();
+
             if (attackPoint == null)
             {
                 Debug.LogWarning("Attack Point не назначена.");

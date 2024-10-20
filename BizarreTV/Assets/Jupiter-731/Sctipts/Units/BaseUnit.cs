@@ -6,9 +6,10 @@ namespace Jupiter731
 {
     public class BaseUnit : MonoBehaviour
     {
+        public float PublicHP { get => _currHP; }
         [SerializeField] float HP = 10;
+        [SerializeField] float _currHP;
         private float _maxHP;
-        [SerializeField] private float _currHP;
 
         private void Awake()
         {
@@ -23,6 +24,7 @@ namespace Jupiter731
 
         private void FixedUpdate()
         {
+            //Debug.Log(PublicHP);
             if (_currHP <= 0)
             {
                 Destroy(gameObject);

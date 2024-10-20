@@ -27,7 +27,7 @@ namespace Jupiter731
             collision.gameObject.TryGetComponent<BaseUnit>(out baseUnit);
             if (baseUnit != null)
             {
-                Debug.Log(BulletDamage);
+                //Debug.Log(BulletDamage);
                 baseUnit.TakeDamage(BulletDamage);
             }
             Destroy(gameObject);
