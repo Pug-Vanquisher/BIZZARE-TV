@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Balance
 {
@@ -8,11 +9,17 @@ namespace Balance
     // Это решение создано исключительно в рамках моих интересов.
     public static class DIContainer
     {
-        private static Dictionary<Type, Object> _services = new();
+        private static Dictionary<Type, System.Object> _services = new();
 
         public static void Register<T>(T service)
         {
             _services[typeof(T)] = service;
+        }
+
+        public static void RegisterCofig<T>(T config) where T : ScriptableObject
+        {
+            var newConfig = ScriptableObject.Instantiate(config);
+            _services[typeof(T)] = newConfig;
         }
 
         public static T Resolve<T>()

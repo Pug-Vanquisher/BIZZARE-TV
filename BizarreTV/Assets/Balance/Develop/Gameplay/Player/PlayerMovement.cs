@@ -14,7 +14,7 @@ namespace Balance
             _rigidbody = rigidbody;
 
             _moveSpeed = DIContainer.Resolve<PlayerConfig>().MoveSpeed;
-            _input =DIContainer.Resolve<IInput>();
+            _input = DIContainer.Resolve<IInput>();
         }
 
         public void Move(float delta)
