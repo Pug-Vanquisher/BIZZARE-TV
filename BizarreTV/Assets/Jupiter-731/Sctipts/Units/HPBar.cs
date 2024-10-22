@@ -22,9 +22,7 @@ namespace Jupiter731
 
         private void Update()
         {
-            //StartCoroutine(Init());
             HP.fillAmount =  unit.PublicHP / _maxHP;
-            Debug.Log(HP.fillAmount);
         }
 
         IEnumerator Init()

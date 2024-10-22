@@ -6,15 +6,16 @@ namespace Jupiter731
 {
     public class MeleeAttack : MonoBehaviour
     {
-        [SerializeField] KeyCode meleeAttackKey = KeyCode.Mouse1;
         [SerializeField] float attackRange = 1.0f;
-        [SerializeField, Range(30, 90)] float attackAngle = 45f;
         [SerializeField] float damage = 10f;
+        [SerializeField] float timeToStrike;
+        [SerializeField, Range(30, 90)] float attackAngle = 45f;
         [SerializeField] LayerMask enemyLayer;
+        [SerializeField] KeyCode meleeAttackKey = KeyCode.Mouse1;
         [SerializeField] Transform attackPoint;
         [SerializeField] BaseAnimator baseAnimator;
-        [SerializeField] float timeToStrike;
         [SerializeField] ParticleSystem particleSystem;
+        [SerializeField] MeleeBlock block;
         private float _strikeTimer;
 
 
@@ -31,6 +32,7 @@ namespace Jupiter731
             if (Input.GetKeyDown(meleeAttackKey) && _strikeTimer > timeToStrike)
             {
                 Hit();
+                block.BlockProjectiles(attackPoint, attackRange);
                 _strikeTimer = 0;
             }
             else
@@ -41,7 +43,6 @@ namespace Jupiter731
         private void Hit()
         {
             baseAnimator.PlayAnimations();
-
             if (attackPoint == null)
             {
                 Debug.LogWarning("Attack Point не назначена.");
@@ -51,17 +52,17 @@ namespace Jupiter731
             Debug.Log("Врагов найдено: " + hitEnemies.Length);
             foreach (Collider2D enemy in hitEnemies)
             {
-                Vector2 directionToEnemy = (enemy.transform.position - attackPoint.position).normalized;
+                Vector2 directionToEnemy = ((Vector3)enemy.attachedRigidbody.position - attackPoint.position).normalized;
                 Vector2 characterForward = transform.right;
                 float angleToEnemy = Vector2.Angle(characterForward, directionToEnemy);
-                Debug.Log($"Проверка врага: {enemy.name}, угол: {angleToEnemy}");
+                Debug.Log($"Проверка врага: {enemy.name}, угол: {angleToEnemy}" + " " + attackAngle);
                 if (angleToEnemy < attackAngle)
                 {
                     BaseUnit enemyUnit = enemy.GetComponent<BaseUnit>();
                     if (enemyUnit != null)
                     {
                         enemyUnit.TakeDamage(damage);
-                        Debug.Log("Попадание по врагу: " + enemy.name);
+                        Debug.Log("Попадание по врагу: " + enemy.name + damage);
                     }
                 }
             }

@@ -25,6 +25,14 @@ namespace Jupiter731
         {
             BaseUnit? baseUnit = null;
             collision.gameObject.TryGetComponent<BaseUnit>(out baseUnit);
+            if(baseUnit == null) 
+            {
+                baseUnit = collision.gameObject.GetComponentInChildren<BaseUnit>();
+            }
+            if (baseUnit == null)
+            {
+                baseUnit = collision.gameObject.GetComponentInParent<BaseUnit>();
+            }
             if (baseUnit != null)
             {
                 //Debug.Log(BulletDamage);
