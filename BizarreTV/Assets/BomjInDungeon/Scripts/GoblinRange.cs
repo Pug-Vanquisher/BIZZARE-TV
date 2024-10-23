@@ -13,8 +13,8 @@ namespace BID
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            //velik = player.transform.position - transform.position;
-            //velik.Normalize();
+            velik = player.transform.position - transform.position;
+            velik.Normalize();
         }
 
         public override void Attack()
