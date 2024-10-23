@@ -12,10 +12,9 @@ namespace BID
         public override void Attack()
         {
             var a = Instantiate(dagger, transform);
-            a.transform.position = transform.position;
+            a.GetComponent<Dagger>().creator = HitCollider;
+            a.transform.position = transform.position + Vector3.up;
             a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(player.transform.position - a.transform.position, Vector3.right), Vector3.forward);
-
-            Debug.Log("палучай!!!");
 
             current_vlframes = vlframes;
         }

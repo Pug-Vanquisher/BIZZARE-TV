@@ -19,6 +19,7 @@ TagManager:
   - MolotTargetArea
   - SecondBow
   - Bullet
+  - Goblin
   layers:
   - Default
   - TransparentFX

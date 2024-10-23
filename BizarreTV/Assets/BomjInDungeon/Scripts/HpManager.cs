@@ -8,7 +8,8 @@ namespace BID
     {
         public int maxhp;
         public int currenthp;
-
+        public float invulDelay;
+        private bool invulnerability = false;
         void Start()
         {
             currenthp = maxhp;
@@ -27,5 +28,19 @@ namespace BID
                 }
             }
         }
+        public virtual void TakeDamage(int damage)
+        {
+            if (!invulnerability)
+            {
+                currenthp -= damage;
+                invulnerability = true;
+                Invoke("DamageTaken", invulDelay);
+            }
+        }
+        void DamageTaken()
+        {
+            invulnerability = false;
+        }
+
     }
 }

@@ -7,7 +7,7 @@ namespace BID
     {
         public GameObject player;
 
-        private Rigidbody2D goblin;
+        private CharacterController goblin;
         public Vector2 velik;
         public float speed;
 
@@ -18,14 +18,16 @@ namespace BID
         public float vlframes;
         protected float current_vlframes;
 
+        public Collider2D HitCollider;
+
         void Start()
         {
-            goblin = GetComponent<Rigidbody2D>();
+            goblin = GetComponent<CharacterController>();
             current_vlframes = 0;
         }
         public void Update()
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+            var sprRender = GetComponent<SpriteRenderer>().sortingOrder = (int)(transform.position.y* -10);
         }
         public virtual void FixedUpdate()
         {
@@ -76,9 +78,10 @@ namespace BID
 
             */
 
+            goblin.Move(velik.normalized * speed);
             hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
 
-            if (hit.collider == null) { goblin.MovePosition(new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed); }
+            if (hit.collider == null) {}
         }
 
     }

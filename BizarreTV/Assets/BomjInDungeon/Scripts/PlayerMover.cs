@@ -6,7 +6,7 @@ namespace BID
 {
     public class PlayerMover : MonoBehaviour
     {
-        public Rigidbody2D pl_tmp;
+        public CharacterController pl_tmp;
         public Vector2 velik;
         public KeyConfig key = new KeyConfig();
 
@@ -17,9 +17,11 @@ namespace BID
         public GameObject dagger;
         public float AttackSpreadness = 0.03f;
 
+        public Collider2D HitCollider;
+
         void Update()
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+            var sprRender = GetComponent<SpriteRenderer>().sortingOrder = (int)(transform.position.y * -10);
             velik = Vector2.zero;
 
             if (Input.GetKey(key.Up)) { velik.y += 1; }
@@ -31,19 +33,22 @@ namespace BID
             mousePosition.z = 0;
             Vector3 side1cos = Quaternion.AngleAxis(-90, Vector3.forward) * (mousePosition - transform.position);
 
-            if (Input.GetKeyDown(key.Attack))
+            if (Input.GetKeyDown(key.Attack) || Input.GetKeyDown(key.AltAttack))
             {
                 var a = Instantiate(dagger, transform);
-                a.transform.position = transform.position + side1cos * Random.Range(-1f, 1f) * AttackSpreadness;
+                a.GetComponent<Dagger>().creator = HitCollider;
+                a.transform.position = transform.position + side1cos * Random.Range(-1f, 1f) * AttackSpreadness + Vector3.up;
                 a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(mousePosition - a.transform.position, Vector3.right), Vector3.forward);
             }
         }
 
         private void FixedUpdate()
         {
+            pl_tmp.Move(velik.normalized * speed);
+
             hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
             
-            if (hit.collider == null) { pl_tmp.MovePosition(new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed); } 
+            if (hit.collider == null) { } 
         }
     }
 }

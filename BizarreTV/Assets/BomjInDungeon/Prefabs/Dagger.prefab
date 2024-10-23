@@ -129,6 +129,8 @@ MonoBehaviour:
   lifetime: 0.2
   speed: 1
   damage: 1
+  creator: {fileID: 0}
+  HitParticle: {fileID: 3108500979531554655, guid: 7fd5bce2484fe3846a68cf12e7726991, type: 3}
 --- !u!95 &5029427368742848057
 Animator:
   serializedVersion: 5
