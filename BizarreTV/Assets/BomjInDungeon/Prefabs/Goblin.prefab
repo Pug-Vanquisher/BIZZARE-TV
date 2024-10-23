@@ -102,11 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7186ce63a83d6043bc5eb0df91d173d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4682256760805990439, guid: bd06a8c09b7642a4493845cd1d801405, type: 3}
+  player: {fileID: 0}
   velik: {x: 0, y: 0}
   speed: 0.3
   attackRange: 3
   AttackInvoke: 0.4
+  aggroRange: 10
   vlframes: 1
   HitCollider: {fileID: 6689410295264162025}
   dagger: {fileID: 3899623944128159961, guid: 5347981c243a7e04599704d13f6a65e7, type: 3}

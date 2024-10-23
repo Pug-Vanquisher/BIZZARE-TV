@@ -15,6 +15,7 @@ namespace BID
 
         public float attackRange;
         public float AttackInvoke;
+        public float aggroRange;
         public float vlframes;
         protected float current_vlframes;
 
@@ -33,7 +34,9 @@ namespace BID
         {
             velik = Vector3.zero;
 
-            if (Vector2.Distance(transform.position, player.transform.position) <= attackRange & current_vlframes == 0 & !IsInvoking("Attack"))
+            if (player == null) { Look(); }
+
+            else if (Vector2.Distance(transform.position, player.transform.position) <= attackRange & current_vlframes == 0 & !IsInvoking("Attack"))
             {
                 Invoke("Attack", AttackInvoke);
             }
@@ -49,6 +52,20 @@ namespace BID
         public virtual void Attack()
         {
 
+        }
+
+        public void Look()
+        {
+            if ((GameObject.FindGameObjectWithTag("Player").transform.position - transform.position).magnitude <= aggroRange) { player = GameObject.FindGameObjectWithTag("Player"); }
+
+            
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Goblin"))
+            {
+                if ((obj.transform.position - transform.position).magnitude <= aggroRange && obj.GetComponent<Goblin>().player != null) { player = obj.GetComponent<Goblin>().player; }
+            }
+            
+
+            current_vlframes = vlframes;
         }
         public virtual void Move()
         {
