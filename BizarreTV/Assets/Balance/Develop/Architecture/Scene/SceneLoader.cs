@@ -14,6 +14,7 @@ namespace Balance
             string sceneName = SceneManager.GetActiveScene().name;
             if (Scenes.IsBalanceGameScene(sceneName))
             {
+                Debug.Log("Autostart");
                 new SceneLoader().LoadBoot();
             }
         }

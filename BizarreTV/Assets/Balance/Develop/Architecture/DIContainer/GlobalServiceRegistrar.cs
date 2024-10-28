@@ -5,15 +5,23 @@ namespace Balance
 {
     public class GlobalServiceRegistrar : ServiceRegistrar
     {
-        [SerializeField] private DefaultGameData defaultGameData;
+        [SerializeField] private DefaultGameData _defaultGameData;
+        [SerializeField] private LevelListConfig _levelListConfig;
 
         public override void Register()
         {
+            RegisterConfigs();
             RegisterSceneLoader();
             RegisterInput();
             RegisterStorage();
+            RegisterLevelTracker();
 
             Debug.Log("Global services registered");
+        }
+
+        private void RegisterConfigs()
+        {
+            DIContainer.RegisterCofig(_levelListConfig);
         }
 
         private void RegisterSceneLoader()
@@ -30,10 +38,16 @@ namespace Balance
 
         private void RegisterStorage()
         {
-            DIContainer.RegisterCofig(defaultGameData);
+            DIContainer.RegisterCofig(_defaultGameData);
 
             Storage storage = new JsonStorage();
             DIContainer.Register(storage);
+        }
+
+        private void RegisterLevelTracker()
+        {
+            LevelTracker tracker = new LevelTracker();
+            DIContainer.Register(tracker);
         }
     }
 }

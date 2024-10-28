@@ -20,13 +20,16 @@ namespace Balance
             {
                 LevelButton button = Instantiate(_levelButtonPrefab);
                 button.transform.SetParent(_levelsContainer, false);
+
                 button.Init(i + 1);
+                button.Unlock();
             }
         }
 
         private void OpenLevel(int number)
         {
-
+            DIContainer.Resolve<LevelTracker>().SetCurrentLevelNumber(number);
+            DIContainer.Resolve<SceneLoader>().LoadGameplay();
         }
     }
 }

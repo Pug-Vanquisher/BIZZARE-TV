@@ -10,6 +10,7 @@ namespace Balance
             RegisterServices();
 
             Debug.Log("Gameplay scene loaded");
+            Debug.Log($"Level: {DIContainer.Resolve<LevelTracker>().Current}");
 
             yield return null;
         }
