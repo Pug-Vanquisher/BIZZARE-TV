@@ -14,9 +14,11 @@ namespace Balance
 
             yield return LoadData();
 
+            InitLevelTracker();
+
             Debug.Log("Boot scene loaded");
 
-            DIContainer.Resolve<SceneLoader>().LoadGameplay();
+            LoadGameplay();
 
             yield return null;
         }
@@ -35,6 +37,17 @@ namespace Balance
             });
 
             yield return new WaitUntil(() => isLoaded);
+        }
+
+        private void InitLevelTracker()
+        {
+            int number = _storage.GameData.LastCompletedLevel + 1;
+            DIContainer.Resolve<LevelTracker>().SetCurrentLevelNumber(number);
+        }
+
+        private void LoadGameplay()
+        {
+            DIContainer.Resolve<SceneLoader>().LoadGameplay();
         }
     }
 }

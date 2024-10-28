@@ -16,13 +16,20 @@ namespace Balance
 
         private void CreateLevels()
         {
+            int lastCompletedLevel = DIContainer.Resolve<Storage>().GameData.LastCompletedLevel;
+
             for (int i = 0; i < 10; i++)
             {
                 LevelButton button = Instantiate(_levelButtonPrefab);
                 button.transform.SetParent(_levelsContainer, false);
 
-                button.Init(i + 1);
-                button.Unlock();
+                int number = i + 1;
+                button.Init(number);
+
+                if (number > lastCompletedLevel + 1)
+                    button.Lock();
+                else
+                    button.Unlock();
             }
         }
 
