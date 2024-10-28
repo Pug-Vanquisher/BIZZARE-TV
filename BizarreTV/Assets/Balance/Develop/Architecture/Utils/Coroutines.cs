@@ -29,5 +29,10 @@ namespace Balance
         {
             instance.StopCoroutine(routine);
         }
+
+        public static void StopAllRoutines()
+        {
+            instance.StopAllCoroutines();
+        }
     }
 }

@@ -9,16 +9,23 @@ namespace Balance
 
         public override void Register()
         {
+            RegisterSceneLoader();
             RegisterInput();
             RegisterStorage();
 
             Debug.Log("Global services registered");
         }
 
+        private void RegisterSceneLoader()
+        {
+            SceneLoader sceneLoader = new SceneLoader();
+            DIContainer.Register(sceneLoader);
+        }
+
         private void RegisterInput()
         {
             IInput input = new KeyboardInput();
-            DIContainer.Register<IInput>(input);
+            DIContainer.Register(input);
         }
 
         private void RegisterStorage()
@@ -26,7 +33,7 @@ namespace Balance
             DIContainer.RegisterCofig(defaultGameData);
 
             Storage storage = new JsonStorage();
-            DIContainer.Register<Storage>(storage);
+            DIContainer.Register(storage);
         }
     }
 }

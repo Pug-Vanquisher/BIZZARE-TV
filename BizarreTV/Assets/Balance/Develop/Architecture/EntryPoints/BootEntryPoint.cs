@@ -16,6 +16,8 @@ namespace Balance
 
             Debug.Log("Boot scene loaded");
 
+            DIContainer.Resolve<SceneLoader>().LoadGameplay();
+
             yield return null;
         }
 

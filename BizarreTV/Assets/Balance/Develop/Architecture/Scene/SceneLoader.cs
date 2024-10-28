@@ -14,33 +14,41 @@ namespace Balance
             string sceneName = SceneManager.GetActiveScene().name;
             if (Scenes.IsBalanceGameScene(sceneName))
             {
-                new SceneLoader().LoadAndStartGameplay();
+                new SceneLoader().LoadBoot();
             }
         }
 
-        // Основная точка запуска всей мини игры.
-        public void LoadAndStartGameplay()
+        public void LoadBoot()
         {
-            Coroutines.StartRoutine(LoadAndStartGameplayRoutine());
+            Coroutines.StopAllRoutines();
+            Coroutines.StartRoutine(
+                LoadScene<BootEntryPoint>(Scenes.BOOT));
         }
 
-        private IEnumerator LoadAndStartGameplayRoutine()
+        public void LoadGameplay()
         {
-            yield return LoadScene(Scenes.BOOT);
-
-            BootEntryPoint bootEntryPoint = Object.FindFirstObjectByType<BootEntryPoint>();
-            yield return bootEntryPoint.Run();
-
-            yield return LoadScene(Scenes.GAMEPLAY);
-
-            GameplayEntryPoint sceneEntryPoint = Object.FindFirstObjectByType<GameplayEntryPoint>();
-            yield return sceneEntryPoint.Run();
+            Coroutines.StopAllRoutines();
+            Coroutines.StartRoutine(
+                LoadScene<GameplayEntryPoint>(Scenes.GAMEPLAY));
         }
 
-        private IEnumerator LoadScene(string sceneName)
+        public void LoadLevelList()
         {
+            Coroutines.StopAllRoutines();
+            Coroutines.StartRoutine(
+                LoadScene<LevelListEntryPoint>(Scenes.LEVEL_LIST));
+        }
+
+        private IEnumerator LoadScene<T>(string sceneName) where T : EntryPoint
+        {
+            //yield return _uiRoot.ShowLoadingScreen();
+
             yield return SceneManager.LoadSceneAsync(sceneName);
-            yield return null;
+
+            EntryPoint sceneEntryPoint = Object.FindFirstObjectByType<T>();
+            yield return sceneEntryPoint.Run();
+
+            //yield return _uiRoot.HideLoadingScreen();
         }
     }
 }
