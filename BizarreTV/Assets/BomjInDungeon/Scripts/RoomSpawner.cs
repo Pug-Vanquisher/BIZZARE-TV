@@ -127,6 +127,7 @@ namespace BID
         void CreateDecoration(float x, float y, GameObject prefab, Sprite sprite)
         {
             var a = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            a.transform.SetParent(transform);
             a.transform.position = new Vector3(x, y) * multiplyer;
             a.GetComponent<SpriteRenderer>().sprite = sprite;
             a.GetComponent<SpriteRenderer>().sortingOrder = (int)(y * multiplyer * -10);

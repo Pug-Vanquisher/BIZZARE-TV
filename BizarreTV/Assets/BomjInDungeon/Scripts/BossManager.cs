@@ -25,18 +25,16 @@ public class BossManager : MonoBehaviour
         {
             if (i != random)
             {
-                var a = Instantiate(clone);
+                var a = Instantiate(clone, transform);
                 a.GetComponent<Goblin>().player = player;
                 a.transform.position = transform.position + new Vector3(i * 7, 0, 0);
-                a.transform.SetParent(transform);
             }
 
             else
             {
-                var a = Instantiate(boss);
+                var a = Instantiate(boss, transform);
                 a.GetComponent<Goblin>().player = player;
                 a.transform.position = transform.position + new Vector3(i * 7, 0, 0);
-                a.transform.SetParent(transform);
             }
 
         }
