@@ -10,7 +10,6 @@ namespace BID
         public override void TakeDamage(int damage)
         {
             origin.TakeDamage(damage);
-            Debug.Log(123);
         }
     }
 }
