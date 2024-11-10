@@ -17,8 +17,9 @@ namespace Balance
         private void CreateLevels()
         {
             int lastCompletedLevel = DIContainer.Resolve<Storage>().GameData.LastCompletedLevel;
+            int levelCount = DIContainer.Resolve<LevelTracker>().LevelCount;
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < levelCount; i++)
             {
                 LevelButton button = Instantiate(_levelButtonPrefab);
                 button.transform.SetParent(_levelsContainer, false);

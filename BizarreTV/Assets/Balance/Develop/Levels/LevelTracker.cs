@@ -17,18 +17,20 @@ namespace Balance
         public int Current => _currentNumber;
         public float Progress => (_currentNumber - 1f) / (LevelCount - 1f);
         public LevelData CurrentLevelData => _levelListConfig.Levels[_currentNumber - 1];
-        private int LevelCount => _levelListConfig.Levels.Count;
+        public int LevelCount => _levelListConfig.Levels.Count;
 
-        public void IncreaseCurrentNumber()
+        public int IncreaseCurrentNumber()
         {
             int newNumber = _currentNumber + 1;
-            SetCurrentLevelNumber(newNumber);
+            return SetCurrentLevelNumber(newNumber);
         }
 
-        public void SetCurrentLevelNumber(int newNumber)
+        public int SetCurrentLevelNumber(int newNumber)
         {
             newNumber = Mathf.Clamp(newNumber, 1, LevelCount);
             _currentNumber = newNumber;
+
+            return newNumber;
         }
     }
 }

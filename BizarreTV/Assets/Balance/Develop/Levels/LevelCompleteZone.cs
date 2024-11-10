@@ -1,14 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Balance
 {
-    public class DeathZone : MonoBehaviour
+    public class LevelCompleteZone : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
+                int newNumber = DIContainer.Resolve<LevelTracker>().IncreaseCurrentNumber();
+                DIContainer.Resolve<Storage>().SetLastCompletedLevel(newNumber);
                 DIContainer.Resolve<SceneLoader>().LoadGameplay();
             }
         }

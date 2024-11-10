@@ -9,10 +9,17 @@ namespace Balance
         {
             RegisterServices();
 
+            CreateLevel();
+
             Debug.Log("Gameplay scene loaded");
-            Debug.Log($"Level: {DIContainer.Resolve<LevelTracker>().Current}");
 
             yield return null;
+        }
+
+        private void CreateLevel()
+        {
+            GameObject prefab = DIContainer.Resolve<LevelTracker>().CurrentLevelData.Prefab;
+            Instantiate(prefab);
         }
     }
 }
