@@ -15,5 +15,11 @@ MonoBehaviour:
   Levels:
   - <Number>k__BackingField: 1
     <Prefab>k__BackingField: {fileID: 2532293881126470055, guid: f560b72933b346b41bd5a28c9e5af18b, type: 3}
-  - <Number>k__BackingField: 1
+  - <Number>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 1909659159771577823, guid: 5574b318001ba4d40afc767052840477, type: 3}
+  - <Number>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 57183459512954126, guid: 721eb66bec7ead14597ab359fe59188a, type: 3}
+  - <Number>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 57183459512954126, guid: 999bbb24023fe894f92e539c285224d5, type: 3}
+  - <Number>k__BackingField: 5
+    <Prefab>k__BackingField: {fileID: 2339010226808199029, guid: 246a3e7acef74284e93863904aeecd7d, type: 3}
