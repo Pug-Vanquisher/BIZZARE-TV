@@ -8,8 +8,15 @@ namespace Balance
         {
             if (other.CompareTag("Player"))
             {
-                int newNumber = DIContainer.Resolve<LevelTracker>().IncreaseCurrentNumber();
-                DIContainer.Resolve<Storage>().SetLastCompletedLevel(newNumber);
+                LevelTracker levelTracker = DIContainer.Resolve<LevelTracker>();
+                Storage storage = DIContainer.Resolve<Storage>();
+
+                int currentNumber = levelTracker.Current;
+                levelTracker.IncreaseCurrentNumber();
+
+                if (storage.GameData.LastCompletedLevel < currentNumber)
+                    storage.SetLastCompletedLevel(currentNumber);
+
                 DIContainer.Resolve<SceneLoader>().LoadGameplay();
             }
         }
