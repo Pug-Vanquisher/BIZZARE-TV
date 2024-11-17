@@ -10,13 +10,6 @@ namespace BID
     {
         public GameObject arrow;
 
-        public override void FixedUpdate()
-        {
-            base.FixedUpdate();
-            velik = player.transform.position - transform.position;
-            velik.Normalize();
-        }
-
         public override void Attack()
         {
             var a = Instantiate(arrow, transform);
@@ -28,7 +21,8 @@ namespace BID
         }
         public override void Move()
         {
-            //Ne dvigaetsa :D
+            velik = player.transform.position - transform.position;
+            velik.Normalize();
         }
     }
 

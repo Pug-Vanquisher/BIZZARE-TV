@@ -6,7 +6,7 @@ namespace BID
 {
     public class PlayerMover : MonoBehaviour
     {
-        public CharacterController pl_tmp;
+        public CharacterController pl;
         public Vector2 velik;
         public KeyConfig key = new KeyConfig();
 
@@ -18,7 +18,6 @@ namespace BID
         public float AttackSpreadness = 0.03f;
 
         public Collider2D HitCollider;
-
         void Update()
         {
             var sprRender = GetComponent<SpriteRenderer>().sortingOrder = (int)(transform.position.y * -10);
@@ -44,11 +43,17 @@ namespace BID
 
         private void FixedUpdate()
         {
-            pl_tmp.Move(velik.normalized * speed);
+            pl.Move(velik.normalized * speed);
 
             hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
             
             if (hit.collider == null) { } 
+        }
+
+        public void AnotherRoom(Vector2 direction)
+        {
+            Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+            pl.Move(direction - pos);
         }
     }
 }

@@ -10,8 +10,12 @@ namespace BID
         public int currenthp;
         public float invulDelay;
         private bool invulnerability = false;
+
+        public int dangerScale = 1;
+
         void Start()
         {
+            maxhp += 2 * dangerScale;
             currenthp = maxhp;
         }
 
@@ -19,7 +23,15 @@ namespace BID
         {
             if (currenthp <= 0) 
             {
-                if (gameObject.name != "Bomj") { Destroy(gameObject); }
+                if (gameObject.name != "Bomj") 
+                {
+                    Destroy(gameObject);
+                    var a = GetComponent<DeathEvent>();
+                    if(a != null)
+                    {
+                        a.Death();
+                    }
+                }
 
                 else
                 {

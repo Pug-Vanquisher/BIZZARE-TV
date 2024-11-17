@@ -6,7 +6,6 @@ namespace BID
     public class Goblin : MonoBehaviour
     {
         public GameObject player;
-
         private CharacterController goblin;
         public Vector2 velik;
         public float speed;
@@ -19,7 +18,9 @@ namespace BID
         protected float current_vlframes;
 
         public Collider2D HitCollider;
-
+        public ParticleSystem warn;
+        public float rangeOfVision;
+        private bool playerFound;
         void Start()
         {
             goblin = GetComponent<CharacterController>();
@@ -32,20 +33,67 @@ namespace BID
         public virtual void FixedUpdate()
         {
             velik = Vector3.zero;
-
-            if (Vector2.Distance(transform.position, player.transform.position) <= attackRange & current_vlframes == 0 & !IsInvoking("Attack"))
+            if(playerFound)
             {
-                Invoke("Attack", AttackInvoke);
-            }
-            else if (current_vlframes == 0)
-            {
-                Move();
-            }
-            else if (current_vlframes < 0) { current_vlframes = 0; }
+                if (Vector2.Distance(transform.position, player.transform.position) <= attackRange & current_vlframes == 0 & !IsInvoking("Attack"))
+                {
+                    Invoke("Attack", AttackInvoke);
+                }
+                else if (current_vlframes == 0)
+                {
+                    Move();
+                }
+                else if (current_vlframes < 0) { current_vlframes = 0; }
 
-            else { current_vlframes -= Time.deltaTime; }
+                else { current_vlframes -= Time.deltaTime; }
+            }
+            else if(!playerFound)
+            {
+                if(player == null)
+                {
+                    Stand();
+                }
+                else
+                {
+                    if (!IsInvoking("Find"))
+                    {
+                        Invoke("Find", 0.5f);
+                    }
+                }
+            }
         }
-
+        public virtual void Stand()
+        {
+            List<GameObject> entities = new List<GameObject>();
+            entities.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+            entities.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+            foreach (GameObject entity in entities)
+            {
+                if(entity != gameObject && (entity.transform.position - transform.position). magnitude <= rangeOfVision)
+                {
+                    if(entity.tag == "Player" && entity.name == "HitCollider")
+                    {
+                        warn.Play();
+                        player = entity;
+                    }
+                    else if(entity.tag == "Enemy" && entity.name == "HitCollider")
+                    {
+                        if(entity.GetComponent<Goblin>() != null)
+                        {
+                            if (entity.GetComponent<Goblin>().player != null)
+                            {
+                                warn.Play();
+                                player = entity;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        void Find()
+        {
+            playerFound = true;
+        }
         public virtual void Attack()
         {
 

@@ -8,11 +8,12 @@ namespace BID
     {
         public RoomSpawner rs;
         public Transform pl;
+        public Transform room;
         private void Update()
         {
-
-            transform.position = new Vector3(Mathf.Clamp(pl.transform.position.x, 0, 0), 
-                Mathf.Clamp(pl.transform.position.y, -rs.roomsize.y * 4 + 16, rs.roomsize.y * 4 - 16), -50);
+            Vector3 direction = pl.position - room.position;
+            transform.position = room.position + direction.normalized * Mathf.Clamp(direction.magnitude, 0, rs.roomsize.magnitude);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -50f);
         }
     }
 
