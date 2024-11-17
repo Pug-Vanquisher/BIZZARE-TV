@@ -108,6 +108,7 @@ MonoBehaviour:
   speed: 0
   attackRange: 100
   AttackInvoke: 0.8
+  aggroRange: 15
   vlframes: 3
   HitCollider: {fileID: 1930894467062974764}
   warn: {fileID: 3953961812796688095}
