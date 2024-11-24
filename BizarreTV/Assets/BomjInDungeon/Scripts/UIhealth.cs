@@ -20,7 +20,7 @@ namespace BID
         void Start()
         {
             origin = transform.parent.GetComponent<RectTransform>();
-            playerCurrentHealth = playerhealth.currenthp;
+            playerCurrentHealth = playerhealth.maxhp;
             for (int i = 0; i < playerhealth.maxhp; i += 2)
             {
                 var a = Instantiate(heartPrefab, transform);

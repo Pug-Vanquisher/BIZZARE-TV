@@ -286,6 +286,9 @@ MonoBehaviour:
   rs: {fileID: 1665569789}
   pl: {fileID: 2057893136}
   room: {fileID: 1665569790}
+  _shakeDuration: 0.3
+  _magnitude: 2
+  _shakePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &660948185
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1641561674543410378, guid: bd06a8c09b7642a4493845cd1d801405, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4682256760805990435, guid: bd06a8c09b7642a4493845cd1d801405, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -574,7 +581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3355406587284744163, guid: 1906e08435b447e4cb79fbb0a6f734af, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3355406587284744163, guid: 1906e08435b447e4cb79fbb0a6f734af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -861,7 +868,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1176828332
 GameObject:
@@ -944,7 +951,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1525681302
 PrefabInstance:
@@ -1037,10 +1044,10 @@ MonoBehaviour:
   player: {fileID: 2057893128}
   wall: {fileID: 8721979562122025140, guid: 31822c9daf9c8504c834969adccaae6b, type: 3}
   door: {fileID: 8721979562122025140, guid: a5e04252dca3d0d46bcbdcabac523608, type: 3}
-  vaseDecor: {fileID: 8721979562122025140, guid: 78b98860f389c864e87f9d863226600a, type: 3}
-  boneDecor: {fileID: 8721979562122025140, guid: b32ee1c1fa895a446a361afb3cb99844, type: 3}
   NewRoomTrigger: {fileID: 3345486963963665106, guid: 1bb4a14977e08ed45847547506c3e349, type: 3}
   bossPrefab: {fileID: 0}
+  keyStone: {fileID: 1207897250795055622, guid: 53b64892c0e57e64ba25283146a9f155, type: 3}
+  doorBoss: {fileID: 4487429177406678599, guid: a6269cdea7214354c84c1ee774594446, type: 3}
   tiles:
   - {fileID: 862540447, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -1234340018, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
@@ -1058,11 +1065,11 @@ MonoBehaviour:
   - {fileID: 1300135399, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -1737557322, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   - {fileID: -1191051309, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
-  decorations:
-  - {fileID: -1281525382, guid: 052b24710b0e3b34887377236cd1e7c9, type: 3}
-  - {fileID: -2129571482, guid: 052b24710b0e3b34887377236cd1e7c9, type: 3}
-  - {fileID: 1588265799, guid: 052b24710b0e3b34887377236cd1e7c9, type: 3}
-  - {fileID: 77602558, guid: 052b24710b0e3b34887377236cd1e7c9, type: 3}
+  - {fileID: -53802126, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 1763264604, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 1714943187, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: -2142096950, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
+  - {fileID: 762429256, guid: 1c7ec259f8f929d479d0a0ced583c0c5, type: 3}
   doors:
   - {fileID: -288883006, guid: 29f11a63ec236c04fa3c770bba2cc5f9, type: 3}
   - {fileID: 644780087, guid: 29f11a63ec236c04fa3c770bba2cc5f9, type: 3}
@@ -1119,53 +1126,6 @@ MonoBehaviour:
   DefaultRoomSize: {x: 7, y: 4}
   RandomErr: {x: 2, y: 2}
   dungeonSize: {x: 5, y: 5}
---- !u!1 &1832114087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1832114089}
-  - component: {fileID: 1832114088}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1832114088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832114087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c313dc7a1adbe5843be33e02224ef084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generator: {fileID: 1665569792}
-  Room: {fileID: 6508107097321108596, guid: fcf157e9f20eb964881e3f012188bd0a, type: 3}
-  door: {fileID: 6734452249656590866, guid: 0e62e108f5faed54a8e335688963262b, type: 3}
---- !u!4 &1832114089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832114087}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.59, y: 8.9754305, z: -29.042597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2021006160 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5255455587793303168, guid: 1906e08435b447e4cb79fbb0a6f734af, type: 3}

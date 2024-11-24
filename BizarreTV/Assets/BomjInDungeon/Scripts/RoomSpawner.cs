@@ -11,13 +11,11 @@ namespace BID
 
         public GameObject wall;
         public GameObject door;
-        public GameObject vaseDecor;
-        public GameObject boneDecor;
         public GameObject NewRoomTrigger;
         public GameObject bossPrefab;
-
+        public GameObject keyStone;
+        public GameObject doorBoss;
         public Sprite[] tiles;
-        public Sprite[] decorations;
         public Sprite[] doors;
 
 
@@ -83,7 +81,14 @@ namespace BID
             }
             GenerateEmptyRoom(roomsize, mainPoints);
             GenerateEnemies(room.EnemiesPositions, placer);
-
+            if (room.tag == "keyRoom")
+            {
+                GenerateKey(Vector2.zero);
+            }
+            if (room.tag == "bossRoom")
+            {
+                GenerateBossEnt(Vector2.zero);
+            }
         }
         void ToString(Dictionary<int, List<Vector2>> dict)
         {
@@ -170,7 +175,25 @@ namespace BID
                     }
                 }
             }
-            
+
+        }
+        void GenerateKey(Vector2 position)
+        {
+            var a = Instantiate(keyStone, transform.GetChild(0));
+            a.transform.position = transform.position + new Vector3(position.x, position.y, 0);
+        }
+        void GenerateBossEnt(Vector2 position)
+        {
+            CreateTile(-1, 2, tiles[16]);
+            CreateTile(0, 2, tiles[5]);
+            CreateTile(1, 2, tiles[17]);
+            CreateTile(-1, 1, tiles[6]);
+            CreateTile(1, 1, tiles[7]);
+            CreateTile(-1, 0, tiles[18]);
+            CreateTile(1, 0, tiles[19]);
+            CreateTile(-1, -1, tiles[20]);
+            CreateBossDoor(0, -1, transform.GetChild(0));
+            CreateTile(1, -1, tiles[20]);
         }
         void CreateTile(float x, float y, Sprite sprite, bool noCollider = false)
         {
@@ -194,20 +217,32 @@ namespace BID
             var a = Instantiate(door, parent);
             a.transform.position = new Vector3(x, y) * multiplyer + transform.position;
             a.GetComponent<SpriteRenderer>().sprite = doors[(int)(1 - Mathf.Abs(direction.y)) * (int)(1.5f - (direction.x / 2f))];
-            a.GetComponent<SpriteRenderer>().sortingOrder = (int)((y * multiplyer + transform.position.y)   * -10) + 1;
+            a.GetComponent<SpriteRenderer>().sortingOrder = (int)((y * multiplyer + transform.position.y)   * -10 + 10);
 
             var b = Instantiate(NewRoomTrigger, transform);
-            b.GetComponent<SpriteRenderer>().sortingOrder = (int)((roomsize.y + transform.position.y + 9) * multiplyer * -10);
+            if(Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            {
+                b.GetComponent<SpriteRenderer>().sortingOrder = (int)((roomsize.x * direction.x + transform.position.y + 9) * multiplyer * -10);
+            }
+            else
+            {
+                b.GetComponent<SpriteRenderer>().sortingOrder = (int)((roomsize.y * direction.y + transform.position.y + 9) * multiplyer * -10);
+            }
             b.transform.position = new Vector3(x, y) * multiplyer + transform.position;
             b.transform.right = -direction;
             b.GetComponent<NewRoomTriggerScript>().type = dirToEvent[direction.x.ToString() + direction.y.ToString()];
         }
-        void CreateDecoration(float x, float y, GameObject prefab, Sprite sprite, Transform parent)
+        void CreateBossDoor(float x, float y, Transform parent)
         {
-            var a = Instantiate(prefab, parent);
+            var a = Instantiate(doorBoss, parent);
             a.transform.position = new Vector3(x, y) * multiplyer + transform.position;
-            a.GetComponent<SpriteRenderer>().sprite = sprite;
-            a.GetComponent<SpriteRenderer>().sortingOrder = (int)((y + transform.position.y) * multiplyer * -10);
+            a.GetComponent<BossDoorScript>().orderZ = (int)((y * multiplyer + transform.position.y) * -10 + 10);
+
+            var b = Instantiate(NewRoomTrigger, transform);
+            b.GetComponent<SpriteRenderer>().sortingOrder = (int)((y + transform.position.y + 9) * multiplyer * -10);
+            b.transform.position = new Vector3(x, y) * multiplyer + transform.position;
+            b.transform.right = Vector2.down;
+            b.GetComponent<NewRoomTriggerScript>().type = "boss";
         }
     }
 

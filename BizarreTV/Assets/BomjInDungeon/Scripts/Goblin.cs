@@ -6,6 +6,7 @@ namespace BID
     public class Goblin : MonoBehaviour
     {
         public GameObject player;
+        private GameObject foundedPlayer;
         private CharacterController goblin;
         public Vector2 velik;
         public float speed;
@@ -28,7 +29,8 @@ namespace BID
         }
         public void Update()
         {
-            var sprRender = GetComponent<SpriteRenderer>().sortingOrder = (int)(transform.position.y* -10);
+            GetComponent<SpriteRenderer>().sortingOrder = (int)(transform.position.y* -10);
+            DrawCircle(rangeOfVision, 30);
         }
         public virtual void FixedUpdate()
         {
@@ -49,7 +51,7 @@ namespace BID
             }
             else if(!playerFound)
             {
-                if(player == null)
+                if(foundedPlayer == null)
                 {
                     Stand();
                 }
@@ -66,24 +68,24 @@ namespace BID
         {
             List<GameObject> entities = new List<GameObject>();
             entities.AddRange(GameObject.FindGameObjectsWithTag("Player"));
-            entities.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+            entities.AddRange(GameObject.FindGameObjectsWithTag("Goblin"));
             foreach (GameObject entity in entities)
             {
-                if(entity != gameObject && (entity.transform.position - transform.position). magnitude <= rangeOfVision)
+                if (entity != gameObject && (entity.transform.position - transform.position). magnitude <= rangeOfVision)
                 {
-                    if(entity.tag == "Player" && entity.name == "HitCollider")
+                    if (entity.tag == "Player" && entity.name == "HitCollider")
                     {
                         warn.Play();
-                        player = entity;
+                        foundedPlayer = entity;
                     }
-                    else if(entity.tag == "Enemy" && entity.name == "HitCollider")
+                    else if(entity.tag == "Goblin" && entity.name != "HitCollider")
                     {
                         if(entity.GetComponent<Goblin>() != null)
                         {
                             if (entity.GetComponent<Goblin>().player != null)
                             {
                                 warn.Play();
-                                player = entity;
+                                foundedPlayer = entity.GetComponent<Goblin>().player;
                             }
                         }
                     }
@@ -93,6 +95,7 @@ namespace BID
         void Find()
         {
             playerFound = true;
+            player = foundedPlayer;
         }
         public virtual void Attack()
         {
@@ -131,6 +134,14 @@ namespace BID
 
             if (hit.collider == null) {}
         }
-
+        void DrawCircle(float radius, int cegments)
+        {
+            for (int i = 1; i < cegments; i++)
+            {
+                Vector3 pos1 = new Vector2(Mathf.Cos((Mathf.PI * 2 / cegments) * i), Mathf.Sin((Mathf.PI * 2 / cegments) * i));
+                Vector3 pos2 = new Vector2(Mathf.Cos((Mathf.PI * 2 / cegments) * (i - 1)), Mathf.Sin((Mathf.PI * 2 / cegments) * (i - 1)));
+                Debug.DrawLine(pos1 * radius + transform.position, pos2 * radius + transform.position, Color.red);
+            }
+        }
     }
 }

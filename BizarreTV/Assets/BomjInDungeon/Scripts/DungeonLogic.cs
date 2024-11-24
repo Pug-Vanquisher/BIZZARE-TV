@@ -26,7 +26,7 @@ namespace BID
 
         public List<Room> rooms = new List<Room>();
 
-
+        public static string keystone = "0000";
         public int idRoomIn = 0;
 
         private void Start()
