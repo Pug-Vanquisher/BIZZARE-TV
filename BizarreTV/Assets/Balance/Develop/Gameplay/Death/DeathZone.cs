@@ -9,6 +9,9 @@ namespace Balance
         {
             if (other.CompareTag("Player"))
             {
+                AudioPlayer audioPlayer = DIContainer.Resolve<AudioPlayer>();
+                audioPlayer.Play(audioPlayer.Config.GameOverSound);
+
                 DIContainer.Resolve<SceneLoader>().LoadGameplay();
             }
         }

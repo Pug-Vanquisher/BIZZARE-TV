@@ -9,12 +9,15 @@ namespace Balance
         private float _moveSpeed;
         private IInput _input;
 
+        private AudioPlayer _audioPlayer;
+
         public PlayerMovement(Rigidbody rigidbody)
         {
             _rigidbody = rigidbody;
 
             _moveSpeed = DIContainer.Resolve<PlayerConfig>().MoveSpeed;
             _input = DIContainer.Resolve<IInput>();
+            _audioPlayer = DIContainer.Resolve<AudioPlayer>();
         }
 
         public void Move(float delta)

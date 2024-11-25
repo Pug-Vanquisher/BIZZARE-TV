@@ -6,7 +6,7 @@ namespace Balance
     {
         public void LoadHomeScene()
         {
-
+            DIContainer.Resolve<BackgroundMusic>().Destroy();
         }
 
         public void LoadLevelListScene()

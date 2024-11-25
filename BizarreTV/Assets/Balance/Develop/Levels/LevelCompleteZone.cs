@@ -17,6 +17,9 @@ namespace Balance
                 if (storage.GameData.LastCompletedLevel < currentNumber)
                     storage.SetLastCompletedLevel(currentNumber);
 
+                AudioPlayer audioPlayer = DIContainer.Resolve<AudioPlayer>();
+                audioPlayer.Play(audioPlayer.Config.FinishReachedSound);
+
                 DIContainer.Resolve<SceneLoader>().LoadGameplay();
             }
         }

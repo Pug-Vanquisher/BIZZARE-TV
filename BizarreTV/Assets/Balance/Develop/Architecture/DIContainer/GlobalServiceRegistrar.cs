@@ -7,6 +7,11 @@ namespace Balance
     {
         [SerializeField] private DefaultGameData _defaultGameData;
         [SerializeField] private LevelListConfig _levelListConfig;
+        [SerializeField] private AudioConfig _audioConfig;
+
+        [Space]
+
+        [SerializeField] private AudioSourcer _audioSourcePrefab;
 
         public override void Register()
         {
@@ -15,6 +20,7 @@ namespace Balance
             RegisterInput();
             RegisterStorage();
             RegisterLevelTracker();
+            RegisterAudio();
 
             Debug.Log("Global services registered");
         }
@@ -22,6 +28,7 @@ namespace Balance
         private void RegisterConfigs()
         {
             DIContainer.RegisterCofig(_levelListConfig);
+            DIContainer.RegisterCofig(_audioConfig);
         }
 
         private void RegisterSceneLoader()
@@ -48,6 +55,17 @@ namespace Balance
         {
             LevelTracker tracker = new LevelTracker();
             DIContainer.Register(tracker);
+        }
+
+        private void RegisterAudio()
+        {
+            DIContainer.Register(_audioSourcePrefab);
+
+            AudioPlayer player = new AudioPlayer();
+            DIContainer.Register(player);
+
+            BackgroundMusic backgroundMusic = new BackgroundMusic(player);
+            DIContainer.Register(backgroundMusic);
         }
     }
 }

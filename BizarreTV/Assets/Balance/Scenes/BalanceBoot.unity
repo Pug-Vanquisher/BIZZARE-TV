@@ -244,3 +244,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultGameData: {fileID: 11400000, guid: e38609c2fcd67734c8ff3f078cdcbeae, type: 2}
   _levelListConfig: {fileID: 11400000, guid: 029f14f67dfaaf34d85332384c396ef5, type: 2}
+  _audioConfig: {fileID: 11400000, guid: 914702a96c690f14bac57a07638ffe5e, type: 2}
+  _audioSourcePrefab: {fileID: 5577458074005995113, guid: 1e81624bcc03539449bff996fe73a165, type: 3}

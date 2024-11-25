@@ -19,6 +19,7 @@ namespace Balance
             Debug.Log("Boot scene loaded");
 
             LoadGameplay();
+            InitAudio();
 
             yield return null;
         }
@@ -45,9 +46,15 @@ namespace Balance
             DIContainer.Resolve<LevelTracker>().SetCurrentLevelNumber(number);
         }
 
+        private void InitAudio()
+        {
+            DIContainer.Resolve<AudioPlayer>().SetVolume(_storage.GameData.AudioVolume);
+        }
+
         private void LoadGameplay()
         {
             DIContainer.Resolve<SceneLoader>().LoadGameplay();
+            DIContainer.Resolve<BackgroundMusic>().Start();
         }
     }
 }
