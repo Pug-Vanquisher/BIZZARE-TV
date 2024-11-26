@@ -8,7 +8,7 @@ public class GoToLevel : MonoBehaviour
     public string level;
 
     public void OpenScene(){
-        if (level == "MainMenu")
+        if (level == "MainMenuTest")
         {
             List<GameObject> gameObjectsToDestroy =  new List<GameObject>();
             gameObjectsToDestroy.Add(GameObject.Find("Music"));
