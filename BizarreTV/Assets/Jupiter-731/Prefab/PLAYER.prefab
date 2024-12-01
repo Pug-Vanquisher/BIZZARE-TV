@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 452722996}
   - component: {fileID: 452722995}
   - component: {fileID: 452722994}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157651940}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: HpDrawPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1470682035}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1484947280}
   - component: {fileID: 1484947279}
   - component: {fileID: 1484947278}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570190144072510355}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3412018337030920631}
   - component: {fileID: 3412018337030920627}
   - component: {fileID: 787776716}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 1258795262}
-  speed: 5
+  speed: 3
   dashKey: 304
   dashMulti: 5
   dashTime: 0.2
@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3412018337557264302}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 3412018337644387199}
   - component: {fileID: 139298969}
   - component: {fileID: 139298968}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.35
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1357,7 +1357,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 273.28
+      value: 300
       mode: 0
       spread: 0
       speed:
@@ -1865,7 +1865,7 @@ ParticleSystem:
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 37008
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -5376,7 +5376,7 @@ GameObject:
   - component: {fileID: 1258795259}
   - component: {fileID: 1258795262}
   - component: {fileID: 1258795263}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: PLAYER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5459,7 +5459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3412018338270818949}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: MeleeAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5496,7 @@ GameObject:
   - component: {fileID: 1522663881}
   - component: {fileID: 1495606474}
   - component: {fileID: 5371396820458002004}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5550,7 +5550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 1.2
   damage: 100
-  timeToStrike: 0.5
+  timeToStrike: 1
   attackAngle: 72.7
   enemyLayer:
     serializedVersion: 2
@@ -5646,7 +5646,7 @@ GameObject:
   - component: {fileID: 1123893667}
   - component: {fileID: 1123893668}
   - component: {fileID: 4333132870531853350}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

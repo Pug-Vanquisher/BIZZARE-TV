@@ -38,8 +38,8 @@ TagManager:
   - 
   - 
   - Interactable
-  - 
-  - 
+  - Wall
+  - Player
   - JupiterProjectile
   - 
   - 
