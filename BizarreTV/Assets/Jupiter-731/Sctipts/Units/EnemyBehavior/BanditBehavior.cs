@@ -165,15 +165,31 @@ namespace Jupiter731
         override protected void FindTheWay()
         {
 
-            var obstacle = Physics2D.CircleCast((Vector2)transform.position, walkingRadius, _targetPosition, evadeRadius/2, maskToBypass);
-            if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+            var obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, _targetPosition, evadeRadius/2, maskToBypass);
+            foreach (var obstacle in obstacles)
             {
-                Move((Vector2)(obstacle.collider.transform.position - transform.position) * -1.5f);
-                _isWalking = false;
+                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+                {
+                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * 1.5f);
+                    _isWalking = false;
+                }
+                else if (!_isWalking && obstacle.collider == null)
+                {
+                    _startPosition = transform.position;
+                }
             }
-            else if (!_isWalking && obstacle.collider == null)
+            obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, -_targetPosition, evadeRadius / 2, maskToBypass);
+            foreach (var obstacle in obstacles)
             {
-                _startPosition = transform.position;
+                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+                {
+                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * -1.5f);
+                    _isWalking = false;
+                }
+                else if (!_isWalking && obstacle.collider == null)
+                {
+                    _startPosition = transform.position;
+                }
             }
         }
 

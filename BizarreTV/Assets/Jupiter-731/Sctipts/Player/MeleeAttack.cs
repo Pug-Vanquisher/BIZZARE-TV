@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Jupiter731
@@ -10,7 +12,7 @@ namespace Jupiter731
         [SerializeField] float damage = 10f;
         [SerializeField] float timeToStrike;
         [SerializeField, Range(30, 90)] float attackAngle = 45f;
-        [SerializeField] LayerMask enemyLayer;
+        [SerializeField] LayerMask[] enemyLayer;
         [SerializeField] KeyCode meleeAttackKey = KeyCode.Mouse1;
         [SerializeField] Transform attackPoint;
         [SerializeField] BaseAnimator baseAnimator;
@@ -29,9 +31,10 @@ namespace Jupiter731
             {
                 trailRenderer.forceRenderingOff = false;
             }
-            if (Input.GetKeyDown(meleeAttackKey) && _strikeTimer > timeToStrike)
+            if (Input.GetKey(meleeAttackKey) && _strikeTimer > timeToStrike)
             {
                 Hit();
+                gameObject.SetActive(true);
                 block.BlockProjectiles(attackPoint, attackRange);
                 _strikeTimer = 0;
             }
@@ -48,7 +51,8 @@ namespace Jupiter731
                 Debug.LogWarning("Attack Point не назначена.");
                 return;
             }
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer[0]);
+            hitEnemies.AddRange(Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer[1]));
             Debug.Log("Врагов найдено: " + hitEnemies.Length);
             foreach (Collider2D enemy in hitEnemies)
             {
