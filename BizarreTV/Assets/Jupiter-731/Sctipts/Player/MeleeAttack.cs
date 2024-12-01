@@ -14,7 +14,7 @@ namespace Jupiter731
         [SerializeField] KeyCode meleeAttackKey = KeyCode.Mouse1;
         [SerializeField] Transform attackPoint;
         [SerializeField] BaseAnimator baseAnimator;
-        [SerializeField] ParticleSystem particleSystem;
+        [SerializeField] TrailRenderer trailRenderer;
         [SerializeField] MeleeBlock block;
         private float _strikeTimer;
 
@@ -23,11 +23,11 @@ namespace Jupiter731
         {
             if (_strikeTimer + 0.1f >= timeToStrike - 0.2f)
             {
-                particleSystem.enableEmission = false;
+                trailRenderer.forceRenderingOff = true;
             }
             else if (_strikeTimer > 0.08f && _strikeTimer < timeToStrike)
             {
-                particleSystem.enableEmission = true;
+                trailRenderer.forceRenderingOff = false;
             }
             if (Input.GetKeyDown(meleeAttackKey) && _strikeTimer > timeToStrike)
             {

@@ -7,7 +7,7 @@ namespace Jupiter731
     public class BaseAnimator : MonoBehaviour
     {
         [SerializeField] Animator animator;
-        [SerializeField] float animationTime;
+        [SerializeField] float animationTime = 0.25f;
         [SerializeField] string triggerName = "MeleeAttack";
         public void PlayAnimations()
         {

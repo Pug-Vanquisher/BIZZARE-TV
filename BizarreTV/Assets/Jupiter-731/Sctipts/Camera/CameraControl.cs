@@ -16,12 +16,6 @@ namespace Jupiter731
         private Vector3 mousePos;
         private Vector3 smooth;
         private Vector3 offset;
-        private WaitForSeconds TickRateTime;
-
-        //private void Start()
-        //{
-        //    Application.targetFrameRate = 60;
-        //}
 
         private void Awake()
         {
