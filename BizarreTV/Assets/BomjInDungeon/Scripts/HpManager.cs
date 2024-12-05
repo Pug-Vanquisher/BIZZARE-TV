@@ -11,33 +11,32 @@ namespace BID
         public float invulDelay;
         private bool invulnerability = false;
 
-        public int dangerScale = 1;
+        public int dangerScale = 0;
 
         void Start()
         {
             maxhp += 2 * dangerScale;
             currenthp = maxhp;
         }
-
+        public void Restart()
+        {
+            maxhp += 2 * dangerScale;
+            currenthp = maxhp;
+        }
         private void Update()
         {
-            if (currenthp <= 0) 
+            if (currenthp <= 0)
             {
-                if (gameObject.name != "Bomj") 
+                var a = GetComponent<DeathEvent>();
+                if (a != null)
                 {
-                    Destroy(gameObject);
-                    var a = GetComponent<DeathEvent>();
-                    if(a != null)
-                    {
-                        a.Death();
-                    }
+                    a.Death();
                 }
-
-                else
+                if (gameObject.tag == "Player")
                 {
-                    Debug.Log("я здох :(");
-                    currenthp = maxhp;
+                    EventManager.Instance.TriggerEvent("PlayerDead");
                 }
+                Destroy(gameObject);
             }
         }
         public virtual void TakeDamage(int damage)

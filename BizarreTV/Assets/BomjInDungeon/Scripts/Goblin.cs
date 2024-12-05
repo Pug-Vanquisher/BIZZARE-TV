@@ -24,6 +24,7 @@ namespace BID
         private bool playerFound;
         void Start()
         {
+
             goblin = GetComponent<CharacterController>();
             current_vlframes = 0;
         }

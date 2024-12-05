@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -91513641, guid: e547067da887a81489413d659598f32d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c741eabf9acba1543b1b94abc2f9e4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pl: {fileID: 0}
+  pl: {fileID: 1609846251077995788}
   velik: {x: 0, y: 0}
   speed: 0.45
   dagger: {fileID: 3899623944128159961, guid: 5347981c243a7e04599704d13f6a65e7, type: 3}
@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6f6de5f11f9a1488139846043554b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 6
-  currenthp: 6
+  maxhp: 8
+  currenthp: 8
   invulDelay: 0.4
-  dangerScale: 1
+  dangerScale: 0
 --- !u!114 &5175776509150032307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 8180824805173826261, guid: fd841fc5652397f418075d92b92b28ce, type: 3}
       propertyPath: m_Name
       value: HitCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180824805173826261, guid: fd841fc5652397f418075d92b92b28ce, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd841fc5652397f418075d92b92b28ce, type: 3}

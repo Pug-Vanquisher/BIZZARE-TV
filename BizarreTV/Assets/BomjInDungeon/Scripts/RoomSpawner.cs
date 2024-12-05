@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace BID
@@ -17,7 +16,7 @@ namespace BID
         public GameObject doorBoss;
         public Sprite[] tiles;
         public Sprite[] doors;
-
+        public GameObject CorpsePrefab;
 
         public int multiplyer;
 
@@ -172,6 +171,7 @@ namespace BID
                         var a = Instantiate(PrefabStorage.enemiesPrefabs[i], transform.GetChild(2));
                         a.transform.position = new Vector3(enemies[i][j].x, enemies[i][j].y) * multiplyer + transform.position;
                         a.AddComponent<DeathEvent>().CollectEvent(logic, roomID, i, enemies[i][j]);
+                        a.GetComponent<DeathEvent>().Corpse = CorpsePrefab;
                     }
                 }
             }

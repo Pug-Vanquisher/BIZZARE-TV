@@ -53,6 +53,15 @@ namespace BID
             EventManager.Instance.Subscribe("MoveDown", MoveDown);
             EventManager.Instance.Subscribe("MoveLeft", MoveLeft);
         }
+        
+        private void Start()
+        {
+            if(generator == null)
+            {
+                generator = GameObject.FindGameObjectWithTag("Brain")?.GetComponent<DungeonGenerator>();
+            }
+            
+        }
 
         public void Update()
         {
@@ -84,6 +93,10 @@ namespace BID
         }
         void MiniMap()
         {
+            if (generator == null)
+            {
+                generator = GameObject.FindGameObjectWithTag("Brain")?.GetComponent<DungeonGenerator>();
+            }
             rooms = generator.rooms;
             roomId = generator.GetPlayerStartRoom();
             PointRoom(roomId);

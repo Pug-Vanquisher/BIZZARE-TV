@@ -8,6 +8,7 @@ namespace BID
     {
         public CharacterController pl;
         public Vector2 velik;
+        private Vector2 dashVel;
         public KeyConfig key = new KeyConfig();
 
         public float speed = 0.025f;
@@ -39,6 +40,19 @@ namespace BID
                 a.transform.position = transform.position + side1cos * Random.Range(-1f, 1f) * AttackSpreadness + Vector3.up;
                 a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(mousePosition - a.transform.position, Vector3.right), Vector3.forward);
             }
+            if(Input.GetKeyDown(KeyCode.Space) && !IsInvoking("dashOff"))
+            {
+                pl.enabled = false;
+                Invoke("dashOff", 0.5f);
+                dashVel = mousePosition - transform.position;
+            }
+            if (IsInvoking("dashOff"))
+            {
+                if(Physics.Raycast(transform.position, dashVel.normalized))
+                {
+                    Debug.Log("1");
+                }
+            }
         }
 
         private void FixedUpdate()
@@ -55,5 +69,11 @@ namespace BID
             Vector2 pos = new Vector2(transform.position.x, transform.position.y);
             pl.Move(direction - pos);
         }
+
+        void dashOff()
+        {
+            pl.enabled = true;
+        }
+
     }
 }

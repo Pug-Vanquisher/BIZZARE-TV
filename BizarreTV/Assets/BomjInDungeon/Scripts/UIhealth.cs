@@ -6,7 +6,7 @@ namespace BID
 {
     public class UIhealth : MonoBehaviour
     {
-        public HpManager playerhealth;
+        private HpManager playerhealth;
         public GameObject heartPrefab;
         public List<GameObject> Hearts = new List<GameObject>();
         public int playerCurrentHealth;
@@ -19,6 +19,10 @@ namespace BID
         // Start is called before the first frame update
         void Start()
         {
+            if (playerhealth == null)
+            {
+                playerhealth = GameObject.FindGameObjectWithTag("Player")?.GetComponent<HpManager>();
+            }
             origin = transform.parent.GetComponent<RectTransform>();
             playerCurrentHealth = playerhealth.maxhp;
             for (int i = 0; i < playerhealth.maxhp; i += 2)
@@ -27,6 +31,7 @@ namespace BID
                 a.GetComponent<HeartScript>().id = i;
                 Hearts.Add(a);
             }
+
         }
         // Update is called once per frame
         void Update()

@@ -64,6 +64,7 @@ MonoBehaviour:
   Room: {fileID: 6508107097321108596, guid: 0b16ad6df745cf640863d284673874e5, type: 3}
   door: {fileID: 6734452249656590866, guid: 336a798d60a09f24a8cdec7f978715c7, type: 3}
   dangerLevel: {fileID: 4605594259497363687}
+  magnitude: 5
 --- !u!114 &443590676730875840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ MonoBehaviour:
   Hearts: []
   playerCurrentHealth: 0
   _shakeDuration: 0.4
-  _magnitude: 0.4
+  _magnitude: 5
   _originalPosition: {x: 0, y: 0, z: 0}
   origin: {fileID: 0}
 --- !u!1 &5157754042739187813

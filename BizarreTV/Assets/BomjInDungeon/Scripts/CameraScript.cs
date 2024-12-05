@@ -6,6 +6,7 @@ namespace BID
 {
     public class CameraScript : MonoBehaviour
     {
+        public GameObject settings;
         public RoomSpawner rs;
         public Transform pl;
         public Transform room;
@@ -18,9 +19,21 @@ namespace BID
         }
         private void Update()
         {
-            Vector3 direction = pl.position - room.position;
-            transform.position = room.position + direction.normalized * Mathf.Clamp(direction.magnitude, 0, rs.roomsize.magnitude) + _shakePosition;
-            transform.position = new Vector3(transform.position.x, transform.position.y, -50f);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                settings.SetActive(true);
+            }
+
+            if(pl != null)
+            {
+                Vector3 direction = pl.position - room.position;
+                transform.position = room.position + direction.normalized * Mathf.Clamp(direction.magnitude, 0, rs.roomsize.magnitude) + _shakePosition;
+                transform.position = new Vector3(transform.position.x, transform.position.y, -50f);
+            }
+            else
+            {
+                pl = GameObject.FindGameObjectWithTag("Player")?.transform;
+            }
         }
         public void CrystalDestroyed()
         {
