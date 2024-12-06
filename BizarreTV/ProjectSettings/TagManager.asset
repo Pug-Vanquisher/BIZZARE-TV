@@ -19,6 +19,8 @@ TagManager:
   - MolotTargetArea
   - SecondBow
   - Bullet
+  - Goblin
+  - Brain
   layers:
   - Default
   - TransparentFX
@@ -35,8 +37,8 @@ TagManager:
   - Molot
   - Bullet
   - 
-  - 
-  - 
+  - Blocking
+  - Actor
   - 
   - 
   - 

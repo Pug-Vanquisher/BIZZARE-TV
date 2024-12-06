@@ -5,75 +5,81 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MainMenu/MainMenuTest.unity
     guid: 155b66c0d9690214ab1b2f1b305fb30f
-  - enabled: 1
+  - enabled: 0
     path: Assets/MainMenu/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/CyberRun/Scenes, cr/Menu cr.unity
     guid: 23be9f6762714854597e8583fa3d86f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/CyberRun/Scenes, cr/Level 1cr.unity
     guid: d380850cedb99124c90896b7a4528a8e
-  - enabled: 1
+  - enabled: 0
     path: Assets/CyberRun/Scenes, cr/Level 2cr.unity
     guid: d5dc537d299d3c6499114f0307df4422
-  - enabled: 1
+  - enabled: 0
     path: Assets/Hit The Mole/Scenes/HitMoleLv1.unity
     guid: 26b5c747dd7cb8f4b861fc2f83bf7f64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Hit The Mole/Scenes/HitMoleLv2.unity
     guid: 114434674cb7d9d48a9dfb9ada51e717
-  - enabled: 1
+  - enabled: 0
     path: Assets/Hit The Mole/Scenes/HitMoleLv3.unity
     guid: 9220bf5deac8b6843acbd220fb75cae7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Puzzle/Scenes/secScene.unity
     guid: 652acfb83ffa01248b1399d07e695559
-  - enabled: 1
+  - enabled: 0
     path: Assets/RythmGame/Scenes/RythmLevel1.unity
     guid: 59bbce222c73a534dab0e763afcbfc65
-  - enabled: 1
+  - enabled: 0
     path: Assets/RythmGame/Scenes/RythmLevel2.unity
     guid: 56b3069f4e3135e4a97343a5bb7b24cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/RythmGame/Scenes/RythmSceneDemo.unity
     guid: b8e537983b2bd414599d3e3ee02429ed
-  - enabled: 1
+  - enabled: 0
     path: Assets/DeliciousDishes/01 Pancakes/Scenes/DDPancakesMenu.unity
     guid: 01184a6a0b7db0f43ba296f72dfd8115
-  - enabled: 1
+  - enabled: 0
     path: Assets/DeliciousDishes/01 Pancakes/Scenes/DDPancakes.unity
     guid: abc237237e42db64795dbfeb5564ac59
-  - enabled: 1
+  - enabled: 0
     path: Assets/DeliciousDishes/02 Tacos/Scenes/DDTacos.unity
-    guid: f7e58e3ad776d6044a73eed77230cc6c
-  - enabled: 1
+    guid: e8ea4c29ed48d3f4e9b597459cb8bddc
+  - enabled: 0
     path: Assets/DeliciousDishes/02 Tacos/Scenes/DDTacosMenu.unity
-    guid: b38a3bc16325c5a4096782c6e5942db6
-  - enabled: 1
+    guid: 9139595ffe0e2ec46ae0f90f549702ad
+  - enabled: 0
     path: Assets/Arcanoid/Scenes/Scene_level_1.unity
     guid: 865ceebd6b2538049a7ac0d9a91ae497
-  - enabled: 1
+  - enabled: 0
     path: Assets/Arcanoid/Scenes/Scene_level_2.unity
     guid: aa93e16eef23ffa40a558e4d70e90064
-  - enabled: 1
+  - enabled: 0
     path: Assets/Arcanoid/Scenes/Scene_level_3.unity
     guid: 716206d6e88eac64f9dd233ec593e2a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/ShootingRanch/_Data/Scenes/Meny.unity
     guid: 3791c26f2a26f474faaac1b964f861a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/ShootingRanch/_Data/Scenes/Tir.unity
     guid: 3ccc41e7ba7347f469675b9289b2149c
-  - enabled: 1
+  - enabled: 0
     path: Assets/LoneTower/Scenes/LoneTower.unity
     guid: 48abd091ce0508442ad7e2a448a5b56a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Rogalik/Scenes/Level.unity
     guid: 3e46023e9af1ca24897f7603b4bc6db8
+  - enabled: 1
+    path: Assets/BomjInDungeon/Scenes/Dungeon.unity
+    guid: 8f0f1e522b73025429c31e288cd76fa2
+  - enabled: 1
+    path: Assets/BomjInDungeon/Scenes/test.unity
+    guid: a30901804c6a1414e8656ad717852861
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 06e2f4cdfba86e147929c5457f2f2823, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 0f09080a1bd9ce94ca0c54a7b6d43969, type: 2}

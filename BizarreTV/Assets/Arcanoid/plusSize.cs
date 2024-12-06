@@ -2,78 +2,82 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class plusSize : MonoBehaviour
+namespace Arcanoid
 {
-    [SerializeField] gameMAnager gameManager;
-    [SerializeField] List<Sprite> sprites;
-    private bool hasReal;
-    public float speed = 2;
-
-    public Vector2 direction = new Vector2(0, 1);
-    public Vector2 velocity;
-
-    public int randomBuff;
-
-    private void Awake()
+    public class plusSize : MonoBehaviour
     {
-        gameManager = FindObjectOfType<gameMAnager>();
-        randomBuff = Random.Range(0, 6);
-        randomBuff = gameManager.ckeckBuff(randomBuff);
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[randomBuff];
-    }
+        [SerializeField] gameMAnager gameManager;
+        [SerializeField] List<Sprite> sprites;
+        private bool hasReal;
+        public float speed = 2;
 
+        public Vector2 direction = new Vector2(0, 1);
+        public Vector2 velocity;
 
-    private void FixedUpdate()
-    {
-        velocity = direction * speed;
-        Vector2 pos = transform.position;
-        pos -= velocity * Time.deltaTime;
-        transform.position = pos;
+        public int randomBuff;
 
-        if (!hasReal)
+        private void Awake()
         {
-            Destroy(gameObject);
+            gameManager = FindObjectOfType<gameMAnager>();
+            randomBuff = Random.Range(0, 6);
+            randomBuff = gameManager.ckeckBuff(randomBuff);
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[randomBuff];
         }
-        
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
+
+        private void FixedUpdate()
         {
-            switch (randomBuff)
-            { 
-                case 0:
-                    gameManager.plusSize();
-                    break;
-                case 1: 
-                    gameManager.minusSize();
-                    break;
-                case 2:
-                    gameManager.resetSize();
-                    break;
-                case 3:
-                    gameManager.addSpeed();
-                    break;
-                case 4:
-                    gameManager.removeSpeed();
-                    break;
-                case 5:
-                    gameManager.resetSpeed();
-                    break;
+            velocity = direction * speed;
+            Vector2 pos = transform.position;
+            pos -= velocity * Time.deltaTime;
+            transform.position = pos;
 
+            if (!hasReal)
+            {
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                switch (randomBuff)
+                {
+                    case 0:
+                        gameManager.plusSize();
+                        break;
+                    case 1:
+                        gameManager.minusSize();
+                        break;
+                    case 2:
+                        gameManager.resetSize();
+                        break;
+                    case 3:
+                        gameManager.addSpeed();
+                        break;
+                    case 4:
+                        gameManager.removeSpeed();
+                        break;
+                    case 5:
+                        gameManager.resetSpeed();
+                        break;
+
+                }
+                Destroy(gameObject);
+            }
+        }
+
+        private void OnBecameInvisible()
+        {
+            hasReal = false;
+        }
+
+        private void OnBecameVisible()
+        {
+            hasReal = true;
         }
     }
 
-    private void OnBecameInvisible()
-    {
-        hasReal = false;
-    }
-
-    private void OnBecameVisible()
-    {
-        hasReal = true;
-    }
 }
