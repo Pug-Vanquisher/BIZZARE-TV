@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unpause : MonoBehaviour
+namespace Jupiter731
 {
-    public void StartTime()
+    public class Unpause : MonoBehaviour
     {
-        Time.timeScale = 1.0f;
+        public void StartTime()
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 }
