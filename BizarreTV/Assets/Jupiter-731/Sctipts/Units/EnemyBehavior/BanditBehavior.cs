@@ -16,6 +16,7 @@ namespace Jupiter731
         [SerializeField, Range(0, 5)] float chillingTime = 2;
         [SerializeField, Range(0, 5)] float noChillingTime = 2;
         [SerializeField, Range(0.05f, 20), Tooltip("Сколько секунд надо на 1 выстрел")] float SecondPerBullet;
+        [SerializeField] bool isRobot = false;
         [SerializeField] Fire gun;
         [SerializeField] Transform weapon;
         [SerializeField] Rigidbody2D body;
@@ -30,11 +31,16 @@ namespace Jupiter731
         private float _currNoChillTime = 0;
         private float _currFireSecond = 0;
         private float _angleToTarget = 0;
+        private float _robotMulti = -1;
 
         private void Awake()
         {
             Application.targetFrameRate =1000;
             _startPosition = centre.position;
+            if (isRobot)
+            {
+                _robotMulti = 1;
+            }
         }
 
         override protected void Attack()
@@ -148,7 +154,7 @@ namespace Jupiter731
                 if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude < evadeRadius)
                 {
                     _isWalking = true;
-                    Move((Vector2)(player.transform.position - centre.position) * -1);
+                    Move((Vector2)(player.transform.position - centre.position) * _robotMulti);
                 }
                 else
                 {
@@ -165,15 +171,31 @@ namespace Jupiter731
         override protected void FindTheWay()
         {
 
-            var obstacle = Physics2D.CircleCast((Vector2)transform.position, walkingRadius, _targetPosition, evadeRadius/2, maskToBypass);
-            if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+            var obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, _targetPosition, evadeRadius/2, maskToBypass);
+            foreach (var obstacle in obstacles)
             {
-                Move((Vector2)(obstacle.collider.transform.position - transform.position) * -1.5f);
-                _isWalking = false;
+                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+                {
+                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * 1.5f);
+                    _isWalking = false;
+                }
+                else if (!_isWalking && obstacle.collider == null)
+                {
+                    _startPosition = transform.position;
+                }
             }
-            else if (!_isWalking && obstacle.collider == null)
+            obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, -_targetPosition, evadeRadius / 2, maskToBypass);
+            foreach (var obstacle in obstacles)
             {
-                _startPosition = transform.position;
+                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+                {
+                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * -1.5f);
+                    _isWalking = false;
+                }
+                else if (!_isWalking && obstacle.collider == null)
+                {
+                    _startPosition = transform.position;
+                }
             }
         }
 

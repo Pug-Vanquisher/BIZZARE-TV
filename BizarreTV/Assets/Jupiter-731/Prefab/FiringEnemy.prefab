@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 2822148147062852346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2822148147064714338}
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bf14b44d26aa44920644a853f1611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 1
   _currHP: 0
 --- !u!70 &2822148147062852321
 CapsuleCollider2D:
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2822148147322324682}
   bulletPrefab: {fileID: 3299769103211288307, guid: 7d34417e6ca31af4d8fbf91903c8bc76, type: 3}
-  bulletSpeed: 3
+  bulletSpeed: 5
   bulletLifeTime: 5
   bulletDamage: 1
   animator: {fileID: 784522013}

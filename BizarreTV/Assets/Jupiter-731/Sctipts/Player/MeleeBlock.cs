@@ -17,7 +17,6 @@ namespace Jupiter731
         {
             StartCoroutine(Delay());
             StartCoroutine(Blocking(blockPoint, blockRange));
-            
         }
 
         private void BlockContinuous(Transform blockPoint, float blockRange)

@@ -8,4 +8,10 @@ namespace Jupiter731
     {
         Chill, Attack, Move, MoveAndAttack, Evade, FindTheWay
     }
+
+    public enum SoundVariety
+    {
+        Shoota, EnemyShootaRobot, EnemyShootaBandit, BackMusic, MenuMusic, Sword, Escape, Hit
+    }
+
 }
