@@ -67,7 +67,8 @@ namespace BID
         }
         public void StartDungeon()
         {
-            if(player == null)
+            keystone = "0000";
+            if (player == null)
             {
                 player = Instantiate(PlayerPrefab);
                 player.name = "Bomj";
