@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 1258795262}
-  speed: 3
+  speed: 6
   dashKey: 304
   dashMulti: 5
   dashTime: 0.2
@@ -711,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 3412018337884268711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.642531, y: 1.5522249, z: 0}
-  m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
+  m_LocalScale: {x: 0.37, y: 0.37, z: 0.37}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3412018337083156780}
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bf14b44d26aa44920644a853f1611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 5
   _currHP: 0
 --- !u!1 &3412018338270818946
 GameObject:
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.2
-  damage: 100
+  damage: 2
   timeToStrike: 1
   attackAngle: 72.7
   enemyLayer:
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireKey: 323
   fire: {fileID: 3412018338826113611}
-  fireRate: 10
+  fireRate: 5
 --- !u!95 &1522663881
 Animator:
   serializedVersion: 5
@@ -1036,9 +1036,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3412018337557264302}
   bulletPrefab: {fileID: 3299769103211288307, guid: 7d34417e6ca31af4d8fbf91903c8bc76, type: 3}
-  bulletSpeed: 7
+  bulletSpeed: 10
   bulletLifeTime: 5
-  bulletDamage: 5
+  bulletDamage: 1
   animator: {fileID: 4333132870531853350}
 --- !u!114 &1123893667
 MonoBehaviour:

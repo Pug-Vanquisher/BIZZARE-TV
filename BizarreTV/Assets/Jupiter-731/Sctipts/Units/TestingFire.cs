@@ -3,23 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestingFire : MonoBehaviour
+namespace Jupiter731
 {
-    [SerializeField] float reloadTime;
-    [SerializeField, Range(0, 10000)] float capacity;
-    [SerializeField] Fire fire;
-    private void Awake()
+    public class TestingFire : MonoBehaviour
     {
-        StartCoroutine(OpenFire());
-    }
-
-    IEnumerator OpenFire()
-    {
-        float counter = 0f;
-        while (counter < capacity)
+        [SerializeField] float reloadTime;
+        [SerializeField, Range(0, 10000)] float capacity;
+        [SerializeField] Fire fire;
+        private void Awake()
         {
-            fire.OpenFire();
-            yield return new WaitForSeconds(reloadTime);
+            StartCoroutine(OpenFire());
+        }
+
+        IEnumerator OpenFire()
+        {
+            float counter = 0f;
+            while (counter < capacity)
+            {
+                fire.OpenFire();
+                yield return new WaitForSeconds(reloadTime);
+            }
         }
     }
 }
