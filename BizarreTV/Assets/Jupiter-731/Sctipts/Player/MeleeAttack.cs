@@ -34,7 +34,6 @@ namespace Jupiter731
             if (Input.GetKey(meleeAttackKey) && _strikeTimer > timeToStrike)
             {
                 Hit();
-                gameObject.SetActive(true);
                 block.BlockProjectiles(attackPoint, attackRange);
                 _strikeTimer = 0;
             }
