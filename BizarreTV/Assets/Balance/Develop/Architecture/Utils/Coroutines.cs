@@ -34,5 +34,11 @@ namespace Balance
         {
             instance.StopAllCoroutines();
         }
+
+        public static void Destroy()
+        {
+            if (instance != null)
+                Destroy(instance.gameObject);
+        }
     }
 }

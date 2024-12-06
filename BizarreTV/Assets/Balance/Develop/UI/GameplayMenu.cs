@@ -8,6 +8,7 @@ namespace Balance
         public void LoadHomeScene()
         {
             DIContainer.Resolve<BackgroundMusic>().Destroy();
+            Coroutines.Destroy();
             SceneManager.LoadScene("MainMenuTest");
         }
 
