@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Balance
 {
@@ -7,6 +8,7 @@ namespace Balance
         public void LoadHomeScene()
         {
             DIContainer.Resolve<BackgroundMusic>().Destroy();
+            SceneManager.LoadScene("MainMenuTest");
         }
 
         public void LoadLevelListScene()
