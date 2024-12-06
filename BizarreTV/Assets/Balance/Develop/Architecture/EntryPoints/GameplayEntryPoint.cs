@@ -10,6 +10,7 @@ namespace Balance
             RegisterServices();
 
             CreateLevel();
+            UpdateUIView();
 
             Debug.Log("Gameplay scene loaded");
 
@@ -20,6 +21,12 @@ namespace Balance
         {
             GameObject prefab = DIContainer.Resolve<LevelTracker>().CurrentLevelData.Prefab;
             Instantiate(prefab);
+        }
+
+        private void UpdateUIView()
+        {
+            float volume = DIContainer.Resolve<AudioPlayer>().Volume;
+            Object.FindObjectOfType<GameplayMenu>().UpdateView(volume);
         }
     }
 }
