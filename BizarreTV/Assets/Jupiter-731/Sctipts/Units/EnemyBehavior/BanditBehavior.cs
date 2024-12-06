@@ -45,7 +45,7 @@ namespace Jupiter731
 
         override protected void Attack()
         {
-            if (gun != null)
+            if (gun != null && player != null)
             {
                 if (((Vector2)centre.position -
                     (Vector2)player.transform.position).magnitude < agrRadius)
@@ -132,14 +132,14 @@ namespace Jupiter731
         override protected void MoveAndAttack()
         {
             Attack();
-            if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius)
+            if (player != null)
             {
-                Evade();
+                if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius)
+                {
+                    Evade();
+                }
             }
-            //else if(((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius - walkingRadius/3)
-            //{
-            //    Chill();
-            //}
+            else if (player == null) { }
             else if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude > agrRadius)
             {
                 Chill();
@@ -201,10 +201,12 @@ namespace Jupiter731
 
         private void TrackPlayer()
         {
-            weapon.rotation = Quaternion.FromToRotation(Vector3.right, player.transform.position - weapon.position);
-            _angleToTarget = Vector2.SignedAngle(Vector3.right, (Vector2)player.transform.position - _startPosition);
-            Flip();
-        }
+            if (player != null)
+            {
+                weapon.rotation = Quaternion.FromToRotation(Vector3.right, player.transform.position - weapon.position);
+                _angleToTarget = Vector2.SignedAngle(Vector3.right, (Vector2)player.transform.position - _startPosition);
+                Flip();
+            }        }
 
         private void Move(Vector2 target)
         {

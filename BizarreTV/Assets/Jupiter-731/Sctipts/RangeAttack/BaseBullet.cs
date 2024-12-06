@@ -37,8 +37,8 @@ namespace Jupiter731
             {
                 //Debug.Log(BulletDamage);
                 baseUnit.TakeDamage(BulletDamage);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
     }
 }
