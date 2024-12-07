@@ -12,7 +12,8 @@ namespace Balance
         public static void AutostartGame()
         {
             string sceneName = SceneManager.GetActiveScene().name;
-            if (Scenes.IsBalanceGameScene(sceneName))
+
+            if (Scenes.IsBalanceGameScene(sceneName) && sceneName != Scenes.BOOT)
             {
                 Debug.Log("Autostart");
                 new SceneLoader().LoadBoot();
@@ -46,7 +47,7 @@ namespace Balance
 
             yield return SceneManager.LoadSceneAsync(sceneName);
 
-            EntryPoint sceneEntryPoint = Object.FindFirstObjectByType<T>();
+            EntryPoint sceneEntryPoint = Object.FindObjectOfType<T>();
             yield return sceneEntryPoint.Run();
 
             //yield return _uiRoot.HideLoadingScreen();
