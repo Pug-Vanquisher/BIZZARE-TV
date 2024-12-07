@@ -86,6 +86,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BomjInDungeon/Scenes/Dungeon.unity
     guid: 8f0f1e522b73025429c31e288cd76fa2
+  - enabled: 1
+    path: Assets/Balance/Scenes/BalanceBoot.unity
+    guid: 7ece69924968d9c4590e472209e45a6e
+  - enabled: 1
+    path: Assets/Balance/Scenes/BalanceGameplay.unity
+    guid: a948a619600f86e4a9bad02f1305aea0
+  - enabled: 1
+    path: Assets/Balance/Scenes/BalanceLevelList.unity
+    guid: 1a3acd60edb801e439dc16f4a546fa0d
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 06e2f4cdfba86e147929c5457f2f2823, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 0f09080a1bd9ce94ca0c54a7b6d43969, type: 2}

@@ -7,6 +7,11 @@ namespace Balance
     {
         private Storage _storage;
 
+        private void Start()
+        {
+            Coroutines.StartRoutine(Run());
+        }
+
         public override IEnumerator Run()
         {
             DIContainer.RemoveAll();
