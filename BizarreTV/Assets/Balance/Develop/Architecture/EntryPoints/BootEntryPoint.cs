@@ -9,11 +9,8 @@ namespace Balance
 
         public override IEnumerator Run()
         {
-            // Сброс всех ранее зарегистрированных сервисов
             DIContainer.RemoveAll();
-
-            // Зарегистрировать все сервисы на сцене
-            RegisterSceneServices();
+            RegisterServices();
 
             yield return LoadData();
 
@@ -25,17 +22,6 @@ namespace Balance
             InitAudio();
 
             yield return null;
-        }
-
-        private void RegisterSceneServices()
-        {
-            ServiceRegistrar[] registrars = FindObjectsOfType<ServiceRegistrar>();
-            foreach (var registrar in registrars)
-            {
-                registrar.Register();
-            }
-
-            Debug.Log("Scene services registered");
         }
 
         private IEnumerator LoadData()

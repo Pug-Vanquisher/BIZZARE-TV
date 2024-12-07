@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene_level_1
+  level: LoneTower
 --- !u!114 &276744441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Menu cr
+  level: 2 2
 --- !u!114 &556336190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4225d37575cf1e847b19c44da8f94470, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f2602d7e58222347b87c0bd637b50d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene_level_1
+  level: Meny
 --- !u!114 &567193621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene_level_1
+  level: Level
 --- !u!114 &689161814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: secScene
+  level: Tutorial
 --- !u!114 &776816796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3578,7 +3578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: HitMoleLv1
+  level: Dungeon
 --- !u!114 &782723631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6523,7 +6523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1627581037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7424,7 +7424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene_level_1
+  level: DDTacosMenu
 --- !u!114 &1768640441
 MonoBehaviour:
   m_ObjectHideFlags: 0
