@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:BizarreTV/Assets/MainMenu/Fixers/BufferScene.unity.meta
 guid: c33240426efb30244a21ab3def78ff1d
 DefaultImporter:
+========
+guid: 7d34417e6ca31af4d8fbf91903c8bc76
+PrefabImporter:
+>>>>>>>> Team2:BizarreTV/Assets/Jupiter-731/Prefab/Bullet.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
