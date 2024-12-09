@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class JupiterPlayer : MonoBehaviour
 {
     MovementController movementController;
     [SerializeField] private EventManager m_EventManager;

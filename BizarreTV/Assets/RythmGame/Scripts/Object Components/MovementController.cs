@@ -33,7 +33,7 @@ class MovementController : MonoBehaviour
                 return true;
             }
             if ((hit.collider.gameObject.tag == "Enemy") | (hit.collider.gameObject.tag == "Boss")){
-                gameObject.GetComponent<Player>()?.Attack(hit.collider.gameObject);    
+                gameObject.GetComponent<JupiterPlayer>()?.Attack(hit.collider.gameObject);    
                 return false;
             }
         }

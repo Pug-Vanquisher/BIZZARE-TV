@@ -31,10 +31,11 @@ namespace Jupiter731
         private void Update()
         {
             if (target != null)
+            {
                 smooth = Vector3.Lerp(transform.position, target.position - offset, speed);
-            smooth = MouseTrack(smooth);
-            transform.position = smooth;
-
+                smooth = MouseTrack(smooth);
+                transform.position = smooth;
+            }
         }
 
         private Vector3 MouseTrack(Vector3 Changed)

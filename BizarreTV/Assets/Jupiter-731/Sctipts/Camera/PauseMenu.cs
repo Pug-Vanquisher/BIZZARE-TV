@@ -4,10 +4,16 @@ using UnityEngine;
 
 namespace Jupiter731
 {
-    public class PAUSEMenuTemp : MonoBehaviour
+    public class PauseMenu : MonoBehaviour
     {
         [SerializeField] GameObject pauseMenu;
         private bool _isPaused = false;
+        public void UnPauseWithButton()
+        {
+            pauseMenu.SetActive(false);
+            _isPaused = false;
+            Time.timeScale = 1f;
+        }
 
         // Update is called once per frame
         void Update()
@@ -26,4 +32,5 @@ namespace Jupiter731
             }
         }
     }
+
 }

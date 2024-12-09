@@ -51,7 +51,7 @@ namespace Jupiter731
                 return;
             }
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer[0]);
-            hitEnemies.AddRange(Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer[1]));
+            //hitEnemies.AddRange(Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer[1]));
             Debug.Log("Врагов найдено: " + hitEnemies.Length);
             foreach (Collider2D enemy in hitEnemies)
             {

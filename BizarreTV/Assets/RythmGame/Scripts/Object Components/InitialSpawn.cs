@@ -12,7 +12,7 @@ public class InitialSpawn : MonoBehaviour
         if (GameObject.FindWithTag("Player") == null){
             Instantiate (playerPrefab, spawnPos.position + Vector3.up * 2f, Quaternion.identity);
         } else {
-            GameObject.FindWithTag("Player").GetComponent<Player>().Teleport(spawnPos.position + Vector3.up * 2f);
+            GameObject.FindWithTag("Player").GetComponent<JupiterPlayer>().Teleport(spawnPos.position + Vector3.up * 2f);
         }
     }
 }
