@@ -10,6 +10,7 @@ namespace Jupiter731
         [SerializeField] KeyCode dashKey = KeyCode.LeftShift;
         [SerializeField] float dashMulti;
         [SerializeField] float dashTime;
+
         private float _currDashTime;
         protected Vector3 direct;
         private WaitForEndOfFrame _waiter = new WaitForEndOfFrame();
@@ -17,6 +18,7 @@ namespace Jupiter731
         {
             direct.x = Input.GetAxis("Horizontal");
             direct.y = Input.GetAxis("Vertical");
+            
             if (Input.GetKeyDown(dashKey))
             {
                 _currDashTime = 0;
