@@ -29,7 +29,7 @@ namespace Jupiter731
         {
             yield return new WaitForSeconds(0.1f);
             HP.type = Image.Type.Filled;
-            HP.fillMethod = Image.FillMethod.Horizontal;
+            HP.fillMethod = Image.FillMethod.Vertical;
             _maxHP = unit.PublicHP;
 
         }

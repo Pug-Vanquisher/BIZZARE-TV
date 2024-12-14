@@ -1,20 +1,22 @@
 using Jupiter731;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimerVisual : MonoBehaviour
 {
     [SerializeField] Timer timerPhy;
-    [SerializeField] TextMeshProUGUI energyForSec;
+    [SerializeField] Image fillEnergy;
+    [SerializeField] float maxSecEnergy = 60;
 
     private void FixedUpdate()
     {
-        if (energyForSec != null)
+        if (fillEnergy != null)
             Refresh();
     }
 
     void Refresh()
     {
-        energyForSec.text = string.Format("{0:f2}", timerPhy.CurrTime);
+        fillEnergy.fillAmount = timerPhy.CurrTime / maxSecEnergy;
     }
 }
