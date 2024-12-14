@@ -23,16 +23,19 @@ namespace Jupiter731
             startCoord.x = target.position.x;
             startCoord.y = target.position.y;
             transform.position = startCoord;
+            if (target != null)
             offset = target.position - transform.position;
         }
 
 
         private void Update()
-        {       
-            smooth = Vector3.Lerp(transform.position, target.position - offset, speed);
-            smooth = MouseTrack(smooth);
-            transform.position = smooth;
-
+        {
+            if (target != null)
+            {
+                smooth = Vector3.Lerp(transform.position, target.position - offset, speed);
+                smooth = MouseTrack(smooth);
+                transform.position = smooth;
+            }
         }
 
         private Vector3 MouseTrack(Vector3 Changed)

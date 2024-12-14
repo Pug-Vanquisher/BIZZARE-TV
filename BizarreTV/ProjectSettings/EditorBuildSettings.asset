@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/MainMenu/MainMenuTest.unity
-    guid: 155b66c0d9690214ab1b2f1b305fb30f
-  - enabled: 0
     path: Assets/MainMenu/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
@@ -77,9 +74,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Jupiter-731/Scenes/2.unity
     guid: a6e02413c2e9cca4eb730c9f87924f3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Jupiter-731/Scenes/2 1.unity
     guid: fba5958cb92ebaa4bb31bf09418fe59c
+  - enabled: 1
+    path: Assets/Jupiter-731/Scenes/2 2.unity
+    guid: 6946a602022d19f4a92f078122d88958
+  - enabled: 1
+    path: Assets/MainMenu/MainMenuTest.unity
+    guid: 155b66c0d9690214ab1b2f1b305fb30f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 06e2f4cdfba86e147929c5457f2f2823, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 0f09080a1bd9ce94ca0c54a7b6d43969, type: 2}

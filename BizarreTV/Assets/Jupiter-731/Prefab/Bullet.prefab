@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d4f51a6fcf83745a2da29d05d90f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTime: 5
+  LifeTime: 100
   BulletDamage: 1
-  isItScenes: 1
+  isItScenes: 0
 --- !u!50 &3299769103211288303
 Rigidbody2D:
   serializedVersion: 4
@@ -137,8 +137,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.07, y: 0.04}
+  m_Offset: {x: 0.0004207194, y: -5.0153656e-11}
+  m_Size: {x: 0.05064272, y: 0.04}
   m_Direction: 1
 --- !u!96 &-8004516569549610454
 TrailRenderer:
@@ -182,7 +182,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Time: 0.1
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

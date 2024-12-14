@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LVLEndTarget : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject target;
+    private void Update()
     {
-        
+        Track();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Track()
     {
-        
+        gameObject.transform.rotation = Quaternion.FromToRotation(Vector3.up,target.transform.position - transform.position);
+        Debug.Log(Quaternion.LookRotation(target.transform.position));
     }
 }

@@ -45,7 +45,7 @@ namespace Jupiter731
 
         override protected void Attack()
         {
-            if (gun != null)
+            if (gun != null && player != null)
             {
                 if (((Vector2)centre.position -
                     (Vector2)player.transform.position).magnitude < agrRadius)
@@ -96,7 +96,7 @@ namespace Jupiter731
                 var yTarget = Random.Range(-(walkingRadius),
                     walkingRadius);
                 //Debug.Log( "новая цель выбрана"+xTarget.ToString() + " " + yTarget);
-                _targetPosition = new Vector2(xTarget, yTarget) * 0.97f + _startPosition;
+                _targetPosition = new Vector2(xTarget, yTarget) * 0.97f;
 
                 _isWalking = true;
             }
@@ -109,6 +109,7 @@ namespace Jupiter731
                 {
                     Move(_startPosition - (Vector2)centre.position);
                     _isWalking = false;
+                    _startPosition = centre.position;
                     //Debug.Log(_startPosition - (Vector2)centre.position);
                 }
                 else if (Vector2.Distance(_targetPosition, (Vector2)centre.position - _startPosition) < targetPositionAccuracy)
@@ -122,8 +123,9 @@ namespace Jupiter731
                     //Debug.Log(_targetPosition);
                     Move(_targetPosition);
                 }
+
+                FindTheWay();
             }
-            FindTheWay();
 
             //Debug.Log(_targetPosition.ToString() + ' ' + (Vector2)transform.position);
             //Debug.Log(centre.position + "   " + _startPosition);
@@ -132,14 +134,14 @@ namespace Jupiter731
         override protected void MoveAndAttack()
         {
             Attack();
-            if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius)
+            if (player != null)
             {
-                Evade();
+                if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius)
+                {
+                    Evade();
+                }
             }
-            //else if(((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius - walkingRadius/3)
-            //{
-            //    Chill();
-            //}
+            else if (player == null) { }
             else if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude > agrRadius)
             {
                 Chill();
@@ -151,7 +153,7 @@ namespace Jupiter731
             
             if (player != null)
             {
-                if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude < evadeRadius)
+                if (((Vector2)centre.position - (Vector2)player.transform.position).magnitude <= evadeRadius)
                 {
                     _isWalking = true;
                     Move((Vector2)(player.transform.position - centre.position) * _robotMulti);
@@ -159,10 +161,10 @@ namespace Jupiter731
                 else
                 {
                     _isWalking = false;
-                }
-
                 _startPosition = transform.position;
                 centre.position = _startPosition;
+                }
+
 
             }
 
@@ -174,9 +176,9 @@ namespace Jupiter731
             var obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, _targetPosition, evadeRadius/2, maskToBypass);
             foreach (var obstacle in obstacles)
             {
-                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
+                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 0.5f)
                 {
-                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * 1.5f);
+                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * _robotMulti * 1.5f);
                     _isWalking = false;
                 }
                 else if (!_isWalking && obstacle.collider == null)
@@ -184,26 +186,17 @@ namespace Jupiter731
                     _startPosition = transform.position;
                 }
             }
-            obstacles = Physics2D.CircleCastAll((Vector2)transform.position, walkingRadius, -_targetPosition, evadeRadius / 2, maskToBypass);
-            foreach (var obstacle in obstacles)
-            {
-                if (obstacle.collider != null && (obstacle.collider.transform.position - transform.position).magnitude < walkingRadius * 1.2f)
-                {
-                    Move((Vector2)(obstacle.collider.transform.position - transform.position) * -1.5f);
-                    _isWalking = false;
-                }
-                else if (!_isWalking && obstacle.collider == null)
-                {
-                    _startPosition = transform.position;
-                }
-            }
+
         }
 
         private void TrackPlayer()
         {
-            weapon.rotation = Quaternion.FromToRotation(Vector3.right, player.transform.position - weapon.position);
-            _angleToTarget = Vector2.SignedAngle(Vector3.right, (Vector2)player.transform.position - _startPosition);
-            Flip();
+            if (player != null)
+            {
+                weapon.rotation = Quaternion.FromToRotation(Vector3.right, player.transform.position - weapon.position);
+                _angleToTarget = Vector2.SignedAngle(Vector3.right, (Vector2)player.transform.position - _startPosition);
+                Flip();
+            }        
         }
 
         private void Move(Vector2 target)

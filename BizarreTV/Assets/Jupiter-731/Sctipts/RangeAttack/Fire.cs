@@ -20,9 +20,9 @@ namespace Jupiter731
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(Mathf.Deg2Rad * firePoint.rotation.eulerAngles.z) *bulletSpeed,
                 Mathf.Sin(Mathf.Deg2Rad * firePoint.rotation.eulerAngles.z) * bulletSpeed);
-            var baseBullet = bullet.GetComponent<BaseBullet>();
-            baseBullet.LifeTime = bulletLifeTime;
+            var baseBullet =  bullet.GetComponent<BaseBullet>();
             baseBullet.BulletDamage = bulletDamage;
+            baseBullet.LifeTime = bulletLifeTime;
         }
     }
 }

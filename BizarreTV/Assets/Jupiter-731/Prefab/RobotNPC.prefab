@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d5e0103a8d4149c47af144da96c87b93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f30f5ccb06a378e49bfbf44a36445fc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -94,7 +94,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822148146961783415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 13cac189d112ea74e9b690f467043186, type: 2}
   m_CullingMode: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 2822148147062852320}
   - component: {fileID: 4179911747474058914}
   m_Layer: 17
-  m_Name: FiringEnemy
+  m_Name: RobotNPC
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,8 +136,8 @@ Transform:
   m_GameObject: {fileID: 2822148147062852346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.33, y: 1.33, z: 1.33}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2822148146961783408}
   - {fileID: 2822148147520037210}
@@ -158,16 +158,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 3
   player: {fileID: 0}
-  walkingRadius: 3.2
-  agrRadius: 10
-  evadeRadius: 3.4
+  walkingRadius: 2.01
+  agrRadius: 5.2
+  evadeRadius: 6
   targetPositionAccuracy: 0.214
   speed: 2.07
   chillingChancePercent: 24.4
   chillingTime: 2.15
   noChillingTime: 1.58
   SecondPerBullet: 0.5
-  isRobot: 0
+  isRobot: 1
   gun: {fileID: 2822148148794290469}
   weapon: {fileID: 2822148148794290468}
   body: {fileID: 2822148147062852326}
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bf14b44d26aa44920644a853f1611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 2
   _currHP: 0
 --- !u!70 &4179911747474058914
 CapsuleCollider2D:
@@ -223,8 +223,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01685986, y: 0.009634197}
-  m_Size: {x: 0.23505938, y: 0.8265842}
+  m_Offset: {x: -0.003942415, y: -0.008778989}
+  m_Size: {x: 0.3754653, y: 0.8634106}
   m_Direction: 0
 --- !u!1 &2822148147322324681
 GameObject:
@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822148147322324681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05, y: 0.16, z: 0}
+  m_LocalPosition: {x: 2.71, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -316,9 +316,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822148148794290491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 0.38, z: 0}
-  m_LocalScale: {x: -0.5, y: 0.60240966, z: 0.60240966}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 2.02, y: -0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2822148147322324682}
   m_Father: {fileID: 2822148146961783408}
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 893bfed7ce10df949b18d329a121c674, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5b0e5db810340e438c265ddeb9922d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2822148147322324682}
   bulletPrefab: {fileID: 3299769103211288307, guid: 7d34417e6ca31af4d8fbf91903c8bc76, type: 3}
-  bulletSpeed: 4
+  bulletSpeed: 10
   bulletLifeTime: 5
   bulletDamage: 1
   animator: {fileID: 784522013}
