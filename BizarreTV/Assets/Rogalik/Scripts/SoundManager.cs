@@ -1,47 +1,50 @@
 using System.Collections;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+namespace Rogalik
 {
-    public static SoundManager Instance { get; private set; }
-
-    [SerializeField] private AudioClip[] sounds;
-    [SerializeField] private AudioSource audioSource;
-
-    private bool isSoundPlaying = false;
-
-    private void Awake()
+    public class SoundManager : MonoBehaviour
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            //DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+        public static SoundManager Instance { get; private set; }
 
-    public void PlaySound(int index)
-    {
-        if (index >= 0 && index < sounds.Length)
+        [SerializeField] private AudioClip[] sounds;
+        [SerializeField] private AudioSource audioSource;
+
+        private bool isSoundPlaying = false;
+
+        private void Awake()
         {
-            StartCoroutine(PlaySoundRoutine(sounds[index]));
+            if (Instance == null)
+            {
+                Instance = this;
+                //DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
-        else
+        public void PlaySound(int index)
         {
-            Debug.LogWarning("Ќеверный индекс или звук уже воспроизводитс€");
+            if (index >= 0 && index < sounds.Length)
+            {
+                StartCoroutine(PlaySoundRoutine(sounds[index]));
+            }
+
+            else
+            {
+                Debug.LogWarning("Ќеверный индекс или звук уже воспроизводитс€");
+            }
         }
-    }
 
-    private IEnumerator PlaySoundRoutine(AudioClip clip)
-    {
-        isSoundPlaying = true;
-        audioSource.PlayOneShot(clip);
-        float waitTime = clip.length;
-        yield return new WaitForSecondsRealtime(waitTime);
+        private IEnumerator PlaySoundRoutine(AudioClip clip)
+        {
+            isSoundPlaying = true;
+            audioSource.PlayOneShot(clip);
+            float waitTime = clip.length;
+            yield return new WaitForSecondsRealtime(waitTime);
 
+        }
     }
 }

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85506599ca09f8143aecff3044c5af6c, type: 3}
+  m_Name: LevelListConfig
+  m_EditorClassIdentifier: 
+  Levels:
+  - <Number>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 2532293881126470055, guid: f560b72933b346b41bd5a28c9e5af18b, type: 3}
+  - <Number>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 1909659159771577823, guid: 5574b318001ba4d40afc767052840477, type: 3}
+  - <Number>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 57183459512954126, guid: 721eb66bec7ead14597ab359fe59188a, type: 3}
+  - <Number>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 57183459512954126, guid: 999bbb24023fe894f92e539c285224d5, type: 3}
+  - <Number>k__BackingField: 5
+    <Prefab>k__BackingField: {fileID: 2339010226808199029, guid: 246a3e7acef74284e93863904aeecd7d, type: 3}
+  - <Number>k__BackingField: 6
+    <Prefab>k__BackingField: {fileID: 9180942519630504354, guid: bb7a4f66f3f043344b8e3dbb4a814779, type: 3}
+  - <Number>k__BackingField: 7
+    <Prefab>k__BackingField: {fileID: 529279702754986044, guid: d09e50ec4ad1d614d874e504c6120f2d, type: 3}
+  - <Number>k__BackingField: 8
+    <Prefab>k__BackingField: {fileID: 5805845300295006595, guid: e9ba7da38c1044344b8c009858a677c3, type: 3}
+  - <Number>k__BackingField: 9
+    <Prefab>k__BackingField: {fileID: 4950557910808053754, guid: bbb52535e62514e4c9f0020ca4fbd45e, type: 3}
+  - <Number>k__BackingField: 10
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 3816d53affbf589408da73b0f429d70d, type: 3}
+  - <Number>k__BackingField: 11
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: ebf2e77c76a3ccd41ab2c60e071e5491, type: 3}
+  - <Number>k__BackingField: 12
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 6bd4f9f16ccae9943a6da0a4ce8191de, type: 3}
+  - <Number>k__BackingField: 13
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: c9d81f3b6a6fe3049bc8e0746a2dc154, type: 3}
+  - <Number>k__BackingField: 14
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: c9bed836d620b6b4880a5562dad5b7bc, type: 3}
+  - <Number>k__BackingField: 15
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 0ee9c4d0045cbd74c98fd6ccd1061349, type: 3}
+  - <Number>k__BackingField: 16
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 268634c7e044a5c4ba5e37f41dad6a79, type: 3}
+  - <Number>k__BackingField: 17
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: c051038902c6d3d44aa900f2c672d248, type: 3}
+  - <Number>k__BackingField: 18
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: ba9b275ec78a2d342afc644866b6887a, type: 3}
+  - <Number>k__BackingField: 19
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 003af7020e4705f409fbcc659bb54eb7, type: 3}
+  - <Number>k__BackingField: 20
+    <Prefab>k__BackingField: {fileID: 3296529265507747387, guid: 8bb9b4b3fded8cc4ab590c7ec9f3f875, type: 3}

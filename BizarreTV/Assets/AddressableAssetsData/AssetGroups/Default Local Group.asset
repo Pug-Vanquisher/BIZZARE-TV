@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: b48a263b2bc254d4094dbea59fbf828c
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4f18a0adbbee3a54fb58dd522ffdfd23
+    m_Address: Assets/BomjInDungeon/Visuals/Animation/Bomj/GoDown.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6994e07545d739c42bcbc25e2a8b2df8, type: 2}
   m_SchemaSet:

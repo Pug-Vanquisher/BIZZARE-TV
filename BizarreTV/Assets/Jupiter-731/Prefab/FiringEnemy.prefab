@@ -119,10 +119,10 @@ GameObject:
   - component: {fileID: 2822148147062852325}
   - component: {fileID: 2822148147062852326}
   - component: {fileID: 2822148147062852320}
-  - component: {fileID: 4179911747474058914}
+  - component: {fileID: 2822148147062852321}
   m_Layer: 17
   m_Name: FiringEnemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,13 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 3
   player: {fileID: 0}
-  walkingRadius: 3.2
-  agrRadius: 10
-  evadeRadius: 3.4
-  targetPositionAccuracy: 0.214
-  speed: 2.07
-  chillingChancePercent: 24.4
-  chillingTime: 2.15
+  walkingRadius: 1.02
+  agrRadius: 3.52
+  evadeRadius: 2.01
+  targetPositionAccuracy: 0.392
+  speed: 1.15
+  chillingChancePercent: 52.6
+  chillingTime: 2.11
   noChillingTime: 1.58
   SecondPerBullet: 0.5
   isRobot: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1
   _currHP: 0
---- !u!70 &4179911747474058914
+--- !u!70 &2822148147062852321
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,8 +223,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01685986, y: 0.009634197}
-  m_Size: {x: 0.23505938, y: 0.8265842}
+  m_Offset: {x: -0.010437995, y: -0.013917416}
+  m_Size: {x: 0.3059209, y: 0.84890586}
   m_Direction: 0
 --- !u!1 &2822148147322324681
 GameObject:
@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822148147322324681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05, y: 0.16, z: 0}
+  m_LocalPosition: {x: -2.57, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 2822148148794290468}
   - component: {fileID: 2822148148794290470}
   - component: {fileID: 2822148148794290469}
+  - component: {fileID: 1831081832}
   - component: {fileID: 784522012}
   - component: {fileID: 784522013}
   m_Layer: 17
@@ -389,11 +390,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2822148147322324682}
-  bulletPrefab: {fileID: 3299769103211288307, guid: 7d34417e6ca31af4d8fbf91903c8bc76, type: 3}
-  bulletSpeed: 4
+  bulletPrefab: {fileID: 3299769103211288307, guid: bdd3e9e4c38e6ec4e9f3679060cddb30, type: 3}
+  bulletSpeed: 7
   bulletLifeTime: 5
   bulletDamage: 1
   animator: {fileID: 784522013}
+--- !u!114 &1831081832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822148148794290491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379e66aa1ff59de42ac74549109e8dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 784522012}
+  animationTime: 0.25
+  triggerName: Fire
 --- !u!95 &784522012
 Animator:
   serializedVersion: 5

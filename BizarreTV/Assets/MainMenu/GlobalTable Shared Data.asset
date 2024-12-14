@@ -16,19 +16,19 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 0c8be7815d9e2e84fb6aa8abf6ee9688
   m_Entries:
   - m_Id: 29901979648
-    m_Key: Game1
+    m_Key: Game11
     m_Metadata:
       m_Items: []
   - m_Id: 113238605824
-    m_Key: Game2
+    m_Key: Game12
     m_Metadata:
       m_Items: []
   - m_Id: 120947736576
-    m_Key: Game3
+    m_Key: Game13
     m_Metadata:
       m_Items: []
   - m_Id: 129470562304
-    m_Key: Game4
+    m_Key: Game14
     m_Metadata:
       m_Items: []
   - m_Id: 132989583360
@@ -85,6 +85,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 58562665555689472
     m_Key: Game10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133422638253912064
+    m_Key: New Entry
     m_Metadata:
       m_Items: []
   m_Metadata:
