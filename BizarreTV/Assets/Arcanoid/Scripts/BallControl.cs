@@ -3,21 +3,20 @@ using UnityEngine.SceneManagement;
 
 namespace Arcanoid
 {
-
     public class BallControl : MonoBehaviour
     {
-
         public Vector2 startingVelocity;
-        public float correctionSpeed = 0.1f;
 
         AudioSource source;
-        Rigidbody2D rigidbody;
 
         Vector2 bufferSpeed;
+        public float speed = 3f;
+
+        Rigidbody2D rgb;
 
         void Start()
         {
-            rigidbody = GetComponent<Rigidbody2D>();
+            rgb = GetComponent<Rigidbody2D>();
             source = GetComponent<AudioSource>();
 
             stp();
@@ -25,23 +24,37 @@ namespace Arcanoid
 
         public void stp()
         {
-            this.gameObject.isStatic = true;
+            gameObject.isStatic = true;
         }
         public void str()
         {
-            rigidbody.velocity = startingVelocity;
-            this.gameObject.isStatic = false;
+            bufferSpeed = startingVelocity.normalized;
+            gameObject.isStatic = false;
         }
 
         private void FixedUpdate()
         {
-            this.gameObject.GetComponent<Animation>().Play();
+            rgb.MovePosition(new Vector2(transform.position.x, transform.position.y) + bufferSpeed * speed * Time.deltaTime);
+
+            gameObject.GetComponent<Animation>().Play();
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            source.Play();
+            Vector2 norm = Vector2.zero;
 
-            bufferSpeed = rigidbody.velocity;
+            norm += collision.contacts[0].normal;
+
+            norm.Normalize();
+
+            bufferSpeed = Vector2.Reflect(bufferSpeed, norm);
+
+            if (collision.gameObject.name.Contains("Player"))
+            {
+                bufferSpeed += collision.gameObject.GetComponent<Platform>().currspeed * 0.1f;
+                bufferSpeed.Normalize();
+            }
+
+            source.Play();
 
             if (collision.gameObject.name == "LoseBorder")
             {
@@ -52,18 +65,11 @@ namespace Arcanoid
             {
                 collision.gameObject.GetComponent<Block>().Hit();
             }
+
         }
 
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if (rigidbody.velocity.x == 0 || rigidbody.velocity.y == 0)
-            {
-                if (rigidbody.velocity.x == 0)
-                    rigidbody.velocity = new Vector2(-(bufferSpeed.x + correctionSpeed), rigidbody.velocity.y);
-                else
-                    rigidbody.velocity = new Vector2(rigidbody.velocity.x, -(bufferSpeed.y + correctionSpeed));
-            }
-        }
+
     }
-
 }
+
+
