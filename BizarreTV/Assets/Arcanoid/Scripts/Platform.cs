@@ -20,7 +20,7 @@ public class Platform : MonoBehaviour
         if (isPlayable)
         {
             //currspeed = speed * Vector2.right * Input.GetAxis("Horizontal");
-            currspeed = Vector2.Lerp(currspeed, Input.GetAxis("Horizontal") * speed * Vector2.right, 0.01f);
+            currspeed = Vector2.Lerp(currspeed, Input.GetAxis("Horizontal") * speed * Vector2.right, Time.deltaTime * 10f);
             transform.Translate(currspeed * Time.deltaTime);
             transform.position = new Vector2(Mathf.Clamp(transform.position.x, leftBorder, rightBorder), transform.position.y);
         }

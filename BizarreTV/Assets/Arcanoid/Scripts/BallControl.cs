@@ -30,13 +30,16 @@ namespace Arcanoid
         {
             bufferSpeed = startingVelocity.normalized;
             gameObject.isStatic = false;
+            rgb.velocity = bufferSpeed * speed; 
         }
 
         private void FixedUpdate()
         {
-            rgb.MovePosition(new Vector2(transform.position.x, transform.position.y) + bufferSpeed * speed * Time.deltaTime);
+            Vector2 movement = bufferSpeed * speed * Time.deltaTime;
+            rgb.MovePosition(rgb.position + movement);
 
-            gameObject.GetComponent<Animation>().Play();
+            float rotationSpeed = rgb.velocity.magnitude * 100f; 
+            rgb.angularVelocity = -rotationSpeed;
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
