@@ -9,7 +9,7 @@ namespace BID
         public int maxhp = 8;
         public int currenthp;
         public float invulDelay;
-        private bool invulnerability = false;
+        public bool invulnerability = false;
 
         public int dangerScale = 0;
 

@@ -4917,6 +4917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pl: {fileID: 1609846251077995788}
   velik: {x: 0, y: 0}
+  playerHP: {fileID: 8937605239083330395}
   speed: 0.45
   dashTime: 0.15
   dashSpeed: 1
@@ -4936,9 +4937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6f6de5f11f9a1488139846043554b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 6
-  currenthp: 8
+  maxhp: 10
+  currenthp: 10
   invulDelay: 0.4
+  invulnerability: 0
   dangerScale: 0
 --- !u!114 &5175776509150032307
 MonoBehaviour:

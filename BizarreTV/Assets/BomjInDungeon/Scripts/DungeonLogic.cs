@@ -71,11 +71,7 @@ namespace BID
         public void StartDungeon()
         {
             keystone = "0000";
-<<<<<<< Updated upstream
-            if (player == null)
-=======
             if(player == null)
->>>>>>> Stashed changes
             {
                 player = Instantiate(PlayerPrefab);
                 player.name = "Bomj";

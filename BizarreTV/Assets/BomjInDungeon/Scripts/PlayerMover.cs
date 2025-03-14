@@ -10,6 +10,7 @@ namespace BID
         public Vector2 velik;
         private Vector2 dashVel;
         public KeyConfig key = new KeyConfig();
+        public HpManager playerHP;
 
         public float speed = 0.025f;
 
@@ -50,7 +51,7 @@ namespace BID
             {
                 Invoke("dashOff", dashTime);
                 dashParticles.Play();
-                //mousePosition - transform.position;
+                playerHP.invulnerability = true;
                 Physics.IgnoreLayerCollision(16, 17, true);
                 Debug.Log(dashVel);
             }
@@ -83,6 +84,7 @@ namespace BID
             pl.enabled = true;
             Physics.IgnoreLayerCollision(16, 17, false);
             dashParticles.Stop();
+            playerHP.invulnerability = false;
         }
 
     }
