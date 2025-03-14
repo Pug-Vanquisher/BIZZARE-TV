@@ -37,15 +37,16 @@ public class GateScales : WeightScale
     {
         Vector3 crntPos = gates.localPosition;
         float crntTime = 0f;
+
+        // Вместо Time.deltaTime используем фиксированное время
         while (crntTime < translateTime)
         {
+            crntTime += Time.fixedDeltaTime; // Используем fixedDeltaTime вместо deltaTime
             gates.localPosition = Vector3.Lerp(crntPos, nextPos, crntTime / translateTime);
-            crntTime += Time.deltaTime;
             yield return null;
         }
 
-
-        yield return null;
+        gates.localPosition = nextPos; // Убедимся, что в конце позиция точно совпадает с nextPos
     }
 
 }

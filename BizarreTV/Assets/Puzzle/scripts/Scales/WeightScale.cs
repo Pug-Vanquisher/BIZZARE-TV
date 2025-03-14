@@ -39,7 +39,8 @@ public class WeightScale : MonoBehaviour
     private void FixedUpdate()
     {
         lastDeltaTime = currentDeltaTime;
-        currentDeltaTime = Time.deltaTime;
+        //
+        currentDeltaTime = Time.fixedDeltaTime;
     }
 
     private void OnCollisionStay(Collision collision)
