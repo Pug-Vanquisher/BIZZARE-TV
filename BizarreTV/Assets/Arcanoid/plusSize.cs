@@ -19,7 +19,7 @@ namespace Arcanoid
         private void Awake()
         {
             gameManager = FindObjectOfType<gameMAnager>();
-            randomBuff = Random.Range(0, 6);
+            randomBuff = Random.Range(0, 3);
             randomBuff = gameManager.ckeckBuff(randomBuff);
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[randomBuff];
         }
@@ -52,16 +52,10 @@ namespace Arcanoid
                         gameManager.minusSize();
                         break;
                     case 2:
-                        gameManager.resetSize();
-                        break;
-                    case 3:
                         gameManager.addSpeed();
                         break;
-                    case 4:
+                    case 3:
                         gameManager.removeSpeed();
-                        break;
-                    case 5:
-                        gameManager.resetSpeed();
                         break;
 
                 }
