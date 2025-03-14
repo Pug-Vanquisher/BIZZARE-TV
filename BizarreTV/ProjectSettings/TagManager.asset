@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ResizableObject
+  - gateBall
+  - Checkpoint
+  - RoguelikeEnemy
+  - Enemy
+  - StartPoint
+  - Tower
+  - Coin
+  - Damage
+  - FireballFirst
+  - FireballSecond
+  - Boloto
+  - MolotTargetArea
+  - SecondBow
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -11,6 +26,21 @@ TagManager:
   - 
   - Water
   - UI
+  - wall
+  - 
+  - dragable
+  - sizeble
+  - dragAnSize
+  - ground
+  - Molot
+  - Bullet
+  - 
+  - 
+  - 
+  - Interactable
+  - Wall
+  - Player
+  - JupiterProjectile
   - 
   - 
   - 
@@ -19,24 +49,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Test
+  - Ground
+  - Grab
   m_SortingLayers:
   - name: Default
     uniqueID: 0

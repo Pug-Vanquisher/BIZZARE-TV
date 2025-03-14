@@ -22,7 +22,7 @@ namespace Balance
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.RightShift))
             {
                 if (Input.GetKeyDown(KeyCode.G))
                 {
