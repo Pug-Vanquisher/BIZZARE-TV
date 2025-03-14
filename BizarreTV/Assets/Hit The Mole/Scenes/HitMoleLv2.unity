@@ -3708,6 +3708,7 @@ MonoBehaviour:
   - {fileID: 1275797587}
   - {fileID: 1094725218}
   - {fileID: 456183574}
+  moleQuantity: 1.7
   scoreText: {fileID: 1444581286}
   winUI: {fileID: 293409271}
   winSound: {fileID: 8300000, guid: a8f07c33c8ca36044906270b76c0ba82, type: 3}

@@ -20,13 +20,16 @@ public class moleGenerate : MonoBehaviour
     [SerializeField] List<Sprite> scoreSprites = new List<Sprite>();
     [SerializeField] List<AudioClip> audioClips = new List<AudioClip>();
     [SerializeField] AudioSource audioSourceNeed;
+    [SerializeField] public float moleSpeed;
 
 
     public Vector2 startPosition;
     public Vector2 endPosition;
-    
+
     public float showDuration = 0.5f;
+
     public float duration = 1f;
+
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;
@@ -41,16 +44,27 @@ public class moleGenerate : MonoBehaviour
     private MoleType moleType;
     private int lives;
     private int moleIndex = 0;
+    
 
 
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
     {
+        //duration - время которое крот тупо сидит (0.5-2)
+        // showDuration - cкорость анимации появления и исчезновения (0.5)
+   
+        duration = duration / moleSpeed;
+
+
         yield return new WaitForSeconds(duration);
+   
+
+
         transform.localPosition = start;
         
         float elapsed = 0f;
         while (elapsed < showDuration)
+
         {
             transform.localPosition = Vector2.Lerp(start, end, elapsed / showDuration);
             boxCollider2D.offset = Vector2.Lerp(boxOffsetHidden, boxOffset, elapsed / showDuration);
@@ -68,7 +82,8 @@ public class moleGenerate : MonoBehaviour
 
         elapsed = 0f;
         while (elapsed < showDuration)
-        {
+
+            {
             transform.localPosition = Vector2.Lerp(end, start, elapsed / showDuration);
             boxCollider2D.offset = Vector2.Lerp(boxOffset, boxOffsetHidden, elapsed / showDuration);
             boxCollider2D.size = Vector2.Lerp(boxSize, boxSizeHidden, elapsed / showDuration);
@@ -82,6 +97,7 @@ public class moleGenerate : MonoBehaviour
 
         gameManager.plants[moleIndex].ChangeBoxCollider2DState();
         yield return new WaitForSeconds(duration);
+
 
         if (hittable)
         {
@@ -182,18 +198,19 @@ public class moleGenerate : MonoBehaviour
             case 0:
                 moleType = MoleType.Standard;
                 spriteRenderer.sprite = moleGreen;
-                duration = 2f;
+                duration = 2f;  // Было 2f
                 break;
             case 1:
                 moleType = MoleType.Fast;
                 spriteRenderer.sprite = moleBlue;
-                duration = 1f;
+                duration = 1f;  // Было 1f
                 break;
             case 2:
                 moleType = MoleType.SuperFast;
                 spriteRenderer.sprite = moleRed;
-                duration = 0.5f;
+                duration = 0.5f;  // Было 0.5f
                 break;
+
 
         }
         lives = 1;        
@@ -227,3 +244,6 @@ public class moleGenerate : MonoBehaviour
         return hittable;
     }
 }
+
+
+

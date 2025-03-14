@@ -7,12 +7,16 @@ public class GameManager : MonoBehaviour
   [SerializeField] public List<moleGenerate> moles;
   [SerializeField] public List<plantGenerate> plants;
 
-  [SerializeField] private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] public float moleQuantity;
+
+
+    [SerializeField] private TMPro.TextMeshProUGUI scoreText;
     [SerializeField] private GameObject winUI;
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioSource audioSource;
 
-    private HashSet<moleGenerate> currentMoles = new HashSet<moleGenerate>();
+
+private HashSet<moleGenerate> currentMoles = new HashSet<moleGenerate>();
   private HashSet<plantGenerate> currentPlants = new HashSet<plantGenerate>();
   public int score;
   private bool playing = false;
@@ -80,36 +84,49 @@ void Update()
             }
         }
 
-        if (currentTime >= timer && !allPlantsPlaced)
-        {
-            timer = Random.Range(0.5f, 3f);
-            currentTime = 0f;
-            int index = Random.Range(0, moles.Count);
-            while (currentPlants.Contains(plants[index]))
+         
+
+            if (currentTime >= timer && !allPlantsPlaced)
             {
-                index = Random.Range(0, moles.Count);
-            }    
-        
-            if (!currentMoles.Contains(moles[index]) && !currentPlants.Contains(plants[index])) 
-            {
+                if (moles.Count - currentPlants.Count > 1)
+                {
+                    timer = Random.Range(0.5f, 3 / moleQuantity);
+
+                }
+                else
+                {
+                    timer = Random.Range(1.5f, 2f);
+                }
+
+
+
+                currentTime = 0f;
+                int index = Random.Range(0, moles.Count);
+                while (currentPlants.Contains(plants[index]))
+                {
+                    index = Random.Range(0, moles.Count);
+                }
+
+                if (!currentMoles.Contains(moles[index]) && !currentPlants.Contains(plants[index]))
+                {
                     if (!timesOutMoles.Contains(moles[index]))
                     {
                         currentMoles.Add(moles[index]);
                         timesOutMoles.Add(moles[index]);
-                        Debug.Log("if "+index);
+                        Debug.Log("if " + index);
                         moles[index].Activate();
                         plants[index].ChangeBoxCollider2DState(false);
                     }
                     else
                     {
                         timesOutMoles.Remove(moles[index]);
-                        Debug.Log("else " + index); 
+                        Debug.Log("else " + index);
                     }
 
-            }
+                }
 
+            }
         }
-    }
 }
 
 
@@ -152,4 +169,8 @@ void Update()
   {
         return currentMoles.Contains(moles[plantIndex]);
   }
+
+  
 }
+
+
