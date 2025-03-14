@@ -231,8 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39b7fc265932940839e633c6d077ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 0
-  currenthp: 0
+  maxhp: 1
+  currenthp: 1
   invulDelay: 0
   dangerScale: 1
 --- !u!1 &1207897250795055622
@@ -346,6 +346,7 @@ MonoBehaviour:
   - {x: -2, y: 1, z: -2}
   chainBracket: {fileID: 5643589857451824967, guid: 5f2d459854f46fb4fa3c48ac24f87797, type: 3}
   explosion: {fileID: 3346395739051940738}
+  dlog: {fileID: 0}
 --- !u!136 &5779907682008162489
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5462,8 +5463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39b7fc265932940839e633c6d077ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 0
-  currenthp: 0
+  maxhp: 1
+  currenthp: 1
   invulDelay: 0
   dangerScale: 1
 --- !u!1 &2029278268879203851
@@ -5697,8 +5698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39b7fc265932940839e633c6d077ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 0
-  currenthp: 0
+  maxhp: 1
+  currenthp: 1
   invulDelay: 0
   dangerScale: 1
 --- !u!1 &5365052658915880725
@@ -10887,8 +10888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39b7fc265932940839e633c6d077ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 0
-  currenthp: 0
+  maxhp: 1
+  currenthp: 1
   invulDelay: 0
   dangerScale: 1
 --- !u!1001 &1986567999053383574

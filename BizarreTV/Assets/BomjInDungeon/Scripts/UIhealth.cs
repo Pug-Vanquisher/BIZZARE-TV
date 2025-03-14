@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace BID
 {
@@ -10,6 +11,7 @@ namespace BID
         public GameObject heartPrefab;
         public List<GameObject> Hearts = new List<GameObject>();
         public int playerCurrentHealth;
+        public TMP_Text text;
 
         public float _shakeDuration = .4f;
         public float _magnitude = .4f;
@@ -17,25 +19,42 @@ namespace BID
         public RectTransform origin;
         private bool isShaking;
         // Start is called before the first frame update
-        void Start()
+        private void Awake()
+        {
+            EventManager.Instance.Subscribe("MakeHPGA", MakeHPGA);
+        }
+        public void MakeHPGA()
         {
             if (playerhealth == null)
             {
-                playerhealth = GameObject.FindGameObjectWithTag("Player")?.GetComponent<HpManager>();
+                foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+                {
+                    if (player.gameObject.name != "HitCollider")
+                    {
+                        playerhealth = player.GetComponent<HpManager>();
+                    }
+                }
             }
+            Debug.Log("makehp");
             origin = transform.parent.GetComponent<RectTransform>();
             playerCurrentHealth = playerhealth.maxhp;
-            for (int i = 0; i < playerhealth.maxhp; i += 2)
+            
+            foreach(GameObject child in transform)
+            {
+                Destroy(child);
+            }
+
+            for (int i = 0; i < playerhealth.maxhp; i+=2)
             {
                 var a = Instantiate(heartPrefab, transform);
                 a.GetComponent<HeartScript>().id = i;
                 Hearts.Add(a);
             }
-
         }
         // Update is called once per frame
         void Update()
         {
+            text.text = playerCurrentHealth + " / " + playerhealth.maxhp;
             _originalPosition = new Vector3(-origin.rect.width/2, origin.rect.height/ 2, 0);
             if (playerCurrentHealth != playerhealth.currenthp)
             {

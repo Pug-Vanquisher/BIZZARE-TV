@@ -13,7 +13,9 @@ namespace BID
 
         public float speed = 0.025f;
 
-        private RaycastHit2D hit;
+        public float dashTime;
+        public float dashSpeed;
+        public ParticleSystem dashParticles;
 
         public GameObject dagger;
         public float AttackSpreadness = 0.03f;
@@ -40,28 +42,34 @@ namespace BID
                 a.transform.position = transform.position + side1cos * Random.Range(-1f, 1f) * AttackSpreadness + Vector3.up;
                 a.transform.rotation = Quaternion.AngleAxis(-Vector2.SignedAngle(mousePosition - a.transform.position, Vector3.right), Vector3.forward);
             }
+            if(velik !=  Vector2.zero)
+            {
+                dashVel = velik;
+            }
             if(Input.GetKeyDown(KeyCode.Space) && !IsInvoking("dashOff"))
             {
-                pl.enabled = false;
-                Invoke("dashOff", 0.5f);
-                dashVel = mousePosition - transform.position;
-            }
-            if (IsInvoking("dashOff"))
-            {
-                if(Physics.Raycast(transform.position, dashVel.normalized))
-                {
-                    Debug.Log("1");
-                }
+                Invoke("dashOff", dashTime);
+                dashParticles.Play();
+                //mousePosition - transform.position;
+                Physics.IgnoreLayerCollision(16, 17, true);
+                Debug.Log(dashVel);
             }
         }
 
         private void FixedUpdate()
         {
+            if (IsInvoking("dashOff"))
+            {
+                velik = dashVel;
+                pl.Move(velik.normalized * dashSpeed);
+                return;
+            }
+
             pl.Move(velik.normalized * speed);
 
-            hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
+            /*hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, velik, Vector2.Distance(transform.position, new Vector2(transform.position.x, transform.position.y) + velik.normalized * speed), LayerMask.GetMask("Actor", "Blocking"));
             
-            if (hit.collider == null) { } 
+            if (hit.collider == null) { } */
         }
 
         public void AnotherRoom(Vector2 direction)
@@ -73,6 +81,8 @@ namespace BID
         void dashOff()
         {
             pl.enabled = true;
+            Physics.IgnoreLayerCollision(16, 17, false);
+            dashParticles.Stop();
         }
 
     }

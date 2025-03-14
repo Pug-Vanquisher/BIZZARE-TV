@@ -16,13 +16,15 @@ namespace BID
         public float _duration;
         void Start()
         {
+
             doorCollider = Door.GetComponent<BoxCollider>();
             doorAnimator = Door.GetComponent<Animator>();
             doorSprite = Door.GetComponent<SpriteRenderer>();
             gloomColor = Gloom.GetComponent<SpriteRenderer>();
             doorSprite.sortingOrder = orderZ;
             gloomColor.sortingOrder = orderZ;
-            if(DungeonLogic.keystone == "destroyed")
+            DungeonLogic dlog = GameObject.FindGameObjectWithTag("Brain").GetComponent<DungeonLogic>();
+            if(dlog.keystone == "destroyed")
             {
                 StartCoroutine("_Entrance");
             }

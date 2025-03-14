@@ -35,6 +35,13 @@ TagManager:
   - Molot
   - Bullet
   - 
+<<<<<<< Updated upstream
+=======
+  - Blocking
+  - Actor
+  - Enemy
+  - 
+>>>>>>> Stashed changes
   - 
   - 
   - Interactable

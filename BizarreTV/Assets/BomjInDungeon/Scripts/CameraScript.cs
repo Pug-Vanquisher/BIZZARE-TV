@@ -15,6 +15,7 @@ namespace BID
         public Vector3 _shakePosition;
         private void Start()
         {
+            _shakePosition = Vector3.zero;
             EventManager.Instance.Subscribe("CrystalDestroyed", CrystalDestroyed);
         }
         private void Update()

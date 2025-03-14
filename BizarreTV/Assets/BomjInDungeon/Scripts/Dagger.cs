@@ -39,7 +39,7 @@ namespace BID
         {
             if(creator != collision)
             {
-                if (collision.gameObject.layer == 16)
+                if (collision.gameObject.layer == 16 || collision.gameObject.layer == 17)
                 {
                     if(speed == 1 && collision.gameObject.tag == "Goblin" && creator.gameObject.tag == "Goblin")
                     {

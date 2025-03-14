@@ -193,7 +193,7 @@ namespace BID
             {
                 x = Random.Range(-magnitude, magnitude) * timeLeft / Time.time;
                 y = Random.Range(-magnitude, magnitude) * timeLeft / Time.time;
-                dangerLevel.transform.localPosition = new Vector3(x + _originalPosition.x, y + _originalPosition.y, _originalPosition.z); yield return new WaitForSeconds(0.025f);
+                dangerLevel.transform.localPosition = new Vector2(x + _originalPosition.x, y + _originalPosition.y); yield return new WaitForSeconds(0.025f);
             }
 
             dangerLevel.transform.localPosition = _originalPosition;

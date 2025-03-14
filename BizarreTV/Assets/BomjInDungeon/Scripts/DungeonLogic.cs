@@ -32,8 +32,11 @@ namespace BID
 
         public List<Room> rooms = new List<Room>();
 
-        public static string keystone = "0000";
+        public string keystone = "0000";
         public int idRoomIn = 0;
+
+        public bool keyStonePotionUsed = false;
+        public bool bossPotionUsed = false;
         private void Awake()
         {
             player = Instantiate(PlayerPrefab);
@@ -68,7 +71,11 @@ namespace BID
         public void StartDungeon()
         {
             keystone = "0000";
+<<<<<<< Updated upstream
             if (player == null)
+=======
+            if(player == null)
+>>>>>>> Stashed changes
             {
                 player = Instantiate(PlayerPrefab);
                 player.name = "Bomj";

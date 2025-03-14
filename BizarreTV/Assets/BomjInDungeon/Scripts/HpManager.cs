@@ -6,7 +6,7 @@ namespace BID
 {
     public class HpManager : MonoBehaviour
     {
-        public int maxhp;
+        public int maxhp = 8;
         public int currenthp;
         public float invulDelay;
         private bool invulnerability = false;
@@ -15,12 +15,14 @@ namespace BID
 
         void Start()
         {
-            maxhp += 2 * dangerScale;
+            //maxhp += 2 * dangerScale;
+            EventManager.Instance.TriggerEvent("MakeHPGA");
             currenthp = maxhp;
         }
         public void Restart()
         {
-            maxhp += 2 * dangerScale;
+            //maxhp += 2 * dangerScale;
+            EventManager.Instance.TriggerEvent("MakeHPGA");
             currenthp = maxhp;
         }
         private void Update()
@@ -41,6 +43,11 @@ namespace BID
         }
         public virtual void TakeDamage(int damage)
         {
+            if(damage < 0)
+            {
+                currenthp -= damage;
+                return;
+            }
             if (!invulnerability)
             {
                 currenthp -= damage;

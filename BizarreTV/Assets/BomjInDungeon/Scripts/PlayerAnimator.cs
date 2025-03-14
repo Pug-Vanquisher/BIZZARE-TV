@@ -8,12 +8,15 @@ namespace BID
     {
         public PlayerMover pm;
         public Animator animator;
+        public SpriteRenderer sr;
+        public ParticleSystem dashParticles;
         void Start()
         {
             pm = gameObject.GetComponent<PlayerMover>();
         }
         void Update()
         {
+            dashParticles.textureSheetAnimation.SetSprite(0, sr.sprite);
             if(pm.velik != Vector2.zero)
             {
                 animator.SetFloat("X", pm.velik.x);

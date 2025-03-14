@@ -17,6 +17,7 @@ namespace BID
         public Sprite[] tiles;
         public Sprite[] doors;
         public GameObject CorpsePrefab;
+        public GameObject PotionPrefab;
 
         public int multiplyer;
 
@@ -181,6 +182,11 @@ namespace BID
         {
             var a = Instantiate(keyStone, transform.GetChild(0));
             a.transform.position = transform.position + new Vector3(position.x, position.y, 0);
+
+            var b = Instantiate(PotionPrefab, transform.GetChild(0));
+            b.transform.position = transform.position + new Vector3(position.x + 14, position.y + 16, 0);
+            b.transform.GetChild(0).GetComponent<PotionScript>().room = "keystone";
+            b.GetComponent<SpriteRenderer>().sortingOrder = -32750; 
         }
         void GenerateBossEnt(Vector2 position)
         {
@@ -194,6 +200,11 @@ namespace BID
             CreateTile(-1, -1, tiles[20]);
             CreateBossDoor(0, -1, transform.GetChild(0));
             CreateTile(1, -1, tiles[20]);
+
+            var b = Instantiate(PotionPrefab, transform.GetChild(0));
+            b.transform.position = transform.position + new Vector3(position.x + 14, position.y + 16, 0);
+            b.transform.GetChild(0).GetComponent<PotionScript>().room = "boss";
+            b.GetComponent<SpriteRenderer>().sortingOrder = -32750;
         }
         void CreateTile(float x, float y, Sprite sprite, bool noCollider = false)
         {

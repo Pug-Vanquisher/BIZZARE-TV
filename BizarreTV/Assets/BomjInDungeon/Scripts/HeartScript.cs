@@ -13,26 +13,24 @@ namespace BID
         public Image damage;
         public Image health;
 
-        void Start()
-        {
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
         public void TakeDamage(int HeartId)
         {
             Pulse();
+
+            health.fillAmount = Mathf.Clamp(HeartId - id, 0f, 2f) / 2f;
+
+            Debug.Log(Mathf.Clamp(HeartId - id, 0f, 2f) / 2f);
+
+            /*
             if (HeartId == id || HeartId == id + 1)
             {
-                health.fillAmount -= 0.5f;
+                
             }
-            if(HeartId == id-1 || HeartId == id)
+            if (HeartId == id - 1 || HeartId == id)
             {
                 damage.fillAmount -= 0.5f;
-            }
+            }*/
+
         }
         public void NonEffDamage(int HeartId)
         {

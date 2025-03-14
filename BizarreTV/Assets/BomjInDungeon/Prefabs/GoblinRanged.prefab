@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6185880208233269216}
   - component: {fileID: 4004011081122568454}
   - component: {fileID: 3618440407259473522}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: GoblinRanged
   m_TagString: Goblin
   m_Icon: {fileID: 0}
@@ -108,7 +108,6 @@ MonoBehaviour:
   speed: 0
   attackRange: 100
   AttackInvoke: 0.8
-  aggroRange: 15
   vlframes: 3
   HitCollider: {fileID: 1930894467062974764}
   warn: {fileID: 3953961812796688095}
@@ -127,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhp: 3
-  currenthp: 0
+  currenthp: 3
   invulDelay: 0
   dangerScale: 1
 --- !u!114 &6185880208233269216
@@ -195,7 +194,7 @@ GameObject:
   - component: {fileID: 1432141491846238089}
   - component: {fileID: 1930894467062974764}
   - component: {fileID: 2344779051808759906}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: HitCollider
   m_TagString: Goblin
   m_Icon: {fileID: 0}
@@ -282,7 +281,7 @@ GameObject:
   - component: {fileID: 2222082952477255477}
   - component: {fileID: 3953961812796688095}
   - component: {fileID: 8550754702978355702}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: warnParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
