@@ -7,7 +7,7 @@ public class Platform : MonoBehaviour
     [SerializeField]
     [Range(0f, 100f)]
     public float speed = 20f;
-
+    public Vector2 currspeed;
     [SerializeField]
     private float leftBorder = -7.9f;
     [SerializeField]
@@ -19,7 +19,9 @@ public class Platform : MonoBehaviour
     {
         if (isPlayable)
         {
-            transform.Translate(speed * Vector2.right * Input.GetAxis("Horizontal") * Time.deltaTime);
+            //currspeed = speed * Vector2.right * Input.GetAxis("Horizontal");
+            currspeed = Vector2.Lerp(currspeed, Input.GetAxis("Horizontal") * speed * Vector2.right, 0.01f);
+            transform.Translate(currspeed * Time.deltaTime);
             transform.position = new Vector2(Mathf.Clamp(transform.position.x, leftBorder, rightBorder), transform.position.y);
         }
 

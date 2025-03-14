@@ -5,7 +5,7 @@ namespace Arcanoid
     public class Block : MonoBehaviour
     {
         [SerializeField]
-        private int hitsLeft = 3;
+        private int hitsLeft;
 
         [SerializeField]
         GameObject buff;
@@ -23,10 +23,7 @@ namespace Arcanoid
                 manager.checkWin();
                 Destroy(gameObject);
             }
-            /*float r, g, b;
-            r = Random.Range(0f, 1f);
-            g = Random.Range(0f, 1f);
-            b = Random.Range(0f, 1f);*/
+            
             Color nextColor = GetComponent<SpriteRenderer>().color;
             nextColor.r /= 2;
             nextColor.g /= 2;
