@@ -58,6 +58,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
+  - m_GUID: 5977ad8ec1a5d7c44ac1a1dc0b41076b
+    m_Address: Puzzle_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: e6f59ee1ecd79e54fa66b284ca819032
+    m_Address: NuPogodi_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: 274cad6f7d62c7d408e03dac0760dd8d
+    m_Address: RythmGame_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: fdd09403f710ca046bdc5d0798cb8352
+    m_Address: BomjinDungeon_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6994e07545d739c42bcbc25e2a8b2df8, type: 2}
   m_SchemaSet:

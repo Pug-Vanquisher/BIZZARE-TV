@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: NuPogodi Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: NuPogodi
+  m_TableCollectionNameGuidString: e60da4364e19ae243b4234014c4c4fb2
+  m_Entries:
+  - m_Id: 91666853888
+    m_Key: general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 572199874560
+    m_Key: good
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874563055616
+    m_Key: bad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055681490944
+    m_Key: bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17812404121600
+    m_Key: Next_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21729993109504
+    m_Key: score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21880153387008
+    m_Key: Highscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22332844617728
+    m_Key: Speedup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22553708277760
+    m_Key: Slow_fall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22771107442688
+    m_Key: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22956046888960
+    m_Key: start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23199127777280
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3401838796004917321
+  references:
+    version: 2
+    RefIds:
+    - rid: 3401838796004917321
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1742217609350

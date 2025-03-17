@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NuPogodi_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e60da4364e19ae243b4234014c4c4fb2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 91666853888
+    m_Localized: 'Goal: score as many points as possible by picking up items!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 572199874560
+    m_Localized: Ordinary items. Picking them up gives points, skipping them loses
+      a life.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874563055616
+    m_Localized: Dangerous items. Picking them up takes a life, skipping them does
+      nothing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055681490944
+    m_Localized: Bonuses. Picking up triggers an item effect, skipping them does
+      nothing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17812404121600
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21729993109504
+    m_Localized: 'Score: NONE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21880153387008
+    m_Localized: 'Highscore: NONE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22332844617728
+    m_Localized: Temporary acceleration of player movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22553708277760
+    m_Localized: Temporary deceleration of falling objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22771107442688
+    m_Localized: Extra Life. Will have no effect if you already have three lives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22956046888960
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23199127777280
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

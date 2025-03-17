@@ -49,6 +49,22 @@ MonoBehaviour:
     m_Address: Assets/LoneTower/Localization/Tower Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 1e38c1be65194a4448c6c6f2e6e06fc3
+    m_Address: Assets/Puzzle/Localization/Puzzle Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: e60da4364e19ae243b4234014c4c4fb2
+    m_Address: Assets/NuPogodi/Localization/NuPogodi Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f52d4033bf47f834eab2c4b9157b0f5f
+    m_Address: Assets/RythmGame/Localization/RythmGame Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 076502d6a65397c44a2940500ef3aa6d
+    m_Address: Assets/BomjInDungeon/Localization/BomjinDungeon Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6994e07545d739c42bcbc25e2a8b2df8, type: 2}
   m_SchemaSet:

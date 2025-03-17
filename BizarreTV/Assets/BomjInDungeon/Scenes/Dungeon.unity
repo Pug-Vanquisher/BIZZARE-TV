@@ -826,6 +826,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd5bce2484fe3846a68cf12e7726991, type: 3}
+--- !u!1 &1618424996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7268206618143132751, guid: e80668423c35a854c85b11fb32503468, type: 3}
+  m_PrefabInstance: {fileID: 1625244371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618424997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618424996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:076502d6a65397c44a2940500ef3aa6d
+    m_TableEntryReference:
+      m_KeyId: 898726440960
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1625244371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +897,14 @@ PrefabInstance:
     - target: {fileID: 7268206618497794069, guid: e80668423c35a854c85b11fb32503468, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268206618620953834, guid: e80668423c35a854c85b11fb32503468, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 1532791959552
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268206618620953834, guid: e80668423c35a854c85b11fb32503468, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:076502d6a65397c44a2940500ef3aa6d
       objectReference: {fileID: 0}
     - target: {fileID: 7268206618650568428, guid: e80668423c35a854c85b11fb32503468, type: 3}
       propertyPath: m_AnchorMax.x
@@ -991,6 +1032,138 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e80668423c35a854c85b11fb32503468, type: 3}
+--- !u!1 &1625244372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7268206619353462746, guid: e80668423c35a854c85b11fb32503468, type: 3}
+  m_PrefabInstance: {fileID: 1625244371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625244373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7268206618256525885, guid: e80668423c35a854c85b11fb32503468, type: 3}
+  m_PrefabInstance: {fileID: 1625244371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625244374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7268206618747694350, guid: e80668423c35a854c85b11fb32503468, type: 3}
+  m_PrefabInstance: {fileID: 1625244371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625244375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7268206619712568105, guid: e80668423c35a854c85b11fb32503468, type: 3}
+  m_PrefabInstance: {fileID: 1625244371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1625244376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625244372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:076502d6a65397c44a2940500ef3aa6d
+    m_TableEntryReference:
+      m_KeyId: 402833879040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1625244377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625244373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:076502d6a65397c44a2940500ef3aa6d
+    m_TableEntryReference:
+      m_KeyId: 237238562816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1625244378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625244374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:076502d6a65397c44a2940500ef3aa6d
+    m_TableEntryReference:
+      m_KeyId: 778370887680
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1625244379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625244375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:076502d6a65397c44a2940500ef3aa6d
+    m_TableEntryReference:
+      m_KeyId: 99019468800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1665569788
 GameObject:
   m_ObjectHideFlags: 0
