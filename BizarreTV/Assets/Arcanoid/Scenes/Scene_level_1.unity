@@ -1057,10 +1057,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d6eb5b1c4c24141821a3c38f06f641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   list:
   - {fileID: 267858812453200969, guid: a4ff7662d7e6a9d4aa85e4bf67acbe18, type: 3}
-  - {fileID: 267858812453200969, guid: 5db68d9de9feb114eaa639896f51664a, type: 3}
-  - {fileID: 267858812453200969, guid: 4c70b06a8d7088e41ab7c4a52e7cf49f, type: 3}
+  - {fileID: 267858812453200969, guid: 78ffe2d95e396664085aa3b928f422a9, type: 3}
+  - {fileID: 267858812453200969, guid: e95d96ccb37297d48836bf9961443990, type: 3}
+  - {fileID: 267858812453200969, guid: 39df85a4d82d41f4a94d12069938234e, type: 3}
+  - {fileID: 267858812453200969, guid: 210730435625fe64aaf370ea49a557da, type: 3}
 --- !u!1 &823664392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,6 +2891,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 39085375}
     - target: {fileID: 669432807816456508, guid: 1e4ae71bcd1ac684fa75f615b709801b, type: 3}
+      propertyPath: ballCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 669432807816456508, guid: 1e4ae71bcd1ac684fa75f615b709801b, type: 3}
       propertyPath: sizeDifPlat
       value: 0.5
       objectReference: {fileID: 0}
@@ -2901,7 +2908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 669432807816456508, guid: 1e4ae71bcd1ac684fa75f615b709801b, type: 3}
       propertyPath: numberOfBlocks
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 669432807816456509, guid: 1e4ae71bcd1ac684fa75f615b709801b, type: 3}
       propertyPath: m_Name
@@ -3017,7 +3024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962780297280009893, guid: 6294220bc3ce39d458b159fa6886f9e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 358.23734
       objectReference: {fileID: 0}
     - target: {fileID: 3962780297280009914, guid: 6294220bc3ce39d458b159fa6886f9e8, type: 3}
       propertyPath: m_CollisionDetection

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
 namespace Arcanoid
@@ -11,7 +12,7 @@ namespace Arcanoid
         [SerializeField] Platform player;
         [SerializeField] BallControl ball;
         [SerializeField] AudioClip winSound;
-        [SerializeField] int numberOfBlocks;
+        [SerializeField] public int numberOfBlocks;
         [SerializeField] GameObject winUI;
 
         public float speedDifPlat = 1.2f;
@@ -24,20 +25,22 @@ namespace Arcanoid
         public int buffSpeed = 0;
 
         float origSize;
-        Vector2 origSpeedBall;
-        float origSpeedPlat;
-
         AudioSource audioSource;
 
         private bool playing = false;
 
+        public int ballCount;
+        public int score;
 
         private void Awake()
         {
             origSize = player.transform.localScale.x;
-            origSpeedBall = ball.startingVelocity;
-            origSpeedPlat = player.speed;
             audioSource = GetComponent<AudioSource>();
+        }
+
+        private void FixedUpdate()
+        {
+            checkLose();
         }
 
         public int ckeckBuff(int random)
@@ -64,83 +67,13 @@ namespace Arcanoid
             }
             return random;
         }
-        public void addSpeed()
+        
+        public void addScore(bool is_gold)
         {
-            buffSpeed++;
-            player.GetComponent<Platform>().speed += speedDifPlat;
-            ball.GetComponent<Rigidbody2D>().velocity *= speedDifBall;
-            /*if(ball.GetComponent<Rigidbody2D>().velocity.x > 0)
-            {
-                if(ball.GetComponent<Rigidbody2D>().velocity.y > 0)
-                {
-                    ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedDifBall, speedDifBall), ForceMode2D.Impulse);
-                    return;
-                }
-                ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedDifBall, -speedDifBall), ForceMode2D.Impulse);
-            }
-            else
-            {
-                if (ball.GetComponent<Rigidbody2D>().velocity.y > 0)
-                {
-                    ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speedDifBall, speedDifBall), ForceMode2D.Impulse);
-                    return;
-                }
-                ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speedDifBall, -speedDifBall), ForceMode2D.Impulse);
-            }*/
-
-
-        }
-        public void removeSpeed()
-        {
-            buffSpeed--;
-            player.GetComponent<Platform>().speed -= speedDifPlat;
-            ball.GetComponent<Rigidbody2D>().velocity /= speedDifBall;
-
-            /*if (ball.GetComponent<Rigidbody2D>().velocity.x > 0)
-            {
-                if (ball.GetComponent<Rigidbody2D>().velocity.y > 0)
-                {
-                    ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speedDifBall, -speedDifBall), ForceMode2D.Impulse);
-                    return;
-                }
-                ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speedDifBall, speedDifBall), ForceMode2D.Impulse);
-            }
-            else
-            {
-                if (ball.GetComponent<Rigidbody2D>().velocity.y > 0)
-                {
-                    ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedDifBall, -speedDifBall), ForceMode2D.Impulse);
-                    return;
-                }
-                ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(speedDifBall, speedDifBall), ForceMode2D.Impulse);
-            }*/
-
+            if (is_gold) score += 100;
+            else score += 500;
         }
 
-        public void resetSpeed()
-        {
-            buffSpeed = 0;
-            player.GetComponent<Platform>().speed = origSpeedPlat;
-            //ball.GetComponent<Rigidbody2D>().velocity = origSpeedBall;
-            if (buffSpeed <= 3 && buffSpeed > 0)
-            {
-                while (buffSpeed > 0)
-                {
-                    removeSpeed();
-                    //buffSpeed--;
-                }
-            }
-            else
-            {
-                while (buffSpeed < 0)
-                {
-                    addSpeed();
-                    //buffSpeed++;
-                }
-            }
-
-
-        }
         public void plusSize()
         {
             player.transform.localScale = new Vector2(player.transform.localScale.x + sizeDifPlat, player.transform.localScale.y);
@@ -166,6 +99,11 @@ namespace Arcanoid
         {
             audioSource.clip = winSound;
             audioSource.Play();
+        }
+
+        public void checkLose()
+        {
+            if (ballCount < 1 & FindObjectOfType<BallControl>()) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void checkWin()

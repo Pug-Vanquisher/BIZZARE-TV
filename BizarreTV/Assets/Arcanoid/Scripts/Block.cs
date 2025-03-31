@@ -9,26 +9,27 @@ namespace Arcanoid
 
         [SerializeField]
         GameObject buff;
+        public SpriteRenderer dsprite;
+        public Sprite damaged;
+        public Sprite bdamaged;
 
         gameMAnager manager;
 
         public void Hit()
         {
+            Debug.Log(gameObject.name);
             hitsLeft--;
             if (hitsLeft < 1)
             {
-                Instantiate(buff, transform.position, transform.rotation);
+                if (!gameObject.name.Contains("Dirt Block")) Instantiate(buff, transform.position, transform.rotation).GetComponent<plusSize>().type = gameObject.name;
                 manager = GameObject.Find("GameObject").GetComponent<gameMAnager>();
                 manager.playDestroySound();
                 manager.checkWin();
                 Destroy(gameObject);
             }
             
-            Color nextColor = GetComponent<SpriteRenderer>().color;
-            nextColor.r /= 2;
-            nextColor.g /= 2;
-            nextColor.b /= 2;
-            GetComponent<SpriteRenderer>().color = nextColor;
+            if (hitsLeft == 2) { dsprite.sprite = damaged; }
+            if (hitsLeft == 1) { dsprite.sprite = bdamaged; }
         }
     }
 

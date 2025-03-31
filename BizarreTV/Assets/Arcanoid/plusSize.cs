@@ -14,14 +14,20 @@ namespace Arcanoid
         public Vector2 direction = new Vector2(0, 1);
         public Vector2 velocity;
 
-        public int randomBuff;
+        public int buff;
+        public string type;
 
         private void Awake()
         {
             gameManager = FindObjectOfType<gameMAnager>();
-            randomBuff = Random.Range(0, 3);
-            randomBuff = gameManager.ckeckBuff(randomBuff);
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[randomBuff];
+            
+            if (type == "Coal Block") buff = 0;
+            if (type == "Iron Block") buff = 1;
+            if (type == "Gold Block") buff = 2;
+            if (type == "Diamond Block") buff = 3;
+
+            buff = gameManager.ckeckBuff(buff);
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[buff];
         }
 
 
@@ -43,7 +49,7 @@ namespace Arcanoid
         {
             if (collision.gameObject.tag == "Player")
             {
-                switch (randomBuff)
+                switch (buff)
                 {
                     case 0:
                         gameManager.plusSize();
@@ -52,10 +58,10 @@ namespace Arcanoid
                         gameManager.minusSize();
                         break;
                     case 2:
-                        gameManager.addSpeed();
+                        gameManager.addScore(true);
                         break;
                     case 3:
-                        gameManager.removeSpeed();
+                        gameManager.addScore(false);
                         break;
 
                 }
