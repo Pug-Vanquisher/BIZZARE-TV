@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AchievementConfig 6
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 6
+  <Project>k__BackingField: 2
   <Progress>k__BackingField: 1
   <Reward>k__BackingField: 1
   <Icon>k__BackingField: {fileID: -183845021, guid: 9440c47c454da0b448d1ace1f8ffb426, type: 3}

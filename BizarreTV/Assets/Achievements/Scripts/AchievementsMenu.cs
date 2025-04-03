@@ -71,7 +71,7 @@ namespace Achievements
             return onCompleted;
         }
 
-        public void CreateBlocks(AchievementConfig[] configs)
+        public void CreateBlocks(IEnumerable<AchievementConfig> configs)
         {
             ClearBlocksContainer();
 

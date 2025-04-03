@@ -42,6 +42,8 @@ namespace Achievements
 
         private void ValidateId(AchievementConfig[] configs, string name)
         {
+            if (configs.Length == 0) return;
+
             for (int i = 0; i < configs.Length; i++)
             {
                 for (int j = i+1; j < configs.Length; j++)
