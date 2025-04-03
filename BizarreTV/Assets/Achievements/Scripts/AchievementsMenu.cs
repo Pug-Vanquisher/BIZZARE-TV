@@ -71,20 +71,24 @@ namespace Achievements
             return onCompleted;
         }
 
-        public void CreateBlocks(IEnumerable<AchievementConfig> configs)
+        public void CreateBlocks(AchievementProjects project, IEnumerable<AchievementConfig> configs, 
+                                 AchievementsStateProxy stateProxy)
         {
             ClearBlocksContainer();
 
             foreach (var config in configs)
             {
-                CreateBlock(config);
+                var mappedId = AchievementsMapper.GetId(project, config.Id);
+                var progress = stateProxy.GetProgress(mappedId);
+
+                CreateBlock(config, progress);
             }
         }
 
-        private void CreateBlock(AchievementConfig config)
+        private void CreateBlock(AchievementConfig config, float progress)
         {
             var block = Instantiate(_blockPrefab);
-            block.Init(config);
+            block.Init(config, progress);
             block.transform.SetParent(_blocksContainer, false);
         }
 

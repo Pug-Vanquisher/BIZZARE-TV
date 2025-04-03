@@ -6,8 +6,8 @@ namespace Achievements
     {
         public AchievementsStateProxy StateProxy { get; }
 
-        public Observable<AchievementsStateProxy> LoadGameState();
-        public Observable<bool> SaveGameState();
-        public Observable<bool> ResetGameState();
+        public Observable<AchievementsStateProxy> LoadState();
+        public Observable<bool> SaveState();
+        public Observable<bool> ResetState();
     }
 }

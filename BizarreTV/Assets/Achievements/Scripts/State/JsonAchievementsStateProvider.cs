@@ -17,12 +17,12 @@ namespace Achievements
             _savePath = GetPath();
         }
 
-        public Observable<AchievementsStateProxy> LoadGameState()
+        public Observable<AchievementsStateProxy> LoadState()
         {
             if (!File.Exists(_savePath))
             {
                 StateProxy = CreateInitalState();
-                SaveGameState();
+                SaveState();
             }
             else
             {
@@ -35,7 +35,7 @@ namespace Achievements
             return Observable<AchievementsStateProxy>.Return(StateProxy);
         }
 
-        public Observable<bool> SaveGameState()
+        public Observable<bool> SaveState()
         {
             var json = JsonUtility.ToJson(StateProxy.State, true);
             File.WriteAllText(_savePath, json);
@@ -43,22 +43,22 @@ namespace Achievements
             return Observable<bool>.Return(true);
         }
 
-        public Observable<bool> ResetGameState()
+        public Observable<bool> ResetState()
         {
             StateProxy = CreateInitalState();
-            SaveGameState();
+            SaveState();
 
             return Observable<bool>.Return(true);
         }
 
         private AchievementsStateProxy CreateInitalState()
         {
-            var gameState = new AchievementsState
+            var state = new AchievementsState
             {
                 Achievements = new(),
             };
 
-            return new AchievementsStateProxy(gameState, this);
+            return new AchievementsStateProxy(state, this);
         }
 
         private string GetPath()

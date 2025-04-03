@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Achievements
@@ -34,9 +35,37 @@ namespace Achievements
             DontDestroyOnLoad(gameObject);
 
             _stateProvider = new JsonAchievementsStateProvider();
-            _stateProvider.LoadGameState();
+            _stateProvider.LoadState();
 
             InitConfigsMap();
+        }
+
+        public bool IsObtained(AchievementProjects project, int id)
+        {
+            var fullId = AchievementsMapper.GetId(project, id);
+            return _stateProvider.StateProxy.IsObtained(fullId);
+        }
+
+        public float GetProgress(AchievementProjects project, int id)
+        {
+            var fullId = AchievementsMapper.GetId(project, id);
+            return _stateProvider.StateProxy.GetProgress(fullId);
+        }
+
+        public void SetProgress(AchievementProjects project, int id, float progress, bool checkObtained = true)
+        {
+            if (checkObtained && IsObtained(project, id)) return;
+            
+            var config = GetConfig(project, id);
+            progress = Mathf.Clamp(progress, 0, config.Progress);
+
+            var fullId = AchievementsMapper.GetId(project, id);
+            var isObtained = progress.Equals(config.Progress);
+
+            _stateProvider.StateProxy.SetProgress(fullId, progress, isObtained).Subscribe(_ =>
+            {
+                _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
+            });
         }
 
         private void Update()
@@ -54,7 +83,7 @@ namespace Achievements
 
         private void OpenMenu(AchievementProjects project)
         {
-            _menu.CreateBlocks(_configsMap[project]);
+            _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
             _menu.Open().Subscribe(_ => Debug.Log("open"));
         }
 
@@ -81,6 +110,11 @@ namespace Achievements
             _configsMap[AchievementProjects.Rogalik] = _config.Rogalik;
             _configsMap[AchievementProjects.RythmGame] = _config.RythmGame;
             _configsMap[AchievementProjects.ShootingRanch] = _config.ShootingRanch;
+        }
+    
+        private AchievementConfig GetConfig(AchievementProjects project, int id)
+        {
+            return _configsMap[project].FirstOrDefault(a => a.Id == id);
         }
     }
 }
