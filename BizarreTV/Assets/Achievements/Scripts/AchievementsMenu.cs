@@ -71,19 +71,20 @@ namespace Achievements
             return onCompleted;
         }
 
-        public void CreateBlocks(int count)
+        public void CreateBlocks(AchievementConfig[] configs)
         {
             ClearBlocksContainer();
 
-            for (int i = 0; i < count; i++)
+            foreach (var config in configs)
             {
-                CreateBlock();
+                CreateBlock(config);
             }
         }
 
-        private void CreateBlock()
+        private void CreateBlock(AchievementConfig config)
         {
             var block = Instantiate(_blockPrefab);
+            block.Init(config);
             block.transform.SetParent(_blocksContainer, false);
         }
 

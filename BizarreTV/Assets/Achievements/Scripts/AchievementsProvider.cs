@@ -1,5 +1,6 @@
-using DG.Tweening;
+using Balance;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Achievements
 {
@@ -8,6 +9,16 @@ namespace Achievements
         public static AchievementsProvider Instance;
 
         [SerializeField] private AchievementsMenu _menu;
+        [SerializeField] private AchievementsConfig _config;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        public static void AutostartGame()
+        {
+            if (Instance != null) return;
+
+            var prefab = Resources.Load<AchievementsProvider>("AchievementsProvider");
+            Instantiate(prefab);
+        }
 
         private void Awake() 
         {
@@ -30,18 +41,16 @@ namespace Achievements
 
             if (Input.GetKey(KeyCode.O))
             {
-                OpenMenu();
+                OpenMenu(_config.Balance);
             }
         }
 
-        [ContextMenu("Open Menu")]
-        private void OpenMenu()
+        private void OpenMenu(AchievementConfig[] configs)
         {
-            _menu.CreateBlocks(10);
+            _menu.CreateBlocks(configs);
             _menu.Open().Subscribe(_ => Debug.Log("open"));
         }
 
-        [ContextMenu("Close Menu")]
         private void CloseMenu()
         {
             _menu.Close().Subscribe(_ => Debug.Log("close"));

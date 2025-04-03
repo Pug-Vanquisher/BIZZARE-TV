@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44882cd62d00654d8856c59b17d5220, type: 3}
+  m_Name: AchievementsConfig
+  m_EditorClassIdentifier: 
+  <Arcanoid>k__BackingField: []
+  <Balance>k__BackingField:
+  - {fileID: 11400000, guid: a97a35c8deb557e47afdaa4fe249bfc9, type: 2}
+  - {fileID: 11400000, guid: cdb7c9c1b9fac7f458d3b44ed9c8bd6c, type: 2}
+  - {fileID: 11400000, guid: 7fab9667655369d41a0d0cea09baf068, type: 2}
+  - {fileID: 11400000, guid: 5e30a5d3c2034964bb25b595fd7aadea, type: 2}
+  - {fileID: 11400000, guid: 560c456eb63bd8e49b7c72221c0c902d, type: 2}
+  - {fileID: 11400000, guid: 6789771bb9596834eba23e687365ac7d, type: 2}
+  - {fileID: 11400000, guid: 474b4cd43cdb803498f70c0c966eb740, type: 2}
+  <BomjInDungeon>k__BackingField: []
+  <CyberRun>k__BackingField: []
+  <DeliciousDishes1>k__BackingField: []
+  <DeliciousDishes2>k__BackingField: []
+  <HitTheMole>k__BackingField: []
+  <Jupiter>k__BackingField: []
+  <LoneTower>k__BackingField: []
+  <NuPogodi>k__BackingField: []
+  <Puzzle>k__BackingField: []
+  <Rogalik>k__BackingField: []
+  <RythmGame>k__BackingField: []
+  <ShootingRanch>k__BackingField: []
