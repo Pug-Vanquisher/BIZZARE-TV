@@ -55,6 +55,7 @@ namespace Achievements
         {
             var state = new AchievementsState
             {
+                MedalsCount = 0,
                 Achievements = new(),
             };
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 3
   <Progress>k__BackingField: 5
-  <Reward>k__BackingField: 1
+  <Reward>k__BackingField: 5
   <Icon>k__BackingField: {fileID: -183845021, guid: 9440c47c454da0b448d1ace1f8ffb426, type: 3}
   <Title>k__BackingField: First level
   <Description>k__BackingField: Pass the first level.

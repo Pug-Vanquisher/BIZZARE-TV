@@ -29,13 +29,15 @@ namespace Achievements
         private Tweener _openCloseTweener;
         private Tweener _fadeTweener;
 
+        public Observable<bool> OnCloseButtonClicked = new();
+
         private void Awake()
         {
-            _closeButtons.ForEach(b => b.onClick.AddListener(() => Close()));
+            _closeButtons.ForEach(b => b.onClick.AddListener(() => OnCloseButtonClicked.OnNext(true)));
 
-            _view.transform.localScale = new Vector2(1, 0);
             _view.gameObject.SetActive(false);
             _fadeView.gameObject.SetActive(false);
+            Close();
         }
 
         public Observable<bool> Open()
@@ -44,11 +46,13 @@ namespace Achievements
 
             _openCloseTweener?.Kill();
             _view.gameObject.SetActive(true);
-            _openCloseTweener = _view.DOScaleY(1, _openDuration).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                _blocksContainer.sizeDelta = new Vector2(_blocksContainer.sizeDelta.x, 0);
-                onCompleted.OnNext(true);
-            });
+            _openCloseTweener = _view.DOScaleY(1, _openDuration)
+                .SetEase(Ease.OutQuad)
+                .OnComplete(() =>
+                {
+                    _blocksContainer.sizeDelta = new Vector2(_blocksContainer.sizeDelta.x, 0);
+                    onCompleted.OnNext(true);
+                });
 
             FadeScreen(true);
 
@@ -60,11 +64,13 @@ namespace Achievements
             var onCompleted = new Observable<bool>();
 
             _openCloseTweener?.Kill();
-            _openCloseTweener = _view.DOScaleY(0, _closeDuration).SetEase(Ease.OutQuad).OnComplete(() =>
-            {
-                _view.gameObject.SetActive(false);
-                onCompleted.OnNext(true);
-            });
+            _openCloseTweener = _view.DOScaleY(0, _closeDuration)
+                .SetEase(Ease.OutQuad)
+                .OnComplete(() =>
+                {
+                    _view.gameObject.SetActive(false);
+                    onCompleted.OnNext(true);
+                });
 
             FadeScreen(false);
 

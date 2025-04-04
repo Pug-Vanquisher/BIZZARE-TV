@@ -15,6 +15,17 @@ namespace Achievements
             _stateProvider = stateProvider;
         }
 
+        public int GetMedals()
+        {
+            return _state.MedalsCount;
+        }
+
+        public void SetMedals(int count)
+        {
+            _state.MedalsCount = count;
+            _stateProvider.SaveState();
+        }
+
         public bool IsObtained(int id)
         {
             return GetAchievement(id)?.IsObtained ?? false;
@@ -22,7 +33,7 @@ namespace Achievements
 
         public float GetProgress(int id)
         {
-            return GetAchievement(id)?.Progress ?? -1f;
+            return GetAchievement(id)?.Progress ?? 0f;
         }
 
         public Observable<bool> SetProgress(int id, float progress, bool isObtained = false)

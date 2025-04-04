@@ -1,14 +1,15 @@
 {
+    "MedalsCount": 15,
     "Achievements": [
         {
             "Id": 201,
             "Progress": 1.0,
-            "IsObtained": true
+            "IsObtained": false
         },
         {
             "Id": 203,
-            "Progress": 2.8529999256134035,
-            "IsObtained": false
+            "Progress": 5.0,
+            "IsObtained": true
         }
     ]
 }
