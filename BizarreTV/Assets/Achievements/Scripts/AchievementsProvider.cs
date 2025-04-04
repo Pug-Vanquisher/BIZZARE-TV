@@ -42,19 +42,14 @@ namespace Achievements
             DontDestroyOnLoad(gameObject);
 
             _stateProvider = new JsonAchievementsStateProvider();
-            _stateProvider.LoadState();
-
-            _medalsCounter.SetMedals(_stateProvider.StateProxy.GetMedals());
+            _stateProvider.LoadState().Subscribe(_ =>
+            {
+                _medalsCounter.SetMedals(_stateProvider.StateProxy.GetMedals());
+            });
 
             InitConfigsMap();
 
             _menu.OnCloseButtonClicked.Subscribe(_ => CloseMenu());
-        }
-
-        public bool IsObtained(AchievementProjects project, int id)
-        {
-            var fullId = AchievementsMapper.GetId(project, id);
-            return _stateProvider.StateProxy.IsObtained(fullId);
         }
 
         public float GetProgress(AchievementProjects project, int id)
@@ -81,6 +76,12 @@ namespace Achievements
                 _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
             });
         }
+        public bool IsObtained(AchievementProjects project, int id)
+        {
+            var fullId = AchievementsMapper.GetId(project, id);
+            return _stateProvider.StateProxy.IsObtained(fullId);
+        }
+
 
         private void ObtainAchievement(AchievementConfig config)
         {
@@ -93,7 +94,6 @@ namespace Achievements
         private void CreditReward(AchievementConfig config)
         {
             var medalsCount = _medalsCounter.Count + config.Reward;
-            var currentViewState = _medalsCounter.CurrentViewState;
 
             // View.
             _medalsCounter.Open().Subscribe(_ =>
@@ -106,7 +106,7 @@ namespace Achievements
                     _medalsCounter.SetMedals(medalsCount);
                     _medalsCounter.ChangeCounterView(from, to).Subscribe(_ =>
                     {
-                        DOVirtual.DelayedCall(4f, () => _medalsCounter.SetState(currentViewState));
+                        DOVirtual.DelayedCall(4f, () => _medalsCounter.Close());
                     });
                 });
             });

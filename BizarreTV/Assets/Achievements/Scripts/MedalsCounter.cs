@@ -1,4 +1,5 @@
 using DG.Tweening;
+using ScriptAnimations;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -17,14 +18,17 @@ namespace Achievements
         [SerializeField] private float _closeDuration;
         [SerializeField] private float _counterChangesDelay;
 
+        [Space]
+
+        [SerializeField] private Transform _iconView;
+        [SerializeField] private PulsationAnimator _pulsation;
+
         private int _medalsCount;
         private float _height;
         private Tweener _openCloseTweener;
         private Coroutine _changeCounterRoutine;
-        private ViewStates _viewState;
 
         public int Count => _medalsCount;
-        public ViewStates CurrentViewState => _viewState;
 
         private void Awake()
         {
@@ -54,7 +58,6 @@ namespace Achievements
         public Observable<bool> Open()
         {
             var onCompleted = new Observable<bool>();
-            _viewState = ViewStates.Open;
             _openCloseTweener?.Kill();
 
             _view.gameObject.SetActive(true);
@@ -71,7 +74,6 @@ namespace Achievements
         public Observable<bool> Close()
         {
             var onCompleted = new Observable<bool>();
-            _viewState = ViewStates.Close;
             _openCloseTweener?.Kill();
 
             _openCloseTweener = _view.DOAnchorPosY(_height, _openDuration)
@@ -85,16 +87,6 @@ namespace Achievements
             return onCompleted;
         }
 
-        public Observable<bool> SetState(ViewStates state)
-        {
-            if (state == ViewStates.Open)
-                return Open();
-            else if (state == ViewStates.Close)
-                return Close();
-
-            return Observable<bool>.Return(false);
-        }
-
         private IEnumerator ChangeCounterView(int from, int to, Observable<bool> onCompleted)
         {
             var value = from;
@@ -104,17 +96,12 @@ namespace Achievements
             {
                 value += step;
                 _counterView.text = value.ToString();
+                _pulsation.Pulse(_iconView);
 
                 yield return new WaitForSeconds(_counterChangesDelay);
             } while (value != to);
 
             onCompleted.OnNext(true);
-        }
-
-        public enum ViewStates
-        {
-            Open,
-            Close
         }
     }
 }
