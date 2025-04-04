@@ -1,5 +1,7 @@
 using DG.Tweening;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 namespace Achievements
@@ -9,6 +11,7 @@ namespace Achievements
         [Space]
 
         [SerializeField] private RectTransform _view;
+        [SerializeField] private Button _openMenuButton;
 
         [Space]
 
@@ -16,10 +19,15 @@ namespace Achievements
         [SerializeField] private float _closeDuration;
         [SerializeField] private float _yPositionAtOpenig;
 
+        private AchievementProjects _project;
         private Tweener _openCloseTweener;
+
+        public Observable<AchievementProjects> OnOpenMenuButtonClicked = new();
 
         private void Awake()
         {
+            _openMenuButton.onClick.AddListener(() => OnOpenMenuButtonClicked.OnNext(_project));
+
             _view.gameObject.SetActive(false);
             Close();
         }
@@ -29,8 +37,9 @@ namespace Achievements
             throw new System.Exception("PopUpAchievementBlock cannot be initialized");
         }
 
-        public Observable<bool> Open(AchievementConfig config)
+        public Observable<bool> Open(AchievementProjects project, AchievementConfig config)
         {
+            _project = project;
             SetView(config);
 
             var onCompleted = new Observable<bool>();

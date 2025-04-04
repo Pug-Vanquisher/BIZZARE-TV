@@ -21,6 +21,7 @@ namespace Achievements
         private IAchievementsStateProvider _stateProvider;
 
         private Dictionary<AchievementProjects, AchievementConfig[]> _configsMap;
+        private bool _isMenuOpened;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void AutostartGame()
@@ -50,6 +51,11 @@ namespace Achievements
             InitConfigsMap();
 
             _menu.OnCloseButtonClicked.Subscribe(_ => CloseMenu());
+            _popUpAchievementBlock.OnOpenMenuButtonClicked.Subscribe(project =>
+            {
+                _popUpAchievementBlock.Close();
+                OpenMenu(project);
+            });
         }
 
         public float GetProgress(AchievementProjects project, int id)
@@ -69,7 +75,7 @@ namespace Achievements
             var isObtained = progress.Equals(config.Progress);
 
             if (isObtained)
-                ObtainAchievement(config);
+                ObtainAchievement(project, config);
 
             _stateProvider.StateProxy.SetProgress(fullId, progress, isObtained).Subscribe(_ =>
             {
@@ -83,9 +89,9 @@ namespace Achievements
         }
 
 
-        private void ObtainAchievement(AchievementConfig config)
+        private void ObtainAchievement(AchievementProjects project, AchievementConfig config)
         {
-            _popUpAchievementBlock.Open(config);
+            _popUpAchievementBlock.Open(project, config);
             CreditReward(config);
 
             DOVirtual.DelayedCall(5, () => _popUpAchievementBlock.Close());
@@ -106,7 +112,11 @@ namespace Achievements
                     _medalsCounter.SetMedals(medalsCount);
                     _medalsCounter.ChangeCounterView(from, to).Subscribe(_ =>
                     {
-                        DOVirtual.DelayedCall(4f, () => _medalsCounter.Close());
+                        DOVirtual.DelayedCall(4f, () =>
+                        {
+                            if (!_isMenuOpened) 
+                                _medalsCounter.Close();
+                        });
                     });
                 });
             });
@@ -155,12 +165,16 @@ namespace Achievements
             _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
             _menu.Open().Subscribe(_ => Debug.Log("open"));
             _medalsCounter.Open();
+
+            _isMenuOpened = true;
         }
 
         private void CloseMenu()
         {
             _menu.Close().Subscribe(_ => Debug.Log("close"));
             _medalsCounter.Close();
+
+            _isMenuOpened = false;
         }
 
         private void InitConfigsMap()
