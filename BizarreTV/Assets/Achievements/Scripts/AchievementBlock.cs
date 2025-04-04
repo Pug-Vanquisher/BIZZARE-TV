@@ -6,8 +6,8 @@ namespace Achievements
 {
 	public class AchievementBlock : MonoBehaviour
     {
-        [SerializeField] private Image _iconView;
-        [SerializeField] private TMP_Text _titleView;
+        [SerializeField] protected Image _iconView;
+        [SerializeField] protected TMP_Text _titleView;
         [SerializeField] private TMP_Text _descriptionView;
         [SerializeField] private TMP_Text _progressView;
 

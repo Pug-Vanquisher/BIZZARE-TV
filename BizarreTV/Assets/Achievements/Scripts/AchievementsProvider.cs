@@ -12,6 +12,7 @@ namespace Achievements
 
         [SerializeField] private AchievementsMenu _menu;
         [SerializeField] private MedalsCounter _medalsCounter;
+        [SerializeField] private PopUpAchievementBlock _popUpAchievementBlock; 
 
         [Space]
 
@@ -73,12 +74,20 @@ namespace Achievements
             var isObtained = progress.Equals(config.Progress);
 
             if (isObtained)
-                CreditReward(config);
+                ObtainAchievement(config);
 
             _stateProvider.StateProxy.SetProgress(fullId, progress, isObtained).Subscribe(_ =>
             {
                 _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
             });
+        }
+
+        private void ObtainAchievement(AchievementConfig config)
+        {
+            _popUpAchievementBlock.Open(config);
+            CreditReward(config);
+
+            DOVirtual.DelayedCall(5, () => _popUpAchievementBlock.Close());
         }
 
         private void CreditReward(AchievementConfig config)
@@ -97,7 +106,7 @@ namespace Achievements
                     _medalsCounter.SetMedals(medalsCount);
                     _medalsCounter.ChangeCounterView(from, to).Subscribe(_ =>
                     {
-                        DOVirtual.DelayedCall(1.5f, () => _medalsCounter.SetState(currentViewState));
+                        DOVirtual.DelayedCall(4f, () => _medalsCounter.SetState(currentViewState));
                     });
                 });
             });
@@ -116,6 +125,16 @@ namespace Achievements
             if (Input.GetKey(KeyCode.O))
             {
                 OpenMenu(AchievementProjects.Balance);
+            }
+
+            if (Input.GetKey(KeyCode.K))
+            {
+                Test1();
+            }
+
+            if (Input.GetKey(KeyCode.L))
+            {
+                Test2();
             }
         }
 
