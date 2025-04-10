@@ -23,6 +23,8 @@ namespace Achievements
         private Dictionary<AchievementProjects, AchievementConfig[]> _configsMap;
         private bool _isMenuOpened;
 
+        public MedalsCounter MedalsCounter => _medalsCounter;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void AutostartGame()
         {
@@ -45,7 +47,8 @@ namespace Achievements
             _stateProvider = new JsonAchievementsStateProvider();
             _stateProvider.LoadState().Subscribe(_ =>
             {
-                _medalsCounter.SetMedals(_stateProvider.StateProxy.GetMedals());
+                _medalsCounter.Construct(_stateProvider);
+                _medalsCounter.SetMedals(_stateProvider.StateProxy.GetMedals(), doSave:false, changeView:true);
             });
 
             InitConfigsMap();
@@ -92,24 +95,26 @@ namespace Achievements
         private void ObtainAchievement(AchievementProjects project, AchievementConfig config)
         {
             _popUpAchievementBlock.Open(project, config);
-            CreditReward(config);
+            CreditReward(config.Reward);
 
             DOVirtual.DelayedCall(5, () => _popUpAchievementBlock.Close());
         }
 
-        private void CreditReward(AchievementConfig config)
+        private void CreditReward(int reward)
         {
-            var medalsCount = _medalsCounter.Count + config.Reward;
+            var medalsCount = _medalsCounter.Count + reward;
+
+            // State.
+            _medalsCounter.SetMedals(medalsCount, changeView:false);
 
             // View.
             _medalsCounter.Open().Subscribe(_ =>
             {
                 DOVirtual.DelayedCall(0.5f, () =>
                 {
-                    var from = _medalsCounter.Count;
+                    var from = medalsCount - reward;
                     var to = medalsCount;
 
-                    _medalsCounter.SetMedals(medalsCount);
                     _medalsCounter.ChangeCounterView(from, to).Subscribe(_ =>
                     {
                         DOVirtual.DelayedCall(4f, () =>
@@ -120,9 +125,6 @@ namespace Achievements
                     });
                 });
             });
-
-            // State.
-            _stateProvider.StateProxy.SetMedals(medalsCount);
         }
 
         private void Update()
@@ -131,36 +133,9 @@ namespace Achievements
             {
                 CloseMenu();
             }
-
-            if (Input.GetKey(KeyCode.O))
-            {
-                OpenMenu(AchievementProjects.Balance);
-            }
-
-            if (Input.GetKey(KeyCode.K))
-            {
-                Test1();
-            }
-
-            if (Input.GetKey(KeyCode.L))
-            {
-                Test2();
-            }
         }
 
-        [ContextMenu("Test1")]
-        private void Test1()
-        {
-            SetProgress(AchievementProjects.Balance, 1, 3);
-        }
-
-        [ContextMenu("Test2")]
-        private void Test2()
-        {
-            SetProgress(AchievementProjects.Balance, 3, 10);
-        }
-
-        private void OpenMenu(AchievementProjects project)
+        public void OpenMenu(AchievementProjects project)
         {
             _menu.CreateBlocks(project, _configsMap[project], _stateProvider.StateProxy);
             _menu.Open().Subscribe(_ => Debug.Log("open"));
@@ -169,7 +144,7 @@ namespace Achievements
             _isMenuOpened = true;
         }
 
-        private void CloseMenu()
+        public void CloseMenu()
         {
             _menu.Close().Subscribe(_ => Debug.Log("close"));
             _medalsCounter.Close();

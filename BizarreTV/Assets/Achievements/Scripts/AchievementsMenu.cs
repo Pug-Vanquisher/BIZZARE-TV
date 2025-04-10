@@ -3,6 +3,7 @@ using DG.Tweening.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
@@ -82,7 +83,10 @@ namespace Achievements
         {
             ClearBlocksContainer();
 
-            foreach (var config in configs)
+            var sortedConfigs = new List<AchievementConfig>(configs)
+                .OrderBy(c => !stateProxy.IsObtained(AchievementsMapper.GetId(project, c.Id)));
+
+            foreach (var config in sortedConfigs)
             {
                 var mappedId = AchievementsMapper.GetId(project, config.Id);
                 var progress = stateProxy.GetProgress(mappedId);

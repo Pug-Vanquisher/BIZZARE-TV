@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: free-icon-sport-competition-cup-69845_0
+      name: Aboba
       rect:
         serializedVersion: 2
         x: 2
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free-icon-sport-competition-cup-69845_1
+      name: AchievementsSprites_1
       rect:
         serializedVersion: 2
         x: 522
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: free-icon-sport-competition-cup-69845_2
+      name: AchievementsSprites_2
       rect:
         serializedVersion: 2
         x: 1045
@@ -178,9 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      free-icon-sport-competition-cup-69845_0: -183845021
-      free-icon-sport-competition-cup-69845_1: -854912
-      free-icon-sport-competition-cup-69845_2: 2080114158
+      Aboba_0: -183845021
+      AchievementsSprites_1: -854912
+      AchievementsSprites_2: 2080114158
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

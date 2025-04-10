@@ -24,6 +24,7 @@ namespace Achievements
         [SerializeField] private PulsationAnimator _pulsation;
 
         private int _medalsCount;
+        private IAchievementsStateProvider _stateProvider;
         private float _height;
         private Tweener _openCloseTweener;
         private Coroutine _changeCounterRoutine;
@@ -38,10 +39,20 @@ namespace Achievements
             Close();
         }
 
-        public void SetMedals(int value)
+        public void Construct(IAchievementsStateProvider stateProvider)
+        {
+            _stateProvider = stateProvider;
+        }
+
+        public void SetMedals(int value, bool doSave = true, bool changeView = false)
         {
             _medalsCount = value;
-            _counterView.text = _medalsCount.ToString();
+
+            if (doSave)
+                _stateProvider.StateProxy.SetMedals(_medalsCount);
+
+            if (changeView)
+                _counterView.text = _medalsCount.ToString();
         }
 
         public Observable<bool> ChangeCounterView(int from, int to)
