@@ -547,6 +547,18 @@ MonoBehaviour:
     m_Key: TBook28
     m_Metadata:
       m_Items: []
+  - m_Id: 179678710302322688
+    m_Key: helpBookPage0_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179679343466065920
+    m_Key: helpBook_page0_tmp2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179679696962007040
+    m_Key: helpbk_page0_tmp2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

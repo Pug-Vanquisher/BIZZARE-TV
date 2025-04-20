@@ -659,9 +659,9 @@ MonoBehaviour:
     m_Localized: 'To view a recipe, hold down the left mouse button and drag up/down,
       or use the mouse wheel.
 
-      In the upper right corner are your points:
-      for correct actions you will earn them, for incorrect actions you will lose
-      them. Try to score maximum points and get 5 stars for your dish!'
+      In the upper right corner are your points: for
+      correct actions you will earn them, for incorrect actions you will lose them.
+      Try to score maximum points and get 5 stars for your dish!'
     m_Metadata:
       m_Items: []
   - m_Id: 56133439409881088
@@ -751,6 +751,18 @@ MonoBehaviour:
       to rotate the held decoration and place it in the pita.\r\nWhen you are satisfied
       with the result, click on the \u201Csave\u201D button to find out the rating
       of your dish and add it to your saves."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179678710302322688
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179679343466065920
+    m_Localized: pancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179679696962007040
+    m_Localized: pancakes
     m_Metadata:
       m_Items: []
   references:
