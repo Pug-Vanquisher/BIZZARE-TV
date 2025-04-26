@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 7389006442672425768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 651851191073068878}
   m_Father: {fileID: 0}
@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cace8fabee60db4199bc8be3da5535f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawntime: 1.2
-  arrowSpeed: 1.5
+  speed: 0.2
   arrow: {fileID: 3501364779375773361, guid: 8f2ba07287b73a1499df2ae1655c0ec9, type: 3}
   arrowPos: {fileID: 7109328902337788951}
   animator: {fileID: 6246329017728213445}
@@ -133,6 +132,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5272453724374946346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162137940177391092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380f809dfedbe94da79c7c48de20139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archer: {fileID: 6032153488653372421}
 --- !u!4 &651851191073068878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37e6fc725dd31ac488f89c500120d75f, type: 3}

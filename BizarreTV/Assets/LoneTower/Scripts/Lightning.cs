@@ -9,6 +9,7 @@ namespace LT
         public float height;
         public Vector2 edgesCount;
         public float angle;
+        public CapsuleCollider collider;
         public LineRenderer line;
 
 
@@ -16,6 +17,7 @@ namespace LT
         {
             Invoke("Death", 1f);
             Animate();
+            DealDamagetoNearEnemies();
         }
 
         private void FixedUpdate()
@@ -34,6 +36,25 @@ namespace LT
             {
                 Vector3 pos = new Vector3(Random.Range(-startRadius * i, startRadius * i), edgeHeight * i, Random.Range(-startRadius * i, 0));
                 line.SetPosition(i, pos);
+            }
+        }
+
+        void DealDamagetoNearEnemies()
+        {
+            GameObject enemylist = GameObject.Find("EnemyList");
+
+            for (int i = 0; i < enemylist.transform.childCount; i++)
+            {
+                Enemy enemy = enemylist.transform.GetChild(i).GetComponent<Enemy>();
+                if (enemy != null && collider.radius > (enemy.transform.position - transform.position).magnitude)
+                {
+                    enemy.TakeDamage(1);
+                    enemy.Knockback(new Vector3(
+                            (enemy.transform.position - transform.position).x,
+                            0,
+                            (enemy.transform.position - transform.position).z)
+                        );
+                }
             }
         }
 
