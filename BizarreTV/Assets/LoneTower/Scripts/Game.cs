@@ -87,7 +87,7 @@ namespace LT
                 ) },
             {  "lighting_chance", new Upgrade(
                 _id: 4,
-                _value: 0,
+                _value: 100,
                 _type: "lighting chance",
                 _add: 5f,
                 _cost: 40,
@@ -144,7 +144,8 @@ namespace LT
                     archers.Add(a);
                 }
             }
-            if(archers.Count < (int)upgrades["archers_count"].value)
+
+            if(archers.Count > (int)upgrades["archers_count"].value)
             {
                 for(int i = 0; i < archers.Count - (int)upgrades["archers_count"].value; i++)
                 {

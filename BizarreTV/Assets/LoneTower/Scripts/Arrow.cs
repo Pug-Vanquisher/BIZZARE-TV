@@ -13,6 +13,7 @@ namespace LT
         public Collider collider;
         public List<Transform> hitted;
         public int ricoshets;
+        public ParticleSystem hitEffect;
         void Start()
         {
             hitted = new List<Transform>();
@@ -26,18 +27,26 @@ namespace LT
         {
             if(rb != null)
             {
-                rb.MovePosition(transform.position + transform.forward * speed);
+                MoveWithDetectTrigger(transform.forward * speed);
             }
             else
             {
                 trail.time = Mathf.Lerp(trail.time, 0, 0.1f);
             }
         }
-        void Death()
-        {
-            Destroy(gameObject);
-        }
 
+        public void MoveWithDetectTrigger(Vector3 vector)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, vector, out hit, vector.magnitude))
+            {
+                rb.MovePosition(hit.point);
+            }
+            else
+            {
+                rb.MovePosition(transform.position + vector);
+            }
+        }
         Transform NearestEnemy()
         {
             Enemy nearestEnemy = null;
@@ -59,9 +68,16 @@ namespace LT
 
             return nearestEnemy.transform;
         }
+        void Death()
+        {
+            Destroy(gameObject);
+        }
+
 
         private void OnTriggerEnter(Collider other)
         {
+            hitEffect.Stop();
+            hitEffect.Play();
             Enemy enemy = other.GetComponent<Enemy>();
             if (other.gameObject.tag == "Damage" || enemy == null) { return; }
             if (other.gameObject.tag == "Tower") 
@@ -75,7 +91,6 @@ namespace LT
 
             if (!hitted.Contains(enemy.transform))
             {
-
                 enemy.TakeDamage(1);
                 enemy.SlowDown(GameObject.Find("Game").GetComponent<Game>().upgrades["slowdown_time"].value);
                 if (ricoshets > 0)

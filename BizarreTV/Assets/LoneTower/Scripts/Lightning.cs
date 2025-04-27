@@ -22,12 +22,17 @@ namespace LT
 
         private void FixedUpdate()
         {
-            line.startColor = new Color(Mathf.Clamp(line.startColor.b - 0.1f, 0f, 1f), 1, 1f, Mathf.Clamp(line.startColor.a - 0.05f, 0f, 1f));
+            line.colorGradient.alphaKeys[0] = new GradientAlphaKey(line.colorGradient.alphaKeys[0].alpha - 0.05f, 0f);
+            line.startColor = new Color(0, line.startColor.g - 0.001f, 1, line.startColor.a - 0.1f);
+
+            for(int i = 0; i < line.positionCount; i++)
+            {
+                line.SetPosition(i, Vector3.Lerp(line.GetPosition(i), Vector3.up * line.GetPosition(i).y, 0.075f));
+            }
         }
         
         void Animate()
         {
-            line.startColor = new Color(1, 1, 1, 1);
             int edges = Random.Range((int)edgesCount.x, (int)edgesCount.y);
             line.positionCount = edges;
             float edgeHeight = height / edges;

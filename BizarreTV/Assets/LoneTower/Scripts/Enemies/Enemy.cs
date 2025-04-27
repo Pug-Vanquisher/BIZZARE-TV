@@ -18,13 +18,13 @@ namespace LT
 
         public Animator animator;
         public ParticleSystem DeathParticles;
-        void Start()
+        public virtual void Start()
         {
             health = maxHealth;
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        public virtual void FixedUpdate()
         {
             Move();
         }
@@ -45,29 +45,22 @@ namespace LT
             }
             else
             {
-                Invoke("Attack", attackTime);
                 TakeDamage(1000);
             }
         }
-        public void Attack() 
-        {
-            Debug.Log("Attacked");
-        }
-
         virtual public void TakeDamage(float damage)
         {
             health -= damage;
             if(health <= 0)
             {
                 Death();
+                GameObject.Find("Game").GetComponent<Game>().score += points;
+                GameObject.Find("Game").GetComponent<Game>().points += points;
             }
         }
 
         virtual public void Death()
         {
-            GameObject.Find("Game").GetComponent<Game>().score += points;
-            GameObject.Find("Game").GetComponent<Game>().points += points;
-            CancelInvoke("Attack");
             DeathParticles.Play();
             DeathParticles.transform.parent = transform.parent;
             Destroy(gameObject);

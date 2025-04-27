@@ -7,7 +7,7 @@ namespace LT
     public class Archer : MonoBehaviour
     {
         public float speed;
-        
+        private float maxSpeed;
         public GameObject arrow;
         public Transform arrowPos;
         public Animator animator;
@@ -24,14 +24,15 @@ namespace LT
 
         void FixedUpdate()
         {
-            speed = GameObject.Find("Game").GetComponent<Game>().upgrades["archers_speed"].value;
+            maxSpeed = GameObject.Find("Game").GetComponent<Game>().upgrades["archers_speed"].value;
+
             Move();
         }
 
         public void Move()
         {
             animator.SetFloat("Speed", 0);
-            transform.rotation = Quaternion.Euler(0, 180f, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             if (target == null) // если нет врага ищет
             {
                 target = NearestNonAimedEnemy();
@@ -40,9 +41,10 @@ namespace LT
             {
                 if (!isAccessed()) // если находится далеко то бежит
                 {
-                    transform.position += Vector3.right * Mathf.Sign(target.position.x - transform.position.x) * speed;
+                    speed = Mathf.Lerp(speed, Mathf.Sign(target.position.x - transform.position.x) * maxSpeed, 0.1f);
+                    transform.position += Vector3.right * speed; //Mathf.Sign(target.position.x - transform.position.x) * speed;
                     animator.SetFloat("Speed", 1);
-                    transform.rotation = Quaternion.Euler(0, -90f * Mathf.Sign(target.position.x - transform.position.x), 0);
+                    transform.rotation = Quaternion.Euler(0, 90f * speed/maxSpeed, 0);
                 }
                 else // иначе стреляет
                 {
@@ -116,6 +118,7 @@ namespace LT
         public void Death()
         {
             Destroy(gameObject);
+            Debug.Log("123");
         }
     }
 

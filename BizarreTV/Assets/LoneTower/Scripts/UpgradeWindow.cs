@@ -10,7 +10,7 @@ namespace LT
     {
         public Sprite[] icons;
 
-        //public Image icon;
+        public Image icon;
         public TMP_Text type;
         public TMP_Text cost;
         public TMP_Text value;
@@ -18,7 +18,7 @@ namespace LT
         {
             type.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].type;
             cost.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].cost.ToString() + " pts";
-            //icon.sprite = icons[GameObject.Find("Game").GetComponent<Game>().upgrades[name].id];
+            icon.sprite = icons[GameObject.Find("Game").GetComponent<Game>().upgrades[name].id];
 
         }
 

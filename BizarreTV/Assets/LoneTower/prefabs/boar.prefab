@@ -105,8 +105,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249005481189601589}
-  - component: {fileID: 5480908173895322740}
   - component: {fileID: 3000434667337421001}
+  - component: {fileID: 7555920890202937374}
   m_Layer: 0
   m_Name: boar
   m_TagString: Untagged
@@ -131,26 +131,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5480908173895322740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639926255291266869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e64f7371ed71f44fb0a85d6a1e54663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  health: 0
-  speed: 0.25
-  attackTime: 0
-  points: 2
-  aimed: 0
-  animator: {fileID: 7627609705262619839}
-  DeathParticles: {fileID: 7319543329236614194}
 --- !u!136 &3000434667337421001
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -165,6 +145,28 @@ CapsuleCollider:
   m_Height: 4.21
   m_Direction: 2
   m_Center: {x: 0, y: 1.5, z: -0.39}
+--- !u!114 &7555920890202937374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639926255291266869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef2cb80f5486a24fad82da8f94391e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  health: 0
+  speed: 0.25
+  attackTime: 0
+  points: 2
+  aimed: 0
+  animator: {fileID: 7627609705262619839}
+  DeathParticles: {fileID: 7319543329236614194}
+  chillingPeriod: 3
+  runningPeriod: 2
 --- !u!1 &972501509619537852
 GameObject:
   m_ObjectHideFlags: 0
