@@ -58,7 +58,7 @@ namespace Arcanoid
 
             if (collision.gameObject.name == "LoseBorder")
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //удалить.
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //удалить.
                 Destroy(gameObject);
             }
 

@@ -15,11 +15,11 @@ namespace Arcanoid
         void Start()
         {
             gameManager = FindObjectOfType<gameMAnager>();
-            for (int i = -11; i <= 11; i++)
+            for (int i = -8; i <= 9; i++)
             {
-                for (int j = 0; j <= 6; j++)
+                for (int j = 0; j <= 5; j++)
                 {
-                    Instantiate(list[Random.Range(0, list.Count)], new Vector3(i * 0.8f, j * 0.8f, 0f), Quaternion.identity, gameObject.transform);
+                    Instantiate(list[Random.Range(0, list.Count)], new Vector3(i - 0.5f, j - 0.5f, 0f), Quaternion.identity, gameObject.transform);
                     gameManager.numberOfBlocks += 1;
                 }
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -10,63 +11,87 @@ namespace Arcanoid
     {
 
         [SerializeField] Platform player;
-        [SerializeField] BallControl ball;
         [SerializeField] AudioClip winSound;
         [SerializeField] public int numberOfBlocks;
         [SerializeField] GameObject winUI;
 
-        public float speedDifPlat = 1.2f;
-
-        public float speedDifBall = 1.5f;
+        public GameObject ball_toclone;
+        float angle;
+        public GameObject arrow;
+        GameObject clone;
 
         public float sizeDifPlat = 0.1f;
-
-        public int buffSize = 0;
-        public int buffSpeed = 0;
 
         float origSize;
         AudioSource audioSource;
 
-        private bool playing = false;
+        private bool win;
 
-        public int ballCount;
-        public int score;
+        int ballCount;
+        int score;
+        public TMP_Text balls_text;
 
         private void Awake()
         {
             origSize = player.transform.localScale.x;
             audioSource = GetComponent<AudioSource>();
+            ballCount = 2;
+        }
+
+        private void Update()
+        {
+            if (ballCount > 0)
+            {
+                float mod_angle = 0;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    clone = Instantiate(arrow, player.transform.position + Vector3.up, Quaternion.identity);
+
+
+                }
+
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    
+                    angle += 0.003f;
+
+                    mod_angle = Mathf.Sin(angle) * 60;
+                    clone.transform.position = player.transform.position + Vector3.up;
+                    clone.transform.rotation = Quaternion.Euler(0,0, mod_angle); 
+                }
+
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    
+                    Vector2 startingVelocity = new Vector2(clone.transform.up.x, clone.transform.up.y);
+                    Destroy(clone);
+
+                    clone = Instantiate(ball_toclone, player.transform.position + Vector3.up, Quaternion.identity);
+
+                    clone.GetComponent<BallControl>().startingVelocity = startingVelocity;
+                    Debug.Log(new Vector2(clone.transform.up.x, clone.transform.up.y).ToString());
+                    clone.GetComponent<BallControl>().str();
+                    ballCount -= 1;
+                    angle = 0;
+                    
+                }
+            }
         }
 
         private void FixedUpdate()
         {
-            checkLose();
-        }
+            balls_text.text = "Количество кирок: " + ballCount;
+            if (!win) checkLose();
 
-        public int ckeckBuff(int random)
-        {
-            switch (random)
+            if (player.transform.localScale.x > origSize) player.transform.localScale = new Vector2(player.transform.localScale.x - 0.001f, player.transform.localScale.y);
+
+            if (Input.GetKey(KeyCode.F5))
             {
-                case 0:
-                    if (buffSize >= 2)
-                        random++;
-                    break;
-                case 1:
-                    if (buffSize <= -2)
-                        random--;
-                    break;
-                case 3:
-                    if (buffSpeed >= 2)
-                        random++;
-                    break;
-                case 4:
-                    if (buffSpeed <= -2)
-                        random--;
-                    break;
-
+                numberOfBlocks = 0;
             }
-            return random;
         }
+
+        
         
         public void addScore(bool is_gold)
         {
@@ -77,17 +102,10 @@ namespace Arcanoid
         public void plusSize()
         {
             player.transform.localScale = new Vector2(player.transform.localScale.x + sizeDifPlat, player.transform.localScale.y);
-            buffSize++;
         }
-        public void minusSize()
+        public void addBalls()
         {
-            player.transform.localScale = new Vector2(player.transform.localScale.x - sizeDifPlat, player.transform.localScale.y);
-            buffSize--;
-        }
-        public void resetSize()
-        {
-            player.transform.localScale = new Vector2(origSize, player.transform.localScale.y);
-            buffSize = 0;
+            ballCount += 1;
         }
 
         public void playDestroySound()
@@ -103,7 +121,7 @@ namespace Arcanoid
 
         public void checkLose()
         {
-            if (ballCount < 1 & FindObjectOfType<BallControl>()) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (ballCount < 1 & !FindObjectOfType<BallControl>()) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void checkWin()
@@ -111,9 +129,11 @@ namespace Arcanoid
             numberOfBlocks--;
             if (numberOfBlocks <= 0)
             {
+                win = true;
                 playWinSound();
                 winUI.SetActive(true);
-                ball.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                winUI.GetComponentInChildren<TMP_Text>().text = "Вы выкопали всю руду! Конечный счёт: " + score;
+                //ball.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 player.StopBePlayable();
                 Cursor.visible = true;
@@ -122,8 +142,8 @@ namespace Arcanoid
 
         public void StartGame()
         {
-            playing = true;
-            ball.str();
+            win = false;
+            //ball.str();
             player.StartBePlayable();
         }
     }

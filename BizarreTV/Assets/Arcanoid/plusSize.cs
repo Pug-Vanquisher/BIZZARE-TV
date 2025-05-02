@@ -17,16 +17,14 @@ namespace Arcanoid
         public int buff;
         public string type;
 
-        private void Awake()
+        void Start()
         {
             gameManager = FindObjectOfType<gameMAnager>();
             
-            if (type == "Coal Block") buff = 0;
-            if (type == "Iron Block") buff = 1;
-            if (type == "Gold Block") buff = 2;
-            if (type == "Diamond Block") buff = 3;
-
-            buff = gameManager.ckeckBuff(buff);
+            if (type.Contains("Coal Block")) buff = 0;
+            if (type.Contains("Iron Block")) buff = 1;
+            if (type.Contains("Gold Block")) buff = 2;
+            if (type.Contains("Diamond Block")) buff = 3;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[buff];
         }
 
@@ -55,7 +53,7 @@ namespace Arcanoid
                         gameManager.plusSize();
                         break;
                     case 1:
-                        gameManager.minusSize();
+                        gameManager.addBalls();
                         break;
                     case 2:
                         gameManager.addScore(true);
