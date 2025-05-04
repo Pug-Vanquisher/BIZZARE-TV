@@ -19,18 +19,10 @@ namespace Arcanoid
             rgb = GetComponent<Rigidbody2D>();
             source = GetComponent<AudioSource>();
 
-            stp();
-        }
 
-        public void stp()
-        {
-            gameObject.isStatic = true;
-        }
-        public void str()
-        {
             bufferSpeed = startingVelocity.normalized;
             gameObject.isStatic = false;
-            rgb.velocity = bufferSpeed * speed; 
+            rgb.velocity = bufferSpeed * speed;
         }
 
         private void FixedUpdate()

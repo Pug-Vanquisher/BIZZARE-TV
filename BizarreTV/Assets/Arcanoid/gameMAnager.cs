@@ -70,7 +70,6 @@ namespace Arcanoid
 
                     clone.GetComponent<BallControl>().startingVelocity = startingVelocity;
                     Debug.Log(new Vector2(clone.transform.up.x, clone.transform.up.y).ToString());
-                    clone.GetComponent<BallControl>().str();
                     ballCount -= 1;
                     angle = 0;
                     
