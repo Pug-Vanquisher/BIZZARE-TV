@@ -14,9 +14,13 @@ namespace LT
         public TMP_Text type;
         public TMP_Text cost;
         public TMP_Text value;
+        public TMP_Text level;
+        public TMP_Text maxLevel;
+
         private void Start()
         {
             type.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].type;
+            maxLevel.text = "max lv " + GameObject.Find("Game").GetComponent<Game>().upgrades[name].maxLevel;
             cost.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].cost.ToString() + " pts";
             icon.sprite = icons[GameObject.Find("Game").GetComponent<Game>().upgrades[name].id];
 
@@ -24,9 +28,19 @@ namespace LT
 
         private void Update()
         {
-            value.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].value.ToString();
-            cost.color = Color.Lerp(cost.color, Color.white, 0.1f);
-            value.color = Color.Lerp(value.color, Color.white, 0.1f);
+            if (GameObject.Find("Game").GetComponent<Game>().upgrades[name].showLikeint)
+            {
+                value.text = ((int)GameObject.Find("Game").GetComponent<Game>().upgrades[name].value).ToString();
+            }
+            else
+            {
+                value.text = GameObject.Find("Game").GetComponent<Game>().upgrades[name].value.ToString();
+            }
+
+            level.text = "lv " + GameObject.Find("Game").GetComponent<Game>().upgrades[name].level;
+            cost.color = Color.Lerp(cost.color, Color.white, 0.05f);
+            level.color = Color.Lerp(cost.color, Color.white, 0.05f);
+            value.color = Color.Lerp(cost.color, Color.white, 0.05f);
         }
 
         public void Add()
@@ -39,6 +53,7 @@ namespace LT
                 }
                 if(e.Message == "max")
                 {
+                    level.color = Color.red;
                     value.color = Color.red;
                 }
             }
@@ -48,6 +63,7 @@ namespace LT
             try { GameObject.Find("Game").GetComponent<Game>().LevelDown(name); }
             catch
             {
+                level.color = Color.red;
                 value.color = Color.red;
             }
         }

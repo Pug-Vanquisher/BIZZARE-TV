@@ -45,7 +45,7 @@ namespace LT
             }
             else
             {
-                TakeDamage(1000);
+                Attack();
             }
         }
         virtual public void TakeDamage(float damage)
@@ -58,7 +58,11 @@ namespace LT
                 GameObject.Find("Game").GetComponent<Game>().points += points;
             }
         }
-
+        public void Attack()
+        {
+            GameObject.Find("Game").GetComponent<Game>().WallDamage(1);
+            Death();
+        }
         virtual public void Death()
         {
             DeathParticles.Play();

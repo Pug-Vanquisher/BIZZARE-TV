@@ -103,7 +103,7 @@ namespace LT
             isAiming = false;
             if (!isAccessed())
             {
-                animator.Play("Start");
+                animator.Play("Idle");
                 isReloaded = true;
                 return;
             }

@@ -11,10 +11,11 @@ namespace LT
         public float angle;
         public CapsuleCollider collider;
         public LineRenderer line;
-
+        public AudioSource source;
 
         private void Start()
         {
+            source.pitch = source.pitch - Random.Range(-0.1f, 0.1f);
             Invoke("Death", 1f);
             Animate();
             DealDamagetoNearEnemies();

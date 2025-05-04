@@ -22,6 +22,7 @@ namespace LT
         void Start()
         {
             clampRadius = new Vector2(PointManager.Instance.GetPoint("LeftSide").x, PointManager.Instance.GetPoint("RightSide").x);
+            pointer.Point(arrowPos, transform.position.x);
         }
 
         void FixedUpdate()

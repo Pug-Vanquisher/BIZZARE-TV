@@ -1,104 +1,107 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 namespace LT
 {
     public class Upgrade
     {
+        public float value { 
+            get{
+                return (max - min) / maxLevel * level; 
+            } 
+        }
+
         public int id;
-        public float value;
         public string type;
-        public float add;
         public int cost;
+        public int level;
         public float min;
         public float max;
-
-        public Upgrade(int _id, float _value, string _type, float _add, int _cost, float _min, float _max)
+        public int maxLevel = 10;
+        public bool showLikeint;
+        public Upgrade(int _id, string _type, int _level, int _cost, float _min, float _max, int _maxLevel = 10, bool _showLikeint = false)
         {
             id = _id;
-            value = _value;
             type = _type;
-            add = _add;
+            level = _level;
             cost = _cost;
             min = _min;
             max = _max;
+            maxLevel = _maxLevel;
+            showLikeint = _showLikeint;
         }
 
         public bool levelUp()
         {
-            if (value + add <= max) {
-                value += add;
+            if (level + 1 <= maxLevel) {
+                level += 1;
                 return true;
             }
             return false;
         }
         public bool levelDown()
         {
-            if (value - add >= min)
+            if (level - 1 >= 1)
             {
-                value -= add;
+                level -= 1;
                 return true;
             }
             return false;
         }
-
     }
 
     public class Game : MonoBehaviour
     {
+        public int maxUpgradeLevel;
         public Dictionary<string, Upgrade> upgrades = new Dictionary<string, Upgrade>()
         {
             { "archers_count", new Upgrade(
                 _id: 0,
-                _value: 1,
                 _type: "archers count",
-                _add: 1f,
+                _level: 1,
                 _cost: 100,
-                _min: 1f,
-                _max: 10f
-                ) },
+                _min: 0,
+                _max: 10f,
+                _maxLevel: 11,
+                _showLikeint: true) },
             { "archers_speed", new Upgrade(
                 _id: 1,
-                _value: 0.2f,
                 _type: "archers' speed",
-                _add: 0.02f,
+                _level: 1,
                 _cost: 25,
-                _min: 1.2f,
+                _min: 0.2f,
                 _max: 2.4f
                 ) },
             { "arrow_speed", new Upgrade(
                 _id: 2,
-                _value: 1.5f,
                 _type: "arrows' speed",
-                _add: 0.85f,
+                _level: 1,
                 _cost: 30,
                 _min: 1.5f,
                 _max: 10f
                 ) },
             { "ricoshet_count", new Upgrade(
                 _id: 3,
-                _value: 0f,
                 _type: "ricoshets count",
-                _add: 1f,
+                _level: 1,
                 _cost: 100,
                 _min: 0f,
-                _max: 3f
-                ) },
+                _max: 3f,
+                _maxLevel: 4,
+                _showLikeint: true) },
             {  "lighting_chance", new Upgrade(
                 _id: 4,
-                _value: 100,
                 _type: "lighting chance",
-                _add: 5f,
+                _level: 1,
                 _cost: 40,
                 _min: 0f,
-                _max: 100f
-                ) },
+                _max: 100f,
+                _showLikeint: true) },
             {  "slowdown_time", new Upgrade(
                 _id: 5,
-                _value: 0,
                 _type: "slowdown time",
-                _add: 0.1f,
+                _level: 1,
                 _cost: 40,
                 _min: 0f,
                 _max: 3f
@@ -107,27 +110,27 @@ namespace LT
 
         public float points;
         public float score;
+        public int wave;
 
-        public float spawntime;
-        public GameObject[] enemies;
+        public int maxHp;
+        public int hp;
+
         public List<GameObject> archers;
+        public GameObject wavePrefab;
 
         public GameObject ArcherPrefab;
-
         void Start()
         {
+            hp = maxHp;
             transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            
-            if (!IsInvoking("Spawn"))
+            if(Input.GetKeyDown(KeyCode.W) && gameObject.GetComponent<Wave>() == null)
             {
-                Invoke("Spawn", spawntime);
+                StartWave();
             }
-            Recruit();
         }
 
         void Recruit()
@@ -155,24 +158,26 @@ namespace LT
             }
         }
 
-        void Spawn()
+        public void StartWave()
         {
-            Vector3 spawnpoint = PointManager.Instance.GetPoint("EnemySpawn");
-            spawnpoint.x = PointManager.Instance.GetPoint("LeftSide").x;
-            var a = Instantiate(enemies[Random.Range(0, enemies.Length)],
-                new Vector3(Random.Range(spawnpoint.x, PointManager.Instance.GetPoint("RightSide").x), spawnpoint.y, spawnpoint.z), Quaternion.identity);
-            a.transform.parent = GameObject.Find("EnemyList").transform;
-            //var b = Instantiate(lighting, new Vector3(-22f, 0f, 22f), Quaternion.identity);
+            wave += 1;
+            GameObject a = Instantiate(wavePrefab, transform);
+            a.gameObject.GetComponent<Wave>().StartWave(wave);
         }
 
         public void LevelUp(string name)
         {
+            
             if (upgrades[name] != null)
             {
                 if (upgrades[name].cost <= points)
                 {
                     if (upgrades[name].levelUp())
                     {
+                        if (name == "archers_count")
+                        {
+                            Recruit();
+                        }
                         points -= upgrades[name].cost;
                         return;
                     }
@@ -187,11 +192,31 @@ namespace LT
             {
                 if (upgrades[name].levelDown())
                 {
+                    if (name == "archers_count")
+                    {
+                        Recruit();
+                    }
                     points += upgrades[name].cost;
                     return;
                 }
             }
             throw new System.Exception("min");
+        }
+        public void WallDamage(float damage)
+        {
+            if(hp - damage <= 0)
+            {
+                hp = 0;
+                Loose();
+            }
+            else
+            {
+                hp -= Mathf.RoundToInt(damage);
+            }
+        }
+        public void Loose()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
     }
 
