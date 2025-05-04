@@ -127,14 +127,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   sprites:
-  - {fileID: 471318005, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
   - {fileID: 143225276, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
-  - {fileID: 1380487198, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
+  - {fileID: 471318005, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
   - {fileID: 729470997, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
+  - {fileID: 1380487198, guid: 14749c9be29c46148801fd45fdd28a71, type: 3}
   speed: 2
   direction: {x: 0, y: 1}
   velocity: {x: 0, y: 0}
-  randomBuff: 0
+  buff: 0
+  type: 
 --- !u!50 &7140979458567398051
 Rigidbody2D:
   serializedVersion: 4

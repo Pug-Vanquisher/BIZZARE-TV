@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3962780297280009919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,7 +124,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: e04f51bf92707e945ae1cee1219785a7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &3962780297367458262
 MonoBehaviour:
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6fb9fea432562848b7333184e1b2987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingVelocity: {x: 3, y: 3}
+  startingVelocity: {x: 0, y: 0}
   speed: 5
 --- !u!82 &3962780297280009913
 AudioSource:

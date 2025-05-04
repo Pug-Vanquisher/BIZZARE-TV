@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Spawn : MonoBehaviour
+namespace Arcanoid
 {
-    public List<GameObject> list;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Spawn : MonoBehaviour
     {
-        for (int i = -11; i <= 11; i++)
+        [SerializeField] gameMAnager gameManager;
+        
+        public List<GameObject> list;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            for (int j = 0; j <= 6; j++)
+            gameManager = FindObjectOfType<gameMAnager>();
+            for (int i = -8; i <= 9; i++)
             {
-                Instantiate(list[Random.Range(0, list.Count)], new Vector3(i * 0.8f, j * 0.8f, 0f), Quaternion.identity, gameObject.transform);
+                for (int j = 0; j <= 5; j++)
+                {
+                    Instantiate(list[Random.Range(0, list.Count)], new Vector3(i - 0.5f, j - 0.5f, 0f), Quaternion.identity, gameObject.transform);
+                    gameManager.numberOfBlocks += 1;
+                }
             }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
