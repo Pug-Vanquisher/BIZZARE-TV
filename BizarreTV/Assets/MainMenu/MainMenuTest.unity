@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: LoneTower
+  level: lTower
 --- !u!114 &276744441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4449,7 +4449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ae1b44761c35448d907b983528140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Scene_level_1
+  level: Game
 --- !u!114 &936069402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9227,7 +9227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2104941210
 RectTransform:
   m_ObjectHideFlags: 0

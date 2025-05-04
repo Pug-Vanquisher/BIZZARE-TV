@@ -53,7 +53,6 @@ namespace LT
 
     public class Game : MonoBehaviour
     {
-        public int maxUpgradeLevel;
         public Dictionary<string, Upgrade> upgrades = new Dictionary<string, Upgrade>()
         {
             { "archers_count", new Upgrade(

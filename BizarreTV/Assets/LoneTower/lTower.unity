@@ -717,8 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38e829eb21b56e4ba699878f3a98367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxUpgradeLevel: 0
-  points: 10000
+  points: 200
   score: 0
   wave: 0
   maxHp: 50
